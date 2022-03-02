@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/curriculum-mapper
     docker:
-      - image: cimage/python:3.8
+      - image: circleci/python:3.8
     steps:
       # step 1: obtain repo from GitHub
       - checkout
@@ -21,4 +21,3 @@ jobs:
             . curriculum-mapper-venv/bin/activate
             flake8 --exclude=curriculum-mapper-venv* --statistics
             pytest -v --cov
-            
