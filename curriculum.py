@@ -17,7 +17,8 @@ class Course:
         self.course_description = course_description
         if prerequisites is None:
             prerequisites = []
-        self.prerequisites = prerequisites
+        for course in prerequisites:
+            self.add_prereq(course)
 
     def __str__(self):
         return str(self.subject_code) + " " + str(self.course_code)
@@ -51,7 +52,8 @@ class Curriculum:
         self.degree_name = degree_name
         if course_list is None:
             course_list = []
-        self.course_list = course_list
+        for course in course_list:
+            self.add_course(course)
 
     def add_course(self, x):
         if isinstance(x, Course):
