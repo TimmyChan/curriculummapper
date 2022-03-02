@@ -15,10 +15,10 @@ class Course:
         self.course_code = course_code
         self.course_title = course_title
         self.course_description = course_description
-        if prerequisites is None:
-            prerequisites = []
-        for course in prerequisites:
-            self.add_prereq(course)
+        self.prerequisites = []
+        if prerequisites is not None:
+            for course in prerequisites:
+                self.add_prereq(course)
 
     def __str__(self):
         return str(self.subject_code) + " " + str(self.course_code)
@@ -46,10 +46,11 @@ class Course:
 
 # curriculum object to handle courses and generating a graph of prerequisites
 class Curriculum:
-    def __init__(self, university="Texas Institute of Technology and Sciences",
+    def __init__(self, university="Brown",
                  degree_name="MS in Data Science", course_list=None):
         self.university = university
         self.degree_name = degree_name
+        self.course_list = []
         if course_list is None:
             course_list = []
         for course in course_list:

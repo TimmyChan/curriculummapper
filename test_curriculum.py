@@ -14,7 +14,7 @@ def test_init():
 
 def test_init_values():
     x = Course()
-    y = Course(course_code=4567, prerequistes=[x])
+    y = Course(course_code=4567, prerequisites=[x])
     test_curr = Curriculum("TAMS",
                            "High School Diploma with Honors",
                            [x, y])
