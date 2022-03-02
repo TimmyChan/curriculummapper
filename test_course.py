@@ -7,9 +7,9 @@ from curriculum import Course
 
 def test_init():
     x = Course()
-    assert (x.subject_code == "DATA" and x.course_code == 1234 and
-            x.course_title == "Hello" and
-            x.course_description == "From the other side" and
+    assert (x.subject_code == "SUBJ" and x.course_code == 1234 and
+            x.course_title == "Course Title" and
+            x.course_description == "Course Description" and
             x.prerequisites == [])
 
 
@@ -26,7 +26,7 @@ def test_init_with_param():
 
 def test_str():
     x = Course()
-    assert str(x) == "DATA 1234"
+    assert str(x) == "SUBJ 1234 Course Title"
 
 
 def test_add_prereq():

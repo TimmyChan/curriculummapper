@@ -9,7 +9,7 @@ def test_init():
     test_curr = Curriculum()
     assert (test_curr.university == "Brown" and
             test_curr.degree_name == "MS in Data Science" and
-            test_curr.course_list == [])
+            test_curr.course_dict == {})
 
 
 def test_init_values():
@@ -20,7 +20,7 @@ def test_init_values():
                            [x, y])
     assert (test_curr.university == "TAMS" and
             test_curr.degree_name == "High School Diploma with Honors" and
-            test_curr.course_list == [x, y])
+            test_curr.course_dict == {x.course_key: x, y.course_key: y})
 
 
 def test_num_courses():
