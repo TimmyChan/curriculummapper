@@ -1,16 +1,16 @@
 #! python3
 
-# course object to handle course 
+# course object to handle course
 
 
 def printbreak(): print("----------")
 
 
 class Course:
-    def __init__(self,  subject_code="DATA", course_code=1234, 
-                 course_title="Hello", 
+    def __init__(self,  subject_code="DATA", course_code=1234,
+                 course_title="Hello",
                  course_description="From the other side",
-                 prerequisites = None):
+                 prerequisites=None):
         self.subject_code = subject_code
         self.course_code = course_code
         self.course_title = course_title
@@ -24,7 +24,7 @@ class Course:
 
     def full_desc(self):
         temp = str(self) + "\n Course Title: " + self.course_title + \
-                        "\n Course Description: " + self.course_description 
+                        "\n Course Description: " + self.course_description
         if len(self.prerequisites) > 0:
             temp += "\nPrereqs: "
             for prereq in self.prerequisites:
@@ -40,7 +40,7 @@ class Course:
         except ValueError:
             print("Only course objects accepted in the prerequisites list.")
             # just ignore if x is something that isn't a course
-            pass 
+            pass
 
 
 # curriculum object to handle courses and generating a graph of prerequisites
@@ -59,13 +59,13 @@ class Curriculum:
         else:
             raise TypeError("tried to add an object that is \
                              not a Course to course_list")
-    
+
     def __str__(self):
         return self.university + " " + self.degree_name + " Curriculum"
-    
+
     def num_courses(self):
         return len(self.course_list)
-    
+
     def print_all(self):
         print(str(self))
         printbreak()
