@@ -1,8 +1,8 @@
 #! python3
 
-
-from bs4 import BeautifulSoup
+import re
 import requests
+from bs4 import BeautifulSoup
 from curriculum import Course, Curriculum
 # import pandas as pd
 
@@ -24,16 +24,17 @@ def main():
         with open("case_western.html", "w") as file:
             file.write(str(soup))
 
-    # initiating an empty list for courses
-    cw_curriculum = Curriculum("Case Western")
+    # initiating an empty curriculum object
+    cw_curriculum = Curriculum("Case Western", "MS in Data Science")
 
     for course_tag in soup.find_all("div", {"class": "courseblock"}):
         blocktitle_tag = course_tag.find("p", {"class": "courseblocktitle"})\
                            .find("strong")
+        # get the subject code which is always the first part before spaces
         subject_code = blocktitle_tag.string.split()[0]
         # apparently some universitys have letters in their course codes best
         # to leave as string
-        course_code = blocktitle_tag.string.split()[1][:-1]
+        course_code = blocktitle_tag.string.split()[1].replace([".", " "], "")
         course_title = blocktitle_tag.string.split('.')[1][2:]
         blockdesc_tag = course_tag.find("p", {"class": "courseblockdesc"})
         new_course = Course(subject_code, course_code,

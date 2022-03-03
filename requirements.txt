@@ -10,6 +10,7 @@ idna==3.3
 iniconfig==1.1.1
 lxml==4.8.0
 mccabe==0.6.1
+networkx==2.7
 numpy==1.22.2
 packaging==21.3
 pandas==1.4.1

@@ -1,15 +1,16 @@
 #! python3
 
 # course object to handle course
+import networkx as nx
 
 
 def printbreak(): print("----------")
 
 
 class Course:
-    def __init__(self,  subject_code="SUBJ", course_code=1234,
-                 course_title="Course Title",
-                 course_description="Course Description",
+    def __init__(self,  subject_code="", course_code="",
+                 course_title="",
+                 course_description="",
                  prerequisites=None):
         self.subject_code = subject_code
         self.course_code = course_code
@@ -48,8 +49,8 @@ class Course:
 
 # curriculum object to handle courses and generating a graph of prerequisites
 class Curriculum:
-    def __init__(self, university="Brown",
-                 degree_name="MS in Data Science", course_list=None):
+    def __init__(self, university="",
+                 degree_name="", course_list=None):
         self.university = university
         self.degree_name = degree_name
         if course_list is None:
@@ -57,10 +58,12 @@ class Curriculum:
         self.course_dict = {}
         for course in course_list:
             self.add_course(course)
+            for prereq in course.prerequisites:
+                self.add_course(prereq)
 
     def add_course(self, x):
         if isinstance(x, Course):
-            self.course_dict[x.course_key] = x
+            self.course_dict[x] = x.prerequisites
         else:
             raise TypeError("tried to add an object that is \
                              not a Course to course_list")
@@ -79,5 +82,14 @@ class Curriculum:
             print(self.course_dict[x].full_desc())
         printbreak()
 
-    def find_course(self, course_key="CSDS 486"):
-        return self.course_dict[course_key]
+    def get_course(self, course=""):
+        try:
+            return self.course_dict[course]
+        except KeyError:
+            return None
+
+    def generate_graph(self):
+        if self.num_courses() > 0:
+            pass
+        else:
+            pass

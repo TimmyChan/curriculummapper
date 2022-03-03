@@ -5,14 +5,16 @@ Unit tests for the course class
 from curriculum import Course
 
 
+# No parameters passed should give blink curriculum
 def test_init():
     x = Course()
-    assert (x.subject_code == "SUBJ" and x.course_code == 1234 and
-            x.course_title == "Course Title" and
-            x.course_description == "Course Description" and
+    assert (x.subject_code == "" and x.course_code == "" and
+            x.course_title == "" and
+            x.course_description == "" and
             x.prerequisites == [])
 
 
+# Parameters passed should be saved
 def test_init_with_param():
     x = Course()
     y = Course("DSCS", 5679, "To the left",
@@ -24,11 +26,13 @@ def test_init_with_param():
             y.prerequisites == [x])
 
 
+# testing __str__() Should print subject code, course code then course title.
 def test_str():
-    x = Course()
+    x = Course("SUBJ", "1234", "Course Title")
     assert str(x) == "SUBJ 1234 Course Title"
 
 
+# adding a prereq to the list
 def test_add_prereq():
     x = Course()
     y = Course("DSCS", 5679, "To the left", "Everything you own")
@@ -36,6 +40,7 @@ def test_add_prereq():
     assert y.prerequisites == [x]
 
 
+# adding a object that is not a course should do nothing
 def test_add_prereq_type():
     x = Course()
     x.add_prereq(5)
