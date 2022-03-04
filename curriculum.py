@@ -1,7 +1,8 @@
 #! python3
 
-
-# import networkx as nx
+from pyvis.network import Network
+import networkx as nx
+# import matplotlib.pyplot as plt
 
 
 def printbreak(): print("----------")
@@ -12,27 +13,36 @@ class Course:
     def __init__(self,  subject_code="NONE", course_code="0",
                  course_title="",
                  course_description="",
-                 prerequisites=None):
+                 prerequisites=None, alias_list=None):
         ''' subject_code (string)
             course_code (string or int)
             course_title (string)
             course_description (string)
             prerequisites [list of Course(s)]
+            alias_list [list of strings]
         '''
         self.subject_code = subject_code
         self.course_code = course_code
         self.course_key = str(subject_code) + " " + str(course_code)
         self.course_title = course_title
         self.course_description = course_description
+        self.prerequisites = []
         if prerequisites is None:
             prerequisites = []
-        self.prerequisites = []
         for course in prerequisites:
             self.add_prereq(course)
+        self.alias_list = []
+        if alias_list is None:
+            alias_list = []
+        for name in alias_list:
+            self.add_alias(name)
 
     def __str__(self):
         '''all we need is subject and course code for an identifier'''
         return str(self.subject_code) + " " + str(self.course_code)
+
+    def add_alias(self, course_id):
+        self.alias_list.append(course_id)
 
     def full_desc(self):
         ''' returning a string that gives the full course description '''
@@ -48,7 +58,8 @@ class Course:
     def add_prereq(self, x):
         try:
             if isinstance(x, Course):
-                self.prerequisites.append(x)
+                if str(self) != str(x):
+                    self.prerequisites.append(x)
             else:
                 raise ValueError
         except ValueError:
@@ -67,6 +78,8 @@ class Curriculum:
         if course_list is None:
             course_list = []
         self.course_dict = {}
+        # this will stay empty until generate_graph is called!
+        self.diGraph = nx.DiGraph()
         for course in course_list:
             self.add_course(course)
             for prereq in course.prerequisites:
@@ -80,25 +93,27 @@ class Curriculum:
         '''
         if isinstance(x, Course):
             # first, only add to dict if it's not already there...
-            if self.get_course(str(x)) is None:
+            key = str(x)
+            if self.get_course(key) is None:
                 # adding to dictionary
-                self.course_dict[str(x)] = x
+                self.course_dict[key] = x
                 # loop through prerequisites list
                 for prereq in x.prerequisites:
                     # recurison
                     self.add_course(prereq)
+
             else:
                 # replace the details only if it's longer (nonempty)
                 if len(x.course_title) > \
-                   len(self.course_dict[str(x)].course_title):
-                    self.course_dict[str(x)].course_title = x.course_title
+                   len(self.course_dict[key].course_title):
+                    self.course_dict[key].course_title = x.course_title
                 if len(x.course_description) > \
-                   len(self.course_dict[str(x)].course_description):
-                    self.course_dict[str(x)].course_description = \
+                   len(self.course_dict[key].course_description):
+                    self.course_dict[key].course_description = \
                                            x.course_description
                 if len(x.prerequisites) > \
-                   len(self.course_dict[str(x)].prerequisites):
-                    self.course_dict[str(x)].prerequisites = x.prerequisites
+                   len(self.course_dict[key].prerequisites):
+                    self.course_dict[key].prerequisites = x.prerequisites
         else:
             raise TypeError("tried to add an object that is \
                              not a Course to course_list")
@@ -118,6 +133,7 @@ class Curriculum:
             printbreak()
             print(self.course_dict[x].full_desc())
         printbreak()
+        self.generate_graph()
 
     def get_course(self, course_id=""):
         ''' tries to retreive a Course object using the key, returns None
@@ -128,7 +144,22 @@ class Curriculum:
             return None
 
     def generate_graph(self):
+        self.diGraph = nx.DiGraph()
         if self.num_courses() > 0:
-            pass
+            print("Generating graph for %d courses..." % self.num_courses())
+            for course in self.course_dict:
+                key = str(course)
+                # print("Adding class %s" % key)
+                self.diGraph.add_node(key)
+                for prereq in self.course_dict[key].prerequisites:
+                    # print("Adding link from %s to %s" % (str(prereq), key))
+                    self.diGraph.add_node(str(prereq))
+                    self.diGraph.add_edge(str(prereq), key)
+            print("Found %d number of prerequisite relationships" %
+                  self.diGraph.number_of_edges())
+            net = Network('768px', '1024px')
+            net.from_nx(self.diGraph)
+            net.show_buttons(filter_=['physics'])
+            net.show('nx.html')
         else:
             pass
