@@ -36,6 +36,13 @@ def course_list_from_string(somewords):
     return course_list
 
 
+def course_id_list_from_string(somewords):
+    ''' extracts list of courses from a string'''
+    course_ids = re.findall(course_search, somewords)
+    return [unicodedata.normalize('NFKD', course_id) for
+            course_id in course_ids]
+
+
 def main():
     '''A scraper for the case western MS Data Science program webpage'''
     # initiating an empty curriculum object
@@ -125,7 +132,7 @@ def main():
         if alias_match is not None:
             try:
                 # find every instance of a course in the remaining string
-                aliases = course_list_from_string(alias_match[0])
+                aliases = course_id_list_from_string(str(alias_match[0]))
             except IndexError:
                 pass
 
@@ -135,7 +142,7 @@ def main():
         # print(new_course)
 
     cw_curriculum.print_all()
-    cw_curriculum.generate_graph()
+    # cw_curriculum.generate_graph()
     file.close()
 
 

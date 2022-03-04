@@ -46,7 +46,13 @@ class Course:
 
     def full_desc(self):
         ''' returning a string that gives the full course description '''
-        temp = (str(self) + " " + str(self.course_title) +
+        aka = " "
+        if len(self.alias_list) > 0:
+            aka = " (aka "
+            for alias in self.alias_list:
+                aka += alias + ", "
+            aka = aka[:-2]+") "
+        temp = (str(self) + aka + str(self.course_title) +
                 "\nCourse Description: " + self.course_description)
         if len(self.prerequisites) > 0:
             ''' if the list of prerequists is not empty list them'''
@@ -73,23 +79,35 @@ class Curriculum:
     prerequisites'''
     def __init__(self, university="",
                  degree_name="", course_list=None):
+        '''
+        University and degree name are for display
+        course list is not really expected but you can initiate with a list of
+        Course objects.
+        '''
         self.university = university
         self.degree_name = degree_name
         if course_list is None:
             course_list = []
         self.course_dict = {}
+        self.alias_dict = {}
         # this will stay empty until generate_graph is called!
         self.diGraph = nx.DiGraph()
         for course in course_list:
             self.add_course(course)
             for prereq in course.prerequisites:
                 self.add_course(prereq)
+        # using set on alias_dict will yield unique classes.
+        # self.unique_classes = set(list(self.alias_dict.values()))
+        # for a directed graph
+        self.diGraph = nx.DiGraph()
 
     def add_course(self, x):
         '''
         Adds a Course object x to course_dict
         with str(x) as the key and iterates through all the prerequisites
         then also add them recursively to course_dict
+        So what happens when ECSE 132 and CSDS is the same course...
+        Currently adding both and keeping track of aliases
         '''
         if isinstance(x, Course):
             # first, only add to dict if it's not already there...
@@ -101,6 +119,19 @@ class Curriculum:
                 for prereq in x.prerequisites:
                     # recurison
                     self.add_course(prereq)
+            # importing alias relationships
+            if len(x.alias_list) > 0:
+                print("Found Aliases %s in Curriculum.add_course(x)" %
+                      x.alias_list)
+                # generating alias_dict[key] : [alias_1, alias_2, etc]
+                for alias in x.alias_list:
+                    try:
+                        self.alias_dict[alias] = \
+                           list(set(self.alias_dict[alias]) |
+                                set(x.alias_list))
+                    except KeyError:
+                        self.alias_dict[alias] = x.alias_list
+                # self.unique_classes = set(list(self.alias_dict.values()))
 
             else:
                 # replace the details only if it's longer (nonempty)
@@ -133,6 +164,7 @@ class Curriculum:
             printbreak()
             print(self.course_dict[x].full_desc())
         printbreak()
+        print(self.alias_dict)
         self.generate_graph()
 
     def get_course(self, course_id=""):
@@ -144,9 +176,11 @@ class Curriculum:
             return None
 
     def generate_graph(self):
-        self.diGraph = nx.DiGraph()
         if self.num_courses() > 0:
-            print("Generating graph for %d courses..." % self.num_courses())
+            print("Curriculum contains %d courses..." % self.num_courses())
+            # self.unique_classes = set(list(self.alias_dict.values()))
+            print("Found %d courses that represent %d unique courses" %
+                  len(set(tuple(self.alias_dict.values()))))
             for course in self.course_dict:
                 key = str(course)
                 # print("Adding class %s" % key)
