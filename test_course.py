@@ -8,7 +8,7 @@ from curriculum import Course
 # No parameters passed should give blink curriculum
 def test_init():
     x = Course()
-    assert (x.subject_code == "" and x.course_code == "" and
+    assert (x.subject_code == "NONE" and x.course_code == "0" and
             x.course_title == "" and
             x.course_description == "" and
             x.prerequisites == [])
@@ -26,10 +26,10 @@ def test_init_with_param():
             y.prerequisites == [x])
 
 
-# testing __str__() Should print subject code, course code then course title.
+# testing __str__() Should print subject code, course code.
 def test_str():
     x = Course("SUBJ", "1234", "Course Title")
-    assert str(x) == "SUBJ 1234 Course Title"
+    assert str(x) == "SUBJ 1234"
 
 
 # adding a prereq to the list

@@ -5,16 +5,16 @@ Unit tests for the curriculum class
 from curriculum import Course, Curriculum
 
 
-# testing blink init
 def test_init():
+    '''testing init'''
     test_curr = Curriculum()
     assert (test_curr.university == "" and
             test_curr.degree_name == "" and
             test_curr.course_dict == {})
 
 
-# testing initiating with given values
 def test_init_values():
+    '''testing initiating with given values'''
     x = Course()
     y = Course(course_code=4567, prerequisites=[x])
     test_curr = Curriculum("TAMS",
@@ -24,17 +24,19 @@ def test_init_values():
             test_curr.degree_name == "High School Diploma with Honors" and
             # course_dict will use a Course object as a key and list of prereqs
             # which will help with adding each key to a graph later.
-            test_curr.course_dict == {x: [], y: [x]})
+            test_curr.course_dict["NONE 0"] == x and
+            test_curr.course_dict["NONE 4567"] == y)
 
 
-# Scenario:
-# Course x is added with prereq a, prereq a is not in list.
-# expectation is a should also be added to the list.
 def test_prereq_recursion():
+    '''Scenario:
+       Course y is added with prereq x, prereq x is not in dict.
+       expectation is x should also be added to the dict.'''
     x = Course()
     y = Course(prerequisites=[x])
     test_curr = Curriculum(course_list=[y])
-    assert test_curr.course_dict == {x: [], y: [x]}
+    assert (str(test_curr.course_dict[str(x)]) == str(x) and
+            str(test_curr.course_dict[str(y)]) == str(y))
 
 
 def test_num_courses():
