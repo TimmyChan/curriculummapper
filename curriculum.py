@@ -121,8 +121,8 @@ class Curriculum:
                     self.add_course(prereq)
             # importing alias relationships
             if len(x.alias_list) > 0:
-                print("Found Aliases %s in Curriculum.add_course(x)" %
-                      x.alias_list)
+                # print("Found Aliases %s in Curriculum.add_course(x)" %
+                #      x.alias_list)
                 # generating alias_dict[key] : [alias_1, alias_2, etc]
                 for alias in x.alias_list:
                     try:
@@ -179,8 +179,8 @@ class Curriculum:
         if self.num_courses() > 0:
             print("Curriculum contains %d courses..." % self.num_courses())
             # self.unique_classes = set(list(self.alias_dict.values()))
-            print("Found %d courses that represent %d unique courses" %
-                  len(set(tuple(self.alias_dict.values()))))
+            # print("Found %d courses that represent %d unique courses" %
+            #     len(set(tuple(self.alias_dict.values()))))
             for course in self.course_dict:
                 key = str(course)
                 # print("Adding class %s" % key)
