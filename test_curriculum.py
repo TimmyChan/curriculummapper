@@ -6,7 +6,7 @@ from curriculum import Course, Curriculum
 
 
 def test_init():
-    '''testing init'''
+    '''blink init'''
     test_curr = Curriculum()
     assert (test_curr.university == "" and
             test_curr.degree_name == "" and
@@ -14,7 +14,7 @@ def test_init():
 
 
 def test_init_values():
-    '''testing initiating with given values'''
+    '''initiating with given values'''
     x = Course()
     y = Course(course_code=4567, prerequisites=[x])
     test_curr = Curriculum("TAMS",
@@ -29,9 +29,10 @@ def test_init_values():
 
 
 def test_prereq_recursion():
-    '''Scenario:
-       Course y is added with prereq x, prereq x is not in dict.
-       expectation is x should also be added to the dict.'''
+    '''
+    Course y is added with prereq x, prereq x is not in dict.
+    expectation is x should also be added to the dict.
+    '''
     x = Course()
     y = Course(prerequisites=[x])
     test_curr = Curriculum(course_list=[y])
@@ -39,10 +40,27 @@ def test_prereq_recursion():
             str(test_curr.course_dict[str(y)]) == str(y))
 
 
+def test_adding_repeated_course():
+    '''
+    when adding a course with less details the details should be preserved
+    '''
+    x = Course("DATA", "1234", "Real Analysis", "Get lubericant")
+    y = Course("DATA", "1234")
+    test_curr = Curriculum("TAMS", "High School Diploma with Honors")
+    test_curr.add_course(x)
+    test_curr.add_course(y)
+    assert (test_curr.course_dict["DATA 1234"].course_title ==
+            "Real Analysis" and
+            test_curr.course_dict["DATA 1234"].course_description ==
+            "Get lubericant" and
+            test_curr.num_courses() == 1)
+
+
 def test_num_courses():
+    ''' testing no courses, added courses with prereq '''
     x = Course()
     y = Course(course_code=4567, prerequisites=[x])
     test_curr = Curriculum()
-    test_curr2 = Curriculum(course_list=[x, y])
+    test_curr2 = Curriculum(course_list=[y])
     assert (test_curr.num_courses() == 0 and
             test_curr2.num_courses() == 2)

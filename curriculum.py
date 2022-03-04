@@ -73,15 +73,31 @@ class Curriculum:
                 self.add_course(prereq)
 
     def add_course(self, x):
+        '''
+        Adds a Course object x to course_dict
+        with str(x) as the key and iterates through all the prerequisites
+        then also add them recursively to course_dict
+        '''
         if isinstance(x, Course):
+            # first, only add to dict if it's not already there...
             if self.get_course(str(x)) is None:
+                # adding to dictionary
                 self.course_dict[str(x)] = x
+                # loop through prerequisites list
                 for prereq in x.prerequisites:
+                    # recurison
                     self.add_course(prereq)
             else:
-                if len(x.course_description) > len(self.course_dict[str(x)].course_description):  # noqa: E501
-                    self.course_dict[str(x)].course_description = x.course_description  # noqa: E501
-                if len(x.prerequisites) > len(self.course_dict[str(x)].prerequisites):  # noqa: E501
+                # replace the details only if it's longer (nonempty)
+                if len(x.course_title) > \
+                   len(self.course_dict[str(x)].course_title):
+                    self.course_dict[str(x)].course_title = x.course_title
+                if len(x.course_description) > \
+                   len(self.course_dict[str(x)].course_description):
+                    self.course_dict[str(x)].course_description = \
+                                           x.course_description
+                if len(x.prerequisites) > \
+                   len(self.course_dict[str(x)].prerequisites):
                     self.course_dict[str(x)].prerequisites = x.prerequisites
         else:
             raise TypeError("tried to add an object that is \
@@ -91,9 +107,11 @@ class Curriculum:
         return self.university + " " + self.degree_name + " Curriculum"
 
     def num_courses(self):
+        ''' returns total number of unique courses'''
         return len(self.course_dict)
 
     def print_all(self):
+        ''' purely for CLI debug use'''
         print(str(self))
         printbreak()
         for x in self.course_dict:
@@ -102,6 +120,8 @@ class Curriculum:
         printbreak()
 
     def get_course(self, course_id=""):
+        ''' tries to retreive a Course object using the key, returns None
+            if not in dict'''
         try:
             return self.course_dict[course_id]
         except KeyError:
