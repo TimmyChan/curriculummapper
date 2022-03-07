@@ -18,7 +18,7 @@ def test_init_values():
     x = Course()
     y = Course(course_code=4567, prerequisites=[x])
     test_curr = Curriculum("TAMS",
-                           "High School Diploma with Honors",
+                           "High School Diploma with Honors", "CSDS",
                            [x, y])
     assert (test_curr.university == "TAMS" and
             test_curr.degree_name == "High School Diploma with Honors" and
@@ -64,3 +64,15 @@ def test_num_courses():
     test_curr2 = Curriculum(course_list=[y])
     assert (test_curr.num_courses() == 0 and
             test_curr2.num_courses() == 2)
+
+
+def test_alias():
+    ''' testing alias dectection system '''
+    x = Course("CSDS", "1234", "Sound Engineering",
+               alias_list=["CSDS 1234", "YMCA 1234"])
+    y = Course("YMCA", "1234", "Sound Engineering",
+               alias_list=["YMCA 1234", "CSDS 1234"])
+    test_curr = Curriculum("TAMS", "High School Diploma with Honors", "CSDS")
+    test_curr.add_course(y)
+    test_curr.add_course(x)
+    assert str(test_curr.get_course("YMCA 1234")) == "CSDS 1234"

@@ -24,9 +24,12 @@ def course_id_to_list(course_id):
 
 
 def course_list_from_string(somewords):
-    ''' extracts list of courses from a string'''
+    '''
+    extracts list of courses from a string'
+    returns them as a list of Course objects
+    '''
     course_list = []
-    course_ids = re.findall(course_search, somewords)
+    course_ids = re.findall(course_search, str(somewords))
     for course_id in course_ids:
         # FOR SOME REASON \xa0 started appearing so clean it...
         norm_id = unicodedata.normalize('NFKD', course_id)
@@ -37,16 +40,21 @@ def course_list_from_string(somewords):
 
 
 def course_id_list_from_string(somewords):
-    ''' extracts list of courses from a string'''
+    '''
+    extracts list of courses from a string
+    returns the courses as a list of course_id.
+    '''
     course_ids = re.findall(course_search, somewords)
     return [unicodedata.normalize('NFKD', course_id) for
             course_id in course_ids]
 
 
 def main():
-    '''A scraper for the case western MS Data Science program webpage'''
+    '''
+    An example scraper for the case western MS Data Science program webpage
+    '''
     # initiating an empty curriculum object
-    cw_curriculum = Curriculum("Case Western", "MS in Data Science")
+    cw_curriculum = Curriculum("Case Western", "MS in Data Science", "CSDS")
     try:
         # try to open output.html, where we cache the soup
         with open("case_western.html", "r") as file:

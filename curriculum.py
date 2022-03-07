@@ -2,6 +2,7 @@
 
 from pyvis.network import Network
 import networkx as nx
+import re
 # import matplotlib.pyplot as plt
 
 
@@ -10,7 +11,7 @@ def printbreak(): print("----------")
 
 class Course:
     '''Course object to handle course data'''
-    def __init__(self,  subject_code="NONE", course_code="0",
+    def __init__(self, subject_code="NONE", course_code="0",
                  course_title="",
                  course_description="",
                  prerequisites=None, alias_list=None):
@@ -39,7 +40,7 @@ class Course:
 
     def __str__(self):
         '''all we need is subject and course code for an identifier'''
-        return str(self.subject_code) + " " + str(self.course_code)
+        return self.course_key
 
     def add_alias(self, course_id):
         self.alias_list.append(course_id)
@@ -64,8 +65,7 @@ class Course:
     def add_prereq(self, x):
         try:
             if isinstance(x, Course):
-                if str(self) != str(x):
-                    self.prerequisites.append(x)
+                self.prerequisites.append(x)
             else:
                 raise ValueError
         except ValueError:
@@ -78,7 +78,7 @@ class Curriculum:
     '''curriculum object to handle courses and generating a graph of
     prerequisites'''
     def __init__(self, university="",
-                 degree_name="", course_list=None):
+                 degree_name="", preferred_subject_code="", course_list=None):
         '''
         University and degree name are for display
         course list is not really expected but you can initiate with a list of
@@ -86,6 +86,7 @@ class Curriculum:
         '''
         self.university = university
         self.degree_name = degree_name
+        self.preferred_subject_code = preferred_subject_code
         if course_list is None:
             course_list = []
         self.course_dict = {}
@@ -101,6 +102,15 @@ class Curriculum:
         # for a directed graph
         self.diGraph = nx.DiGraph()
 
+    def add_alias_group(self, alias_group=[]):
+        for alias in alias_group:
+            try:
+                self.alias_dict[alias] = \
+                    list(set(self.alias_dict[alias]) |
+                         set(alias_group))
+            except KeyError:
+                self.alias_dict[alias] = alias_group
+
     def add_course(self, x):
         '''
         Adds a Course object x to course_dict
@@ -110,41 +120,43 @@ class Curriculum:
         Currently adding both and keeping track of aliases
         '''
         if isinstance(x, Course):
+            # print("Adding %s" % str(x))
             # first, only add to dict if it's not already there...
             key = str(x)
-            if self.get_course(key) is None:
+            if self.course_dict.get(key) is None:
                 # adding to dictionary
                 self.course_dict[key] = x
-                # loop through prerequisites list
-                for prereq in x.prerequisites:
-                    # recurison
-                    self.add_course(prereq)
-            # importing alias relationships
-            if len(x.alias_list) > 0:
-                # print("Found Aliases %s in Curriculum.add_course(x)" %
-                #      x.alias_list)
-                # generating alias_dict[key] : [alias_1, alias_2, etc]
-                for alias in x.alias_list:
-                    try:
-                        self.alias_dict[alias] = \
-                           list(set(self.alias_dict[alias]) |
-                                set(x.alias_list))
-                    except KeyError:
-                        self.alias_dict[alias] = x.alias_list
-                # self.unique_classes = set(list(self.alias_dict.values()))
 
+                # importing alias relationships
+                if len(x.alias_list) > 0:
+                    # print("Found Aliases %s in Curriculum.add_course(x)" %
+                    #      x.alias_list)
+                    # generating alias_dict[key] : [alias_1, alias_2, etc]
+                    self.add_alias_group(x.alias_list)
             else:
                 # replace the details only if it's longer (nonempty)
-                if len(x.course_title) > \
+                if len(x.course_title) >= \
                    len(self.course_dict[key].course_title):
                     self.course_dict[key].course_title = x.course_title
-                if len(x.course_description) > \
+                if len(x.course_description) >= \
                    len(self.course_dict[key].course_description):
                     self.course_dict[key].course_description = \
                                            x.course_description
-                if len(x.prerequisites) > \
+                if len(x.prerequisites) >= \
                    len(self.course_dict[key].prerequisites):
                     self.course_dict[key].prerequisites = x.prerequisites
+                if len(x.alias_list) >= len(self.course_dict[key].alias_list):
+                    self.course_dict[key].alias_list = x.alias_list
+                    self.add_alias_group(x.alias_list)
+            # loop through prerequisites list
+            for prereq in x.prerequisites:
+                # recurison
+                # print("Found prereq %s, adding it" % str(prereq))
+                self.add_course(prereq)
+
+            for alias in x.alias_list:
+                # print("Found alias %s adding it" % alias)
+                self.add_course(Course(alias.split()[0], alias.split()[1]))
         else:
             raise TypeError("tried to add an object that is \
                              not a Course to course_list")
@@ -167,33 +179,48 @@ class Curriculum:
         print(self.alias_dict)
         self.generate_graph()
 
-    def get_course(self, course_id=""):
-        ''' tries to retreive a Course object using the key, returns None
-            if not in dict'''
-        try:
+    def get_course(self, course_id="", ):
+        ''' tries to retreive a Course object using the key (subj_code course_code)
+            scans thru alias list and returns one.
+            returns None if not in dict
+            '''
+        # print("\tseeking %s" % course_id)
+        if self.alias_dict.get(course_id) is not None:
+            # print("\t\tAlias found")
+            for alias in self.alias_dict[course_id]:
+                if re.match(self.preferred_subject_code, alias):
+                    # print("returning %s" % self.course_dict[alias])
+                    return self.course_dict[alias]
+        else:
             return self.course_dict[course_id]
-        except KeyError:
-            return None
 
     def generate_graph(self):
+        '''
+        Visualizing the curriculum using networkx.
+        '''
+        for alias in self.alias_dict:
+            self.alias_dict[alias].sort()
         if self.num_courses() > 0:
             print("Curriculum contains %d courses..." % self.num_courses())
-            # self.unique_classes = set(list(self.alias_dict.values()))
-            # print("Found %d courses that represent %d unique courses" %
-            #     len(set(tuple(self.alias_dict.values()))))
-            for course in self.course_dict:
-                key = str(course)
-                # print("Adding class %s" % key)
-                self.diGraph.add_node(key)
-                for prereq in self.course_dict[key].prerequisites:
-                    # print("Adding link from %s to %s" % (str(prereq), key))
-                    self.diGraph.add_node(str(prereq))
-                    self.diGraph.add_edge(str(prereq), key)
+            # Looping through every course:
+            for course in self.course_dict.values():
+                course_key = str(self.get_course(str(course)))
+                # print("Adding class %s as node" % course_key)
+                self.diGraph.add_node(course_key)
+                if len(course.prerequisites) > 0:
+                    for prereq in course.prerequisites:
+                        prereq_key = str(self.get_course(str(prereq)))
+                        # Adding node prereq_key
+                        self.diGraph.add_node(prereq_key)
+                        # Adding edge (prereq_key => course_key)
+                        self.diGraph.add_edge(prereq_key, course_key)
+            print("After scanning alias lists, found %d unique classes" %
+                  self.diGraph.number_of_nodes())
             print("Found %d number of prerequisite relationships" %
                   self.diGraph.number_of_edges())
             net = Network('768px', '1024px')
             net.from_nx(self.diGraph)
-            net.show_buttons(filter_=['physics'])
-            net.show('nx.html')
+            net.show_buttons()
+            net.show("%s.html" % str(self))
         else:
-            pass
+            print("Add courses first!")
