@@ -1,5 +1,6 @@
 #! python3
 
+
 import re
 import requests
 import unicodedata
@@ -49,22 +50,32 @@ def course_id_list_from_string(somewords):
             course_id in course_ids]
 
 
+def polite_crawler(filename, url):
+    ''' saves a copy of the html to not overping '''
+    try:
+        # try to open html, where we cache the soup
+        with open("soupfile_"+filename, "r") as file:
+            soup = BeautifulSoup(file, "lxml")
+            return soup
+    except Exception:
+        res = requests.get(url)
+        # using lxml because of bs4 doc
+        soup = BeautifulSoup(res.content, "lxml")
+        with open("soupfile_"+filename, "w") as file:
+            file.write(str(soup))
+            return soup
+
+
 def main():
     '''
     An example scraper for the case western MS Data Science program webpage
     '''
     # initiating an empty curriculum object
-    cw_curriculum = Curriculum("Case Western", "MS in Data Science", "CSDS")
-    try:
-        # try to open output.html, where we cache the soup
-        with open("case_western.html", "r") as file:
-            soup = BeautifulSoup(file, "lxml")
-    except Exception:
-        res = requests.get("https://bulletin.case.edu/schoolofengineering/compdatasci/")  # noqa: E501
-        # using lxml because of bs4 doc
-        soup = BeautifulSoup(res.content, "lxml")
-        with open("case_western.html", "w") as file:
-            file.write(str(soup))
+    school_name = "Case Western"
+    degree_name = "MS in Data Science"
+    url = "https://bulletin.case.edu/schoolofengineering/compdatasci/"
+    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS")
+    soup = polite_crawler(str(cwru_curriculum)+".html", url)
 
     # Getting prereq names from course tables first
     print("Scraping tables...")
@@ -77,9 +88,9 @@ def main():
                                str(row_tag.findChildren("a")[0].string))[0]
                 subject_code, course_code = course_id_to_list(course_id)
                 course_title = str(cells[1].string)
-                cw_curriculum.add_course(Course(subject_code,
-                                                course_code,
-                                                course_title))
+                cwru_curriculum.add_course(Course(subject_code,
+                                                  course_code,
+                                                  course_title))
             except Exception:
                 pass
 
@@ -144,14 +155,13 @@ def main():
             except IndexError:
                 pass
 
-        cw_curriculum.add_course(Course(subject_code, course_code,
-                                        course_title, course_desc,
-                                        prereqs, aliases))
+        cwru_curriculum.add_course(Course(subject_code, course_code,
+                                          course_title, course_desc,
+                                          prereqs, aliases))
         # print(new_course)
+    cwru_curriculum.print_all(notebook=True)
 
-    cw_curriculum.print_all()
-    # cw_curriculum.generate_graph()
-    file.close()
+    cwru_curriculum.generate_graph()
 
 
 if __name__ == "__main__":

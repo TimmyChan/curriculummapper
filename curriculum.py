@@ -168,7 +168,7 @@ class Curriculum:
         ''' returns total number of unique courses'''
         return len(self.course_dict)
 
-    def print_all(self):
+    def print_all(self, notebook=False):
         ''' purely for CLI debug use'''
         print(str(self))
         printbreak()
@@ -177,7 +177,7 @@ class Curriculum:
             print(self.course_dict[x].full_desc())
         printbreak()
         # print(self.alias_dict)
-        self.generate_graph()
+        self.generate_graph(notebook)
 
     def get_course(self, course_id="", ):
         ''' tries to retreive a Course object using the key (subj_code course_code)
@@ -194,7 +194,7 @@ class Curriculum:
         else:
             return self.course_dict[course_id]
 
-    def generate_graph(self):
+    def generate_graph(self, notebook=False):
         '''
         Visualizing the curriculum using networkx.
         '''
@@ -207,26 +207,72 @@ class Curriculum:
             for course in self.course_dict.values():
                 course_key = str(self.get_course(str(course)))
                 # print("Adding class %s as node" % course_key)
-                self.diGraph.add_node(course_key)
+
+                self.diGraph.add_node(course_key,
+                                      label=course_key,
+                                      title=self.course_dict[course_key]
+                                      .course_title,
+                                      group=(1
+                                             if re.match(self.preferred_subject_code, course_key)  # noqa: E501
+                                             else 0))
                 if len(course.prerequisites) > 0:
                     for prereq in course.prerequisites:
                         prereq_key = str(self.get_course(str(prereq)))
                         # Adding node prereq_key
-                        self.diGraph.add_node(prereq_key)
+                        self.diGraph.add_node(prereq_key,
+                                              label=prereq_key,
+                                              title=self.course_dict[prereq_key]  # noqa: E501
+                                              .course_title,
+                                              group=(1 if
+                                                     re.match(self.preferred_subject_code, prereq_key)  # noqa: E501
+                                                     else 0))
                         # Adding edge (prereq_key => course_key)
                         self.diGraph.add_edge(prereq_key, course_key)
+            # DiGraph populated.
+
             print("After scanning alias lists, found %d unique classes" %
                   self.diGraph.number_of_nodes())
             print("Found %d number of prerequisite relationships" %
                   self.diGraph.number_of_edges())
 
+            # formatting graph
+            for node in self.diGraph:
+                # setting the size of each node to depend
+                # on the in_degree
+                self.diGraph.nodes[node]['size'] = \
+                    5*(self.diGraph.in_degree(node) + 1)
 
 #            for node in self.diGraph.nodes:
 #                self.digraph.nodes[node]
-
-            net = Network('768px', '1024px')
+            if notebook:
+                net = Network(notebook=True)
+            else:
+                net = Network('768px', '1024px')
             net.from_nx(self.diGraph)
-            net.show_buttons()
-            net.show("%s.html" % str(self))
+            net.set_options('''
+                var options = {
+                  "edges": {
+                    "arrows": {
+                      "to": {
+                        "enabled": true
+                      }
+                    },
+                    "color": {
+                      "inherit": true
+                    },
+                    "smooth": false
+                  },
+                  "physics": {
+                    "forceAtlas2Based": {
+                      "springLength": 100,
+                      "avoidOverlap": 1
+                    },
+                    "minVelocity": 0.75,
+                    "solver": "forceAtlas2Based"
+                  }
+                }
+                ''')
+            # net.show_buttons(filter_=['physics'])
+            net.show("%s.html" % self.preferred_subject_code)
         else:
             print("Add courses first!")
