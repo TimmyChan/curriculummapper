@@ -194,7 +194,7 @@ class Curriculum:
         else:
             return self.course_dict[course_id]
 
-    def generate_graph(self, notebook=False):
+    def generate_graph(self, notebook=False, emphasize_in_degree=False):
         '''
         Visualizing the curriculum using networkx.
         '''
@@ -240,7 +240,9 @@ class Curriculum:
                 # setting the size of each node to depend
                 # on the in_degree
                 self.diGraph.nodes[node]['size'] = \
-                    5*(self.diGraph.in_degree(node) + 1)
+                        (5*(self.diGraph.in_degree(node) + 1)
+                            if emphasize_in_degree else
+                         5*(self.diGraph.out_degree(node) + 1))
 
 #            for node in self.diGraph.nodes:
 #                self.digraph.nodes[node]
