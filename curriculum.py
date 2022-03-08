@@ -19,7 +19,7 @@ class Course:
             course_code (string or int)
             course_title (string)
             course_description (string)
-            prerequisites [list of Course(s)]
+            prerequisites [list of Course(s)] somewhat like a linked list
             alias_list [list of strings]
         '''
         self.subject_code = subject_code
@@ -81,7 +81,7 @@ class Curriculum:
                  degree_name="", preferred_subject_code="", course_list=None):
         '''
         University and degree name are for display
-        course list is not really expected but you can initiate with a list of
+        course_list is not really expected but you can initiate with a list of
         Course objects.
         '''
         self.university = university
@@ -176,7 +176,7 @@ class Curriculum:
             printbreak()
             print(self.course_dict[x].full_desc())
         printbreak()
-        print(self.alias_dict)
+        # print(self.alias_dict)
         self.generate_graph()
 
     def get_course(self, course_id="", ):
@@ -201,7 +201,8 @@ class Curriculum:
         for alias in self.alias_dict:
             self.alias_dict[alias].sort()
         if self.num_courses() > 0:
-            print("Curriculum contains %d courses..." % self.num_courses())
+            print("Course Inventory contains %d courses..." %
+                  self.num_courses())
             # Looping through every course:
             for course in self.course_dict.values():
                 course_key = str(self.get_course(str(course)))
@@ -218,6 +219,11 @@ class Curriculum:
                   self.diGraph.number_of_nodes())
             print("Found %d number of prerequisite relationships" %
                   self.diGraph.number_of_edges())
+
+
+#            for node in self.diGraph.nodes:
+#                self.digraph.nodes[node]
+
             net = Network('768px', '1024px')
             net.from_nx(self.diGraph)
             net.show_buttons()
