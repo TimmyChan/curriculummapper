@@ -1,9 +1,11 @@
 #! python3
 
+
 from pyvis.network import Network
 import networkx as nx
 import re
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib.colors
 
 
 def printbreak(): print("----------")
@@ -16,7 +18,7 @@ class Course:
                  course_description="",
                  prerequisites=None, alias_list=None):
         ''' subject_code (string)
-            course_code (string or int)
+            course_code (int)
             course_title (string)
             course_description (string)
             prerequisites [list of Course(s)] somewhat like a linked list
@@ -72,6 +74,15 @@ class Course:
             print("Only course objects accepted in the prerequisites list.")
             # just ignore if x is something that isn't a course
             pass
+
+    def get_course_code_int(self):
+        if isinstance(self.course_code, int):
+            return self.course_code
+        else:
+            try:
+                return int(re.findall(r'([0-9]+)', self.course_code)[0])
+            except Exception:
+                return int(self.course_code)
 
 
 class Curriculum:
@@ -172,12 +183,15 @@ class Curriculum:
         ''' purely for CLI debug use'''
         print(str(self))
         printbreak()
-        for x in self.course_dict:
+        print("Course Inventory contains %d courses..." %
+              self.num_courses())
+        if self.num_courses() > 0:
+            for x in self.course_dict:
+                printbreak()
+                print(self.course_dict[x].full_desc())
             printbreak()
-            print(self.course_dict[x].full_desc())
-        printbreak()
-        # print(self.alias_dict)
-        self.generate_graph(notebook)
+            # print(self.alias_dict)
+            self.print_graph(notebook)
 
     def get_course(self, course_id="", ):
         ''' tries to retreive a Course object using the key (subj_code course_code)
@@ -194,7 +208,7 @@ class Curriculum:
         else:
             return self.course_dict[course_id]
 
-    def generate_graph(self, notebook=False, emphasize_in_degree=False):
+    def generate_graph(self, emphasize_in_degree=False):
         '''
         Visualizing the curriculum using networkx.
         '''
@@ -210,10 +224,9 @@ class Curriculum:
 
                 self.diGraph.add_node(course_key,
                                       label=course_key,
-                                      title=self.course_dict[course_key]
-                                      .course_title,
-                                      group=(1
-                                             if re.match(self.preferred_subject_code, course_key)  # noqa: E501
+                                      title=self.course_dict[course_key].course_title,  # noqa: E501,
+                                      group=(1 if
+                                             re.match(self.preferred_subject_code, course_key)  # noqa: E501
                                              else 0))
                 if len(course.prerequisites) > 0:
                     for prereq in course.prerequisites:
@@ -221,60 +234,74 @@ class Curriculum:
                         # Adding node prereq_key
                         self.diGraph.add_node(prereq_key,
                                               label=prereq_key,
-                                              title=self.course_dict[prereq_key]  # noqa: E501
-                                              .course_title,
+                                              title=self.course_dict[prereq_key].course_title,  # noqa: E501,
                                               group=(1 if
                                                      re.match(self.preferred_subject_code, prereq_key)  # noqa: E501
                                                      else 0))
                         # Adding edge (prereq_key => course_key)
                         self.diGraph.add_edge(prereq_key, course_key)
             # DiGraph populated.
-
-            print("After scanning alias lists, found %d unique classes" %
-                  self.diGraph.number_of_nodes())
-            print("Found %d number of prerequisite relationships" %
-                  self.diGraph.number_of_edges())
-
-            # formatting graph
+            preferred_nodes = [x for x, y in self.diGraph.nodes(data=True)
+                               if y['group'] == 1]
+            course_ints = [self.course_dict[node].get_course_code_int() for
+                           node in preferred_nodes]
+            color_min, color_max = min(course_ints), max(course_ints)
+            # print(color_min, color_max)
             for node in self.diGraph:
                 # setting the size of each node to depend
-                # on the in_degree
+                # on the in_degree or out degree based on emphasize_in_degree
                 self.diGraph.nodes[node]['size'] = \
-                        (5*(self.diGraph.in_degree(node) + 1)
-                            if emphasize_in_degree else
-                         5*(self.diGraph.out_degree(node) + 1))
-
-#            for node in self.diGraph.nodes:
-#                self.digraph.nodes[node]
-            if notebook:
-                net = Network(notebook=True)
-            else:
-                net = Network('768px', '1024px')
-            net.from_nx(self.diGraph)
-            net.set_options('''
-                var options = {
-                  "edges": {
-                    "arrows": {
-                      "to": {
-                        "enabled": true
-                      }
-                    },
-                    "color": {
-                      "inherit": true
-                    },
-                    "smooth": false
-                  },
-                  "physics": {
-                    "forceAtlas2Based": {
-                      "springLength": 100,
-                      "avoidOverlap": 1
-                    },
-                    "minVelocity": 0.75,
-                    "solver": "forceAtlas2Based"
-                  }
-                }
-                ''')
-            # net.show_buttons(filter_=['physics'])
-            net.show("%s.html" % self.preferred_subject_code)
+                    (2*(self.diGraph.in_degree(node) + 5)
+                     if emphasize_in_degree else
+                     2*(self.diGraph.out_degree(node) + 5))
+                norm = matplotlib.colors.Normalize(color_min, color_max)
+                if self.diGraph.nodes[node]['group'] == 1:
+                    cmap = plt.cm.Blues
+                else:
+                    cmap = plt.cm.Greys
+                # 1) get the course #
+                # 2) normalize from
+                self.diGraph.nodes[node]['color'] = \
+                    matplotlib.colors.rgb2hex(cmap(norm(
+                        self.course_dict[node].get_course_code_int())))
         else:
             print("Add courses first!")
+
+    def get_graph(self):
+        self.generate_graph()
+        return self.diGraph
+
+    def print_graph(self, notebook=False, emphasize_in_degree=False):
+        self.generate_graph(emphasize_in_degree=emphasize_in_degree)
+
+        if notebook:
+            net = Network(notebook=True)
+        else:
+            net = Network('768px', '1024px')
+        net.from_nx(self.diGraph)
+        net.set_options('''
+            var options = {
+              "edges": {
+                "arrows": {
+                  "to": {
+                    "enabled": true
+                  }
+                },
+                "color": {
+                  "inherit": true
+                },
+                "smooth": false
+              },
+              "physics": {
+                "forceAtlas2Based": {
+                  "springLength": 100,
+                  "avoidOverlap": 1
+                },
+                "minVelocity": 0.75,
+                "solver": "forceAtlas2Based"
+              }
+            }
+            ''')
+        # net.show_buttons(filter_=['physics'])
+        # net.enable_physics(True)
+        net.show("%s.html" % self.preferred_subject_code)

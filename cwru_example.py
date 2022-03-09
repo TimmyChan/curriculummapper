@@ -1,6 +1,6 @@
 #! python3
 
-
+import os
 import re
 import requests
 import unicodedata
@@ -53,15 +53,19 @@ def course_id_list_from_string(somewords):
 def polite_crawler(filename, url):
     ''' saves a copy of the html to not overping '''
     try:
+        os.makedirs("canned soup")
+    except Exception:
+        pass
+    try:
         # try to open html, where we cache the soup
-        with open("soupfile_"+filename, "r") as file:
+        with open("canned_soup/"+filename, "r") as file:
             soup = BeautifulSoup(file, "lxml")
             return soup
     except Exception:
         res = requests.get(url)
         # using lxml because of bs4 doc
         soup = BeautifulSoup(res.content, "lxml")
-        with open("soupfile_"+filename, "w") as file:
+        with open("canned_soup/"+filename, "w") as file:
             file.write(str(soup))
             return soup
 
@@ -159,9 +163,9 @@ def main():
                                           course_title, course_desc,
                                           prereqs, aliases))
         # print(new_course)
-    cwru_curriculum.print_all(notebook=True)
-
-    cwru_curriculum.generate_graph()
+    # cwru_curriculum.print_graph(notebook=True)
+    cwru_curriculum.print_graph()
+    return cwru_curriculum
 
 
 if __name__ == "__main__":
