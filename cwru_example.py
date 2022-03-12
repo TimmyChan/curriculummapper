@@ -53,7 +53,7 @@ def course_id_list_from_string(somewords):
 def polite_crawler(filename, url):
     ''' saves a copy of the html to not overping '''
     try:
-        os.makedirs("canned soup")
+        os.makedirs("canned_soup")
     except Exception:
         pass
     try:
@@ -78,7 +78,7 @@ def main():
     school_name = "Case Western"
     degree_name = "MS in Data Science"
     url = "https://bulletin.case.edu/schoolofengineering/compdatasci/"
-    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS")
+    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS", URL=url)
     soup = polite_crawler(str(cwru_curriculum)+".html", url)
 
     # Getting prereq names from course tables first
@@ -164,7 +164,7 @@ def main():
                                           prereqs, aliases))
         # print(new_course)
     # cwru_curriculum.print_graph(notebook=True)
-    cwru_curriculum.print_graph()
+    cwru_curriculum.print_all()
     return cwru_curriculum
 
 
