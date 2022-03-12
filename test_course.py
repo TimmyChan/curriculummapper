@@ -32,7 +32,7 @@ def test_alias():
     x = Course("CSDS", 1234, "Yo Mama",
                "Needs her own zipcode")
     x.add_alias("ABCD 1234")
-    assert x.alias_set == set(["CSDS 1234", "ABCD 1234"])
+    assert x.alias_set == set(["ABCD 1234"])
 
 
 # testing __str__() Should print subject code, course code.

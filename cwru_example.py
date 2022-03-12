@@ -12,10 +12,11 @@ def main():
     # initiating an empty curriculum object
     school_name = "Case Western"
     degree_name = "MS in Data Science"
-    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS", colored_subjects=["ECSE", "MATH"])
+    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS",
+                                 colored_subjects=["ECSE", "MATH"])
     url_list = ["https://bulletin.case.edu/schoolofengineering/compdatasci/",
-                "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",
-                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",
+                "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",  # noqa: E501
+                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  # noqa: E501
                 "https://bulletin.case.edu/course-descriptions/dsci/",
                 "https://bulletin.case.edu/course-descriptions/engr/",
                 "https://bulletin.case.edu/course-descriptions/buai/",
@@ -30,7 +31,8 @@ def main():
                 cells = row_tag.findChildren("td")
                 try:
                     course_title = str(cells[1].string)
-                    course_id = cwru_curriculum.course_id_list_from_string(str(row_tag.findChildren("a")[0].string))[0] 
+                    course_id = cwru_curriculum.course_id_list_from_string(
+                        str(row_tag.findChildren("a")[0].string))[0]
                     '''
                     subject_code, course_code = course_id_to_list(course_id)
                     cwru_curriculum.add_course(Course(subject_code,
@@ -38,11 +40,12 @@ def main():
                                                       course_title))
                     '''
                     cwru_curriculum.add_courses_from_string(course_id)
-                    cwru_curriculum.course_dict[course_id].append_course_title(course_title)
+                    cwru_curriculum.course_dict[course_id].append_course_title(
+                        course_title)
                 except Exception:
                     pass
 
-        # inpecting the source reveals that each course is neatly in div blocks of
+        # inpecting the source reveals that each course is neatly in div blocks
         # courseblock class. Iterating through each courseblock
         print("Scraping courseblocks...")
         for course_tag in soup.find_all("div", {"class": "courseblock"}):
@@ -53,10 +56,12 @@ def main():
             print(blocktitle_string)
             # search for the first instance in blocktitle_string
             # that matches course_search
-            course_id = cwru_curriculum.course_id_list_from_string(blocktitle_string)[0]
-            subject_code, course_code = cwru_curriculum.course_id_to_list(course_id)
-            # apparently some universitys have letters in their course codes best
-            # to leave as string. Remove the spaces and periods tho.
+            course_id = cwru_curriculum.course_id_list_from_string(
+                blocktitle_string)[0]
+            subject_code, course_code = cwru_curriculum.course_id_to_list(
+                course_id)
+            # apparently some universitys have letters in their course codes
+            # so leave as string. Remove the spaces and periods tho.
             # course title
             title_search = re.compile(r"(?<=\s\s)([^!]*)(?=\.\s\s)")
             title_match = re.findall(title_search, blocktitle_string)
@@ -86,7 +91,8 @@ def main():
             if prereq_match is not None:
                 try:
                     # find every instance of a course in the remaining string
-                    prereqs = cwru_curriculum.course_list_from_string(prereq_match[0])
+                    prereqs = cwru_curriculum.course_list_from_string(
+                        prereq_match[0])
                 except IndexError:
                     # print("No prereqs.")
                     pass
@@ -98,10 +104,13 @@ def main():
             if alias_match is not None:
                 try:
                     # find every instance of a course in the remaining string
-                    aliases = cwru_curriculum.course_id_list_from_string(str(alias_match[0]))
+                    aliases = cwru_curriculum.course_id_list_from_string(
+                        str(alias_match[0]))
                 except IndexError:
                     pass
-            cwru_curriculum.add_course(Course(subject_code, course_code, course_title, course_description, prereqs, aliases))
+            cwru_curriculum.add_course(Course(subject_code, course_code,
+                                              course_title, course_description,
+                                              prereqs, aliases))
 
     cwru_curriculum.print_all()
 

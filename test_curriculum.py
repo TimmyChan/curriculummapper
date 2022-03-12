@@ -69,9 +69,9 @@ def test_num_courses():
 def test_alias():
     ''' testing alias dectection system '''
     x = Course("CSDS", "1234", "Sound Engineering",
-               alias_list=["YMCA 1234"])
+               alias_list=["CSDS 1234", "YMCA 1234"])
     y = Course("YMCA", "1234", "Sound Engineering",
-               alias_list=["CSDS 1234"])
+               alias_list=["CSDS 1234", "YMCA 1234"])
     test_curr = Curriculum("TAMS", "High School Diploma with Honors", "CSDS")
     test_curr.add_course(y)
     test_curr.add_course(x)

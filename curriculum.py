@@ -58,7 +58,8 @@ class Course:
     def __eq__(self, other):
         ''' needed to evaulate equality for set operations '''
         if isinstance(other, Course):
-            return ((self.subject_code == other.subject_code) and (self.course_code == other.course_code))
+            return ((self.subject_code == other.subject_code) and
+                    (self.course_code == other.course_code))
         else:
             return False
 
@@ -156,14 +157,14 @@ class Curriculum:
     def __init__(self, university="",
                  degree_name="", preferred_subject_code="", course_list=None,
                  URL=None, data_directory="canned_soup",
-                 # RegEx: course id is four capitals with space then three numbers
-                 # with a possible letter after the numbers then stop with a non-word
-                 course_search = r"([A-Z]{4}\s\d{3}\w*)",
-                 # get the subject code which is always the first four capitals
-                 # preceeding a space, 3 digits and a possible word character
-                 subject_search = r"([A-Z]{4})",
-                 # get the course_code which is the letters following the digits
-                 code_search = r"(\d{3}\w*)", colored_subjects=None
+                 # RegEx: course id is four capitals with space then three
+                 # numbers with a possible letter after the numbers then stop
+                 # with a non-word
+                 course_search=r"([A-Z]{4}\s\d{3}\w*)",
+                 # get the subject code which is by default first 4 capitals
+                 subject_search=r"([A-Z]{4})",
+                 # get the course_code which are the digits
+                 code_search=r"(\d{3}\w*)", colored_subjects=None
                  ):
         '''
         university (string)
@@ -188,7 +189,7 @@ class Curriculum:
             course_list = []
         self.course_dict = {}
         self.url = ""
-        self.url_list = [] # for history
+        self.url_list = []
         if URL is not None:
             self.set_url(URL)
 
@@ -400,7 +401,6 @@ class Curriculum:
                 # DEBUG print("Adding class %s as node" % course_key)
                 color_group = 0
                 try:
-                    #print("\t in group %d" % self.colored_subjects.index(subject_code))
                     color_group = self.colored_subjects.index(subject_code) + 1
                 except Exception:
                     pass
@@ -414,15 +414,13 @@ class Curriculum:
                         prereq_true_self = self.get_course(str(prereq))
                         prereq_key = str(prereq_true_self)
                         subject_code = prereq_true_self.subject_code
-                        # print("Adding %s as prereq of %s" % (str(prereq_true_self), course_key))
                         # Adding node prereq_key
                         color_group = 0
                         try:
-                            # print("\t in group %d" % self.colored_subjects.index(subject_code))
-                            color_group = self.colored_subjects.index(subject_code) +1
+                            color_group = 1 + self.colored_subjects.index(
+                                  subject_code)
                         except Exception:
                             pass
-
                         self.diGraph.add_node(str(prereq_true_self),
                                               label=str(prereq_true_self),
                                               title=prereq_true_self.full_desc(),  # noqa: E501,
@@ -435,7 +433,10 @@ class Curriculum:
             course_ints = [self.course_dict[node].get_course_code_int() for
                            node in self.diGraph.nodes]
             course_ints = np.array(course_ints)
-            course_ints = course_ints[(course_ints > np.quantile(course_ints, 0.1)) & (course_ints < np.quantile(course_ints,0.9))].tolist()
+            course_ints = course_ints[(course_ints >
+                                       np.quantile(course_ints, 0.1)) &
+                                      (course_ints <
+                                       np.quantile(course_ints, 0.9))].tolist()
             color_min = min(course_ints) / 2
             color_max = max(course_ints)
             # print(color_min, color_max)
@@ -502,7 +503,6 @@ class Curriculum:
         # net.show_buttons(filter_=True)
         net.show("%s.html" % self.preferred_subject_code)
         net.show_buttons(filter_=['physics'])
-
 
     def set_url(self, new_url):
         if isinstance(new_url, str):
