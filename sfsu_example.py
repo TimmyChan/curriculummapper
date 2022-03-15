@@ -39,17 +39,24 @@ def main():
             # print("Course_ID: %s %s \nCourse Title: %s" %
             #       (subject_code, course_code, course_title.split("(")[0]))
             try:
-                courseblockextra_tag = course_tag.find("p", {"class": "courseblockextra"})
+                courseblockextra_tag = \
+                    course_tag.find("p", {"class": "courseblockextra"})
             # For some reason the course description is the text behind the
             # courseblockextra outside of any tags >.>
                 course_description = courseblockextra_tag.next_sibling
-                prereqs = courseblockextra_tag.find_all("a", {"class": "bubblelink code"})
+                prereqs = \
+                    courseblockextra_tag.find_all("a",
+                                                  {"class": "bubblelink code"})
                 # normalize the strings
-                prereqs = [unicodedata.normalize('NFKD', p.string) for p in prereqs]
-                prereqs = [Course(p.split()[0], p.split()[1]) for p in prereqs]
+                prereqs = \
+                    [unicodedata.normalize('NFKD', p.string) for p in prereqs]
+                prereqs = \
+                    [Course(p.split()[0], p.split()[1]) for p in prereqs]
             except Exception:
-                courseblockdesc = course_tag.find("p", {"class": "courseblockdesc"})
-                course_description = unicodedata.normalize('NFKD', str(courseblockdesc.string))
+                courseblockdesc = \
+                    course_tag.find("p", {"class": "courseblockdesc"})
+                course_description = \
+                    unicodedata.normalize('NFKD', str(courseblockdesc.string))
 
             c = [child for child in course_tag.children]
             aliases = []
@@ -57,8 +64,10 @@ def main():
                 # print("\tALIAS FOUND")
                 # print(c[-2].string)
                 # print(c[-4].string)
-                aliases.append(unicodedata.normalize('NFKD', str(c[-2].string)))
-                aliases.append(unicodedata.normalize('NFKD', str(c[-4].string)))
+                aliases.append(unicodedata.normalize('NFKD',
+                                                     str(c[-2].string)))
+                aliases.append(unicodedata.normalize('NFKD',
+                                                     str(c[-4].string)))
             prereqs = [p for p in prereqs if p not in aliases]
 
             # print(aliases)
@@ -66,7 +75,7 @@ def main():
                                          course_title, course_description,
                                          prereqs, aliases))
 
-    curriculum.print_all(defaults=False)
+    curriculum.print_all()
 
 
 if __name__ == "__main__":

@@ -496,7 +496,8 @@ class Curriculum:
         self.generate_nx()
         return self.diGraph
 
-    def print_graph(self, notebook=False, emphasize_in_degree=False, defaults=True):
+    def print_graph(self, notebook=False, emphasize_in_degree=False,
+                    defaults=True):
 
         self.generate_nx(emphasize_in_degree=emphasize_in_degree)
 
@@ -506,6 +507,12 @@ class Curriculum:
         if defaults:
             net.set_options('''
                 var options = {
+                  "nodes": {
+                    "shadow": {
+                      "enabled": true,
+                      "size": 15
+                    }
+                  },
                   "edges": {
                     "arrows": {
                       "to": {
@@ -513,14 +520,23 @@ class Curriculum:
                       }
                     },
                     "color": {
-                      "inherit": true
+                      "inherit": "both"
                     },
                     "smooth": false
                   },
+                  "interaction": {
+                    "hover": true
+                  },
+                  "manipulation": {
+                    "enabled": true
+                  },
                   "physics": {
                     "forceAtlas2Based": {
-                      "springLength": 100,
-                      "avoidOverlap": 1
+                      "gravitationalConstant": -200,
+                      "centralGravity": 0.02,
+                      "springLength": 120,
+                      "springConstant": 0.2,
+                      "avoidOverlap": 0.5
                     },
                     "minVelocity": 0.75,
                     "solver": "forceAtlas2Based"
@@ -531,7 +547,8 @@ class Curriculum:
             net.show_buttons(True)
         # net.enable_physics(True)
         # net.show_buttons(filter_=True)
-        net.show("%s_%s.html" % (str(self).replace(" ", "_"), self.preferred_subject_code))
+        net.show("%s_%s.html" % (str(self).replace(" ", "_"),
+                 self.preferred_subject_code))
         # net.show_buttons(filter_=['physics'])
 
     def set_url(self, new_url):

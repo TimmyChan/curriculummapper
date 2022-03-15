@@ -16,14 +16,9 @@ def main():
                                  colored_subjects=["STAT", "MATH"])
     url_list = ["https://bulletin.case.edu/schoolofengineering/compdatasci/",   # COMPSCI  # noqa: E501
                 "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",  # MATH # noqa: E501
-                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  #COMPSCI # noqa: E501
-                "https://bulletin.case.edu/course-descriptions/dsci/", #DATA SCI
-                #"https://bulletin.case.edu/course-descriptions/engr/", #ENGEINEERING
-                #"https://bulletin.case.edu/course-descriptions/buai/", #BUSINESS ANALYTICS
-                #"https://bulletin.case.edu/course-descriptions/phys/", #PHYSICS
-                "https://bulletin.case.edu/course-descriptions/stat/",#STAT
-                "https://bulletin.case.edu/course-descriptions/scmg/",
-                #"https://bulletin.case.edu/bulletinarchives/2017-18/course-descriptions/eecs/"
+                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  # COMPSCI # noqa: E501
+                "https://bulletin.case.edu/course-descriptions/dsci/",
+                "https://bulletin.case.edu/course-descriptions/stat/"
                 ]
     for URL in url_list:
         print("Connecting: %s..." % URL)
