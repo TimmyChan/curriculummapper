@@ -222,9 +222,7 @@ class Curriculum:
         # this will stay empty until generate_graph is called!
         self.diGraph = nx.DiGraph()
         self.soup = None
-        if len(course_list) > 0:
-            for course in course_list:
-                self.add_course(course)
+
         ''' RegEx compiled searches '''
         if isinstance(course_search, str):
             self.course_search = re.compile(course_search)
@@ -239,6 +237,11 @@ class Curriculum:
         if colored_subjects is not None and isinstance(colored_subjects, list):
             for subj in colored_subjects:
                 self.add_subject(subj)
+        # ADDING COURSES
+        self.course_codes_set = set()
+        if len(course_list) > 0:
+            for course in course_list:
+                self.add_course(course)
 
     def add_subject(self, subj):
         if re.match(self.subject_search, subj):
@@ -262,6 +265,7 @@ class Curriculum:
         try:
             # first, only add to dict if it's not already there...
             key = str(x)
+            self.course_codes_set.add(x.get_course_code_int())
             # print("Attempting to add %s" % key)
             if self.course_dict.get(key) is None:
                 # print("\tAdding %s as a new key" % key)
@@ -356,7 +360,7 @@ class Curriculum:
         ''' returns total number of unique courses'''
         return len(self.course_dict)
 
-    def print_all(self, notebook=False, logging=True):
+    def print_all(self, notebook=False, logging=True, defaults=True):
         '''
         no unit test for this one
         since it's rly just printing things out
@@ -383,7 +387,7 @@ class Curriculum:
                 # print(self.alias_dict)
         # Reset the standard output to its original value
         sys.stdout = original_stdout
-        self.print_graph(notebook)
+        self.print_graph(notebook=notebook, defaults=defaults)
 
     def get_course(self, course_id=""):
         ''' tries to retreive a Course object using the key (subj_code course_code)
@@ -420,7 +424,8 @@ class Curriculum:
             # Looping through every course:
             for course in self.course_dict.values():
                 # DEBUG print("In generate_nx Looking for %s" % str(course))
-                course_key = str(self.get_course(str(course)))
+                chosen = (self.get_course(str(course)))
+                course_key = str(chosen)
                 subject_code, course_code = self.course_id_to_list(course_key)
                 # DEBUG print("Adding class %s as node" % course_key)
                 color_group = 0
@@ -437,26 +442,25 @@ class Curriculum:
                         # print("Scanning for %s" % str(prereq))
                         prereq_true_self = self.get_course(str(prereq))
                         prereq_key = str(prereq_true_self)
-                        subject_code = prereq_true_self.subject_code
-                        # Adding node prereq_key
-                        color_group = 0
-                        try:
-                            color_group = 1 + self.colored_subjects.index(
-                                  subject_code)
-                        except Exception:
-                            pass
-                        self.diGraph.add_node(str(prereq_true_self),
-                                              label=str(prereq_true_self),
-                                              title=prereq_true_self.full_desc(tooltip=True),  # noqa: E501,
-                                              group=color_group)
-                        # Adding edge (prereq_key => course_key)
-                        self.diGraph.add_edge(prereq_key, course_key)
+                        if prereq_key != course_key:
+                            subject_code = prereq_true_self.subject_code
+                            # Adding node prereq_key
+                            color_group = 0
+                            try:
+                                color_group = 1 + self.colored_subjects.index(
+                                      subject_code)
+                            except Exception:
+                                pass
+                            self.diGraph.add_node(prereq_key,
+                                                  label=str(prereq_true_self),
+                                                  title=prereq_true_self.full_desc(tooltip=True),  # noqa: E501,
+                                                  group=color_group)
+                            # Adding edge (prereq_key => course_key)
+                            self.diGraph.add_edge(prereq_key, course_key)
             print("NetworkX object initiated.")
             print("Found %d unique classes with %d prerequisite relationships"
                   % (len(self.diGraph.nodes), len(self.diGraph.edges)))
-            course_ints = [self.course_dict[node].get_course_code_int() for
-                           node in self.diGraph.nodes]
-            course_ints = np.array(course_ints)
+            course_ints = np.array(list(self.course_codes_set))
             course_ints = course_ints[(course_ints >
                                        np.quantile(course_ints, 0.1)) &
                                       (course_ints <
@@ -492,42 +496,42 @@ class Curriculum:
         self.generate_nx()
         return self.diGraph
 
-    def print_graph(self, notebook=False, emphasize_in_degree=False):
+    def print_graph(self, notebook=False, emphasize_in_degree=False, defaults=True):
 
         self.generate_nx(emphasize_in_degree=emphasize_in_degree)
 
         net = Network('768px', '1024px', notebook)
 
         net.from_nx(self.diGraph)
-        net.show_buttons()
-        """
-        net.set_options('''
-            var options = {
-              "edges": {
-                "arrows": {
-                  "to": {
-                    "enabled": true
+        if defaults:
+            net.set_options('''
+                var options = {
+                  "edges": {
+                    "arrows": {
+                      "to": {
+                        "enabled": true
+                      }
+                    },
+                    "color": {
+                      "inherit": true
+                    },
+                    "smooth": false
+                  },
+                  "physics": {
+                    "forceAtlas2Based": {
+                      "springLength": 100,
+                      "avoidOverlap": 1
+                    },
+                    "minVelocity": 0.75,
+                    "solver": "forceAtlas2Based"
                   }
-                },
-                "color": {
-                  "inherit": true
-                },
-                "smooth": false
-              },
-              "physics": {
-                "forceAtlas2Based": {
-                  "springLength": 100,
-                  "avoidOverlap": 1
-                },
-                "minVelocity": 0.75,
-                "solver": "forceAtlas2Based"
-              }
-            }
-            ''')
-        """
+                }
+                ''')
+        else:
+            net.show_buttons(True)
         # net.enable_physics(True)
         # net.show_buttons(filter_=True)
-        net.show("%s.html" % self.preferred_subject_code)
+        net.show("%s_%s.html" % (str(self).replace(" ", "_"), self.preferred_subject_code))
         # net.show_buttons(filter_=['physics'])
 
     def set_url(self, new_url):
@@ -540,14 +544,16 @@ class Curriculum:
         ''' saves a copy of the html to not overping '''
         if URL is not None:
             self.set_url(URL)
-        index = self.url_list.index(self.url)
+
         data_dir = "canned_soup"
         if self.data_dir != "":
             data_dir = self.data_dir
         filename = "DATA"
-        if self.preferred_subject_code != "":
-            filename = self.preferred_subject_code
-        filename += "_" + str(index) + ".html"
+        filename = str(self).replace(" ", "_")
+        i = 1
+        if self.url.split("/")[-i] == "":
+            i += 1
+        filename += "_" + self.url.split("/")[-i] + ".html"
         # print("Trying %s/%s" % (data_dir, filename))
         try:
             os.makedirs(data_dir)
