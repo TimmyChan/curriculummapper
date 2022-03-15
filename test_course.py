@@ -26,7 +26,25 @@ def test_init_with_param():
             y.prerequisites == set([x]))
 
 
-# testing add_alias
+# testing __str__() Should print subject code, course code.
+def test_str():
+    x = Course("SUBJ", "1234", "Course Title")
+    assert str(x) == "SUBJ 1234"
+
+
+# testing __repr__(self) should always print simple string as defined below
+def test_repr():
+    x = Course("SUBJ", "1234", "Course Title")
+    assert repr(x) == "curriculum.Course(SUBJ, 1234, Course Title)"
+
+
+def test_eq():
+    x = Course("SUBJ", "1234")
+    y = Course("SUBJ", "1234", "Yo Mama")
+    assert (x == y)
+
+
+# testing simple add_alias
 def test_alias():
     ''' should be sorted '''
     x = Course("CSDS", 1234, "Yo Mama",
@@ -35,10 +53,13 @@ def test_alias():
     assert x.alias_set == set(["ABCD 1234"])
 
 
-# testing __str__() Should print subject code, course code.
-def test_str():
-    x = Course("SUBJ", "1234", "Course Title")
-    assert str(x) == "SUBJ 1234"
+# testing repeat add_alias (should behave as set)
+def test_alias_repeat():
+    ''' should return just one '''
+    x = Course("CSDS", 1234, "Yo Mama")
+    x.add_alias("ABCD 1234")
+    x.add_alias("ABCD 1234")
+    assert x.alias_set == set(["ABCD 1234"])
 
 
 # adding a prereq to the list
@@ -54,3 +75,29 @@ def test_add_prereq_type():
     x = Course()
     x.add_prereq(5)
     assert x.prerequisites == set()
+
+
+# should return a simple int
+def test_get_course_code_int():
+    x = Course("DATA", 1234)
+    assert x.get_course_code_int() == 1234
+
+
+# should return an int still
+def test_get_course_code_int_tricky():
+    x = Course("DATA", "1234F")
+    assert x.get_course_code_int() == 1234
+
+
+# appending course title with shorter string does nothing
+def test_append_course_desc_no_action():
+    x = Course("DSCS", 5679, "To the left", "Everything you own")
+    x.append_course_title("yeee")
+    assert x.course_title == "To the left"
+
+
+# appending longer string for course title will replace
+def test_append_course_desc_change():
+    x = Course()
+    x.append_course_title("Chocolate Star Fish")
+    assert x.course_title == "Chocolate Star Fish"

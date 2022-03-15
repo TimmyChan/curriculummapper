@@ -1,6 +1,7 @@
 #! python3
 
 # Scraping and logic
+from time import perf_counter
 import sys
 import os
 import re
@@ -55,6 +56,15 @@ class Course:
         '''all we need is subject and course code for an identifier'''
         return self.course_key
 
+    def __repr__(self):
+        ''' Give stable repr for hash for set operations '''
+        return ("curriculum.Course(%s, %s, %s)" %
+                (self.subject_code, self.course_code, self.course_title))
+
+    def __hash__(self):
+        ''' Give a hash based on representation '''
+        return hash(self.__repr__())
+
     def __eq__(self, other):
         ''' needed to evaulate equality for set operations '''
         if isinstance(other, Course):
@@ -62,14 +72,6 @@ class Course:
                     (self.course_code == other.course_code))
         else:
             return False
-
-    def __repr__(self):
-        ''' Give stable repr for hash for set operations '''
-        return "Course(%s %s)" % (self.subject_code, self.course_code)
-
-    def __hash__(self):
-        ''' Give a hash based on representation '''
-        return hash(self.__repr__())
 
     def add_alias(self, course_id):
         ''' adds an alias to the course id '''
@@ -367,6 +369,7 @@ class Curriculum:
         for debugging purposes
         '''
         # Save a reference to the original standard output
+        init_time = perf_counter()
         original_stdout = sys.stdout
 
         with open(str(self)+' output.txt', 'w') as f:
@@ -374,7 +377,8 @@ class Curriculum:
             if logging:
                 sys.stdout = f
             print('Sources:')
-            print(self.url_list)
+            for u in self.url_list:
+                print("\t" + str(u) + "\n")
             print(str(self))
             printbreak()
             print("Course Inventory contains %d courses..." %
@@ -388,6 +392,8 @@ class Curriculum:
         # Reset the standard output to its original value
         sys.stdout = original_stdout
         self.print_graph(notebook=notebook, defaults=defaults)
+        finish_time = perf_counter()
+        print("Printing time: %d" % finish_time - init_time)
 
     def get_course(self, course_id=""):
         ''' tries to retreive a Course object using the key (subj_code course_code)
