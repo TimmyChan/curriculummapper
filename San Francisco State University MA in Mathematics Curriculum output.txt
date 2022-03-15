@@ -1,5 +1,8 @@
 Sources:
-['https://bulletin.sfsu.edu/courses/math/', 'https://bulletin.sfsu.edu/courses/csc/']
+	https://bulletin.sfsu.edu/courses/math/
+
+	https://bulletin.sfsu.edu/courses/csc/
+
 San Francisco State University MA in Mathematics Curriculum
 ----------
 Course Inventory contains 213 courses...
@@ -18,15 +21,15 @@ Functions, derivatives, and integrals. Applications of differentiation and integ
 MATH 112 Support for College Mathematics 
 Review of numbers and operations, exponents, and radicals. Linear, quadratic, polynomial, and rational functions. Exponential and logarithmic functions as needed. Develop and practice strategies for proficiency in quantitative reasoning through problem-solving, communication, and interpretation of data and graphs.
 Prereqs:
-CSC 110
 PHIL 111
+CSC 110
+----------
+PHIL 111 
 ----------
 CSC 110 Computational Thinking and Quantitative Reasoning 
 Basic building blocks of programming and computational thinking practices including analyzing the effects of computation, creating computational artifacts, using abstractions and models, analyzing problems and artifacts, communicating processes and results, and working effectively in teams. Mathematical models and information retrieval from real-world datasets will be used as vehicles to practice programming and computation thinking.
 Prereqs:
 MATH 112
-----------
-PHIL 111 
 ----------
 MATH 122 Mathematics for Statistical Quantitative Reasoning 
 Review of mathematics in the context of elementary statistics: numbers, fractions, decimals, percentages; units; rounding; formulas and scientific notation; order of operations; algebra of equations; graphs and plots; sets; principals of counting.
@@ -63,9 +66,9 @@ Functions, graphing techniques, exponentials and logarithms, trigonometry. [Form
 MATH 226 Calculus I 
 Graphs. Differentiation: theory, techniques, and applications. Integration: Fundamental Theorem of Calculus and applications. Transcendental functions. Lecture, 3 units; seminar, 1 unit.
 Prereqs:
-MATH 199
 MATH 226
 MATH 198
+MATH 199
 ----------
 MATH 227 Calculus II 
 Techniques of integration, analytic geometry, polar coordinates, vectors, improper integrals. Sequences and series.
@@ -105,8 +108,8 @@ MATH 227
 MATH 310 Elementary Number Theory 
 Divisibility, congruencies, power residues, quadratic reciprocity, diophantine equations. Number theoretic functions, continued fractions and rational approximation, partitions.
 Prereqs:
-MATH 301GW
 MATH 227
+MATH 301GW
 ----------
 MATH 314 Math Circle Seminar 
 Opportunity to relate mathematics to the teaching and learning of mathematics and problem-solving skills at the middle and high school levels through participation in math circles. [CSL may be available]
@@ -122,14 +125,14 @@ MATH 325 Linear Algebra
 Vector spaces, linear transformations, elements of matrix algebra including determinants and eigenvalues.
 Prereqs:
 CSC 230
-MATH 301GW
 MATH 227
+MATH 301GW
 ----------
 CSC 230 Discrete Mathematical Structures for Computer Science 
 Review of set algebra, relations and functions, permutations, propositional logic, proof techniques, introduction to graph theory, and infinite sets, and their applications to computer science.
 Prereqs:
-CSC 210
 MATH 227
+CSC 210
 ----------
 MATH 335 Modern Algebra 
 Introduction to groups, rings, integral domains, fields, and ordering.
@@ -140,8 +143,8 @@ MATH 301GW
 MATH 338 Introduction to SAS 
 Using SAS software for data management, presentation of data using graphs and reports, calculation of basic statistics such as mean, standard error, percentiles. Analysis of data using t-test, Chi-square test, regression, and analysis of variance.
 Prereqs:
-CSC 309
 MATH 309
+CSC 309
 CSC 210
 ----------
 CSC 309 Computer Programming 
@@ -163,8 +166,8 @@ MATH 301GW
 MATH 370 Real Analysis I 
 Critical development of analysis: Bolzano-Weierstrass and Heine-Borel theorems; limits, continuity, differentiability, integrability.
 Prereqs:
-MATH 301GW
 MATH 227
+MATH 301GW
 ----------
 MATH 375 Field Study for Secondary Teachers 
 Completion of tuberculosis test and fingerprinting for work in the public schools. Opportunity for students to relate the mathematics they are learning to the teaching and learning of mathematics at the middle and high school levels;  at the same time, fulfill the 45-hour field experience requirement for prospective teachers.
@@ -174,8 +177,8 @@ MATH 301GW
 MATH 376 Ordinary Differential Equations I 
 First-order differential equations, second-order linear equations with constant coefficients, graphical and numerical methods, systems of differential equations and phase-plane analysis, existence and uniqueness theorems.
 Prereqs:
-MATH 325
 MATH 228
+MATH 325
 ----------
 MATH 380 Introduction to Complex Analysis 
 Analytic functions of a complex variable. Cauchy's theorem, power series, Laurent series, singularities, residue theorem with applications to definite integrals.
@@ -186,43 +189,43 @@ MATH 301GW
 MATH 400 Numerical Analysis 
 Numerical solution of algebra and calculus problems. Interpolation and approximations; direct and iterative methods for solutions of linear equations. Gaussian elimination. Numerical differentiation and integration; solution of ordinary differential equations.
 Prereqs:
-MATH 325
 MATH 228
+MATH 325
 CSC 210
 ----------
-MATH 414 (aka MATH 414, MATH 714) Analyzing DNA Topology with Math and Computational Methods 
+MATH 414 (aka MATH 714, MATH 414) Analyzing DNA Topology with Math and Computational Methods 
 Introduction to mathematical and computational techniques used to analyze DNA structure for mathematics, computer science, and biology students. The strong interaction between math and biology is emphasized.
 Prereqs:
 MATH 414
 MATH 228
 MATH 714
 ----------
-MATH 714 (aka MATH 414, MATH 714) Analyzing DNA Topology with Math and Computational Methods 
+MATH 714 (aka MATH 714, MATH 414) Analyzing DNA Topology with Math and Computational Methods 
 Introduction to mathematical and computational techniques used to analyze DNA structure for mathematics, computer science, and biology students. The strong interaction between math and biology is emphasized.
 Prereqs:
+MATH 414
 MATH 228
 MATH 714
-MATH 414
 ----------
 MATH 420 (aka MATH 720, MATH 420) Combinatorics 
 An introduction to fundamental combinatorial objects, their uses in other fields of mathematics and its applications, and their analysis. Does an object with certain prescribed properties exist? How many of them are there? What structure do they have? 
 Prereqs:
-MATH 325
-CSC 230
-MATH 310
 MATH 720
-MATH 301GW
+CSC 230
 MATH 420
+MATH 301GW
+MATH 310
+MATH 325
 ----------
 MATH 720 (aka MATH 720, MATH 420) Combinatorics 
 An introduction to fundamental combinatorial objects, their uses in other fields of mathematics and its applications, and their analysis. Does an object with certain prescribed properties exist? How many of them are there? What structure do they have? 
 Prereqs:
-MATH 325
-CSC 230
-MATH 310
 MATH 720
-MATH 301GW
+CSC 230
 MATH 420
+MATH 301GW
+MATH 310
+MATH 325
 ----------
 MATH 424 (aka MATH 424, MATH 724) Introduction to Linear Models 
 Theory and applications of Linear Models, Multiple Regression, Analysis of Variance for Fixed and Random Effects, Nested and Crossed Treatments, and Experimental Design.
@@ -241,16 +244,16 @@ MATH 441
 MATH 441 (aka MATH 441, MATH 741) Probability and Statistics II 
 Sampling distributions, estimation of parameters, hypothesis testing, goodness-of-fit tests, linear regression, and selected non-parametric methods. 
 Prereqs:
-MATH 440
-MATH 228
 MATH 741
+MATH 440
 MATH 441
+MATH 228
 ----------
 MATH 425 Applied and Computational Linear Algebra 
 Explores techniques for solving huge linear systems, covering both the theory behind the techniques and the computation. Reviews and further develops concepts from 
 Prereqs:
-MATH 325
 MATH 309
+MATH 325
 CSC 210
 ----------
 MATH 430 Mathematics of Optimization 
@@ -258,19 +261,19 @@ Modeling and solution of optimization problems as linear, semidefinite, nonlinea
 Prereqs:
 MATH 325
 ----------
-MATH 435 (aka MATH 435, MATH 735) Modern Algebra II 
+MATH 435 (aka MATH 735, MATH 435) Modern Algebra II 
 Group actions, conjugacy classes, and Sylow's Theorem. Rings, modules, vector spaces, and finitely generated modules over PIDs. Field extensions and finite fields.
 Prereqs:
 MATH 335
 MATH 435
 MATH 735
 ----------
-MATH 735 (aka MATH 435, MATH 735) Modern Algebra II 
+MATH 735 (aka MATH 735, MATH 435) Modern Algebra II 
 Group actions, conjugacy classes, and Sylow's Theorem. Rings, modules, vector spaces, and finitely generated modules over PIDs. Field extensions and finite fields.
 Prereqs:
-MATH 435
-MATH 735
 MATH 335
+MATH 735
+MATH 435
 ----------
 MATH 440 Probability and Statistics I 
 Probability spaces, elementary combinatorics, random variables, independence, expected values, moment generating functions, selected probability distributions, limit theorems, and applications. [Formerly MATH 340]
@@ -280,10 +283,10 @@ MATH 228
 MATH 741 (aka MATH 441, MATH 741) Probability and Statistics II 
 Sampling distributions, estimation of parameters, hypothesis testing, goodness-of-fit tests, linear regression, and selected non-parametric methods. 
 Prereqs:
-MATH 440
-MATH 228
 MATH 741
+MATH 440
 MATH 441
+MATH 228
 ----------
 MATH 442 Probability Models 
 Advanced topics in probability theory: discrete and continuous-time Markov chains, Poisson process, queuing systems, and applications.
@@ -320,58 +323,58 @@ MATH 370
 MATH 451 Introduction to Differential Geometry 
 Study of intrinsic surface along with a topological invariant known as the Euler characteristic. The aim is to prove that the Euler characteristic of a compact orientated surface is numerically equal to the total index of any vector field with isolated zeroes (Poincare-Hopf Index theorem), the total Gaussian curvature (Gauss-Bonnet-Chern theorem), and the algebraic total of the number of non-degenerate critical points (Morse theorem).
 Prereqs:
-MATH 325
-MATH 228
-MATH 450
 MATH 370
+MATH 228
+MATH 325
+MATH 450
 ----------
 MATH 460 Mathematical Modeling 
 Deterministic and stochastic techniques used in mathematical modeling, illustrated and developed through problems originating in industry and applied research.
 Prereqs:
-MATH 325
 MATH 245
+MATH 325
 MATH 376
 ----------
 MATH 462 Dynamical Systems with Applications 
 An introduction to the study of iterations (repeated composition) of a function in most basic contexts, including linear and continuous functions of one variable, number-theoretic functions, geometric functions, and Markov chains. Using mathematical software as an investigative tool, explore applications chosen from piecewise linear systems, fractals, chaos, number theory, cryptography, complex networks, and mathematical modeling.
 Prereqs:
 MATH 227
-MATH 301GW
 CSC 210
+MATH 301GW
 ----------
-MATH 470 (aka MATH 470, MATH 770) Real Analysis II: Several Variables 
+MATH 470 (aka MATH 770, MATH 470) Real Analysis II: Several Variables 
 Sequences and series of functions, uniform convergence, real-analytic functions, metric spaces, open and closed sets, compact and connected sets, and continuous functions.
 Prereqs:
 MATH 370
-MATH 470
 MATH 770
+MATH 470
 ----------
-MATH 770 (aka MATH 470, MATH 770) Real Analysis II: Several Variables 
+MATH 770 (aka MATH 770, MATH 470) Real Analysis II: Several Variables 
 Sequences and series of functions, uniform convergence, real-analytic functions, metric spaces, open and closed sets, compact and connected sets, and continuous functions.
 Prereqs:
-MATH 470
 MATH 370
 MATH 770
+MATH 470
 ----------
 MATH 471 (aka MATH 471, MATH 771) Fourier Analysis and Applications 
 Sequences and series of functions, modes of convergence, Fourier series and integrals, and wavelet analysis.
 Prereqs:
-MATH 771
 MATH 370
+MATH 771
 MATH 471
 ----------
 MATH 771 (aka MATH 471, MATH 771) Fourier Analysis and Applications 
 Sequences and series of functions, modes of convergence, Fourier series and integrals, and wavelet analysis.
 Prereqs:
-MATH 771
 MATH 370
+MATH 771
 MATH 471
 ----------
 MATH 475 Capstone Course for Secondary Teachers of Mathematics 
 Builds on student's work in upper division mathematics to deepen understanding of the math taught in secondary school. Active exploration of topics in algebra, analysis, geometry and statistics.
 Prereqs:
-MATH 370
 MATH 335
+MATH 370
 ----------
 MATH 477 (aka MATH 777, MATH 477) Partial Differential Equations 
 Study of partial differential equations in rectangular and polar coordinates. Initial and boundary value problems for the heat equation and wave equation. Study of Fourier series, Bessel series, harmonic functions, and Fourier transforms. 
@@ -383,9 +386,9 @@ MATH 777
 MATH 777 (aka MATH 777, MATH 477) Partial Differential Equations 
 Study of partial differential equations in rectangular and polar coordinates. Initial and boundary value problems for the heat equation and wave equation. Study of Fourier series, Bessel series, harmonic functions, and Fourier transforms. 
 Prereqs:
-MATH 477
 MATH 777
 MATH 376
+MATH 477
 ----------
 MATH 491 Game Theory 
 Normal, extensive and network forms. Strategy, bets reply and Nash equilibrium. Equilibrium path, information and beliefs, sequential rationality and perfect equilibria. Applications to learning, signaling, screening and deterrence. [Formerly a topic under MATH 490]
@@ -410,8 +413,8 @@ Point and interval estimates, univariate hypotheses tests, multiple comparison m
 MATH 495 Introduction to Wavelets and Frames with Applications 
 Fundamentals of wavelets, time frequency analysis, and frames, as well as applications in engineering and physics. [Formerly a topic under MATH 490]
 Prereqs:
-MATH 325
 MATH 370
+MATH 325
 ----------
 MATH 565 Concepts of Geometry, Measurement, and Probability 
 Designed for prospective multiple subjects credential candidates. Spatial relationships and inductive reasoning in geometry, measurement emphasizing the metric system, and elementary statistics and probability.
@@ -436,21 +439,21 @@ MATH 565
 MATH 690 Capstone Research for Mathematics Majors 
 The specifics in that subset depend on the chosen research problem. Research problem, chosen by the instructor, to explore the interrelationships among the cornerstones in a typical undergraduate math major's course. These cornerstones are algebra, analysis, and probability and statistics. (Plus-minus letter grade only)
 Prereqs:
-MATH 325
 MATH 493
-MATH 324
-MATH 310
-MATH 376
-MATH 400
-MATH 492
-MATH 491
 MATH 494
-MATH 495
-MATH 440
-MATH 420
-MATH 380
-MATH 370
 MATH 335
+MATH 324
+MATH 420
+MATH 376
+MATH 380
+MATH 491
+MATH 310
+MATH 492
+MATH 325
+MATH 370
+MATH 440
+MATH 400
+MATH 495
 ----------
 MATH 696 Applied Mathematics Project I 
 Preparation under faculty guidance of feasibility study and outline of a project in applied mathematics.
@@ -471,8 +474,8 @@ Discussion and analysis of teaching techniques, peer evaluation, peer classroom 
 MATH 710 Measure and Integration 
 Outer measure, Lebesgue measure and integration; convergence theorems; bounded variation, absolute continuity, and Lebesgue's theory of differentiation.
 Prereqs:
-MATH 470
 MATH 770
+MATH 470
 ----------
 MATH 711 Functional Analysis 
 Banach and Hilbert spaces, bounded linear operators, dual spaces; the Hahn-Banach, closed graph, and open mapping theorems with applications; functional analysis topics.
@@ -494,8 +497,8 @@ Practice of written and oral communication of advanced and research mathematics:
 MATH 730 Theory of Functions of a Complex Variable 
 Elementary topology of the Euclidean plane, analytic functions, power series, conformal mapping, Cauchy integral formula, residue theorems, power series, Laurent series, analytic continuation, normal families and Riemann mapping theorem.
 Prereqs:
-MATH 470
 MATH 770
+MATH 470
 ----------
 MATH 742 Advanced Probability Models 
 Advanced topics in probability theory including discrete and continuous-time Markov chains, Markov chain Monte Carlo simulations, Poisson process, renewal theory and applications, queuing systems, and applications.
@@ -505,8 +508,8 @@ MATH 440
 MATH 748 Theory and Applications of Statistical and Machine Learning 
 Study of the fundamental concepts of statistical and machine learning theory.
 Prereqs:
-MATH 448
 MATH 441
+MATH 448
 ----------
 MATH 760 Multivariate Statistical Methods 
 Multivariate Statistical Methods are used to analyze the joint behavior of more than one random variable. There are a number of multivariate techniques available including Factor Analysis, Principle Component Analysis, Canonical Correlation, Multidimensional Scaling, MANOVA, and Discriminant Analysis.
@@ -524,41 +527,41 @@ Seminar on research in computational biology. Introduction to tools from pure an
 MATH 850 Algebra 
 Rings and modules; further material is selected from such topics as Wedderburn theory, Noetherian ring theory, field theory, and general algebraic systems.
 Prereqs:
-MATH 435
 MATH 735
+MATH 435
 ----------
 MATH 852 Algebraic Topology 
 The fundamental group of topological spaces, construction of surfaces, simplicial and singular homology and cohomology with basic calculations, exact sequences, and Mayer-Vietoris theorem. [Formerly MATH 452]
 Prereqs:
-MATH 450
 MATH 335
+MATH 450
 ----------
 MATH 870 Computational Discrete Geometry 
 A comprehensive overview of basic topics in computational discrete geometry including generating functions, complexity theory, convex hull, nearest-neighbor problems, and efficient algorithms. Extra fee required.
 Prereqs:
-MATH 325
 CSC 230
+MATH 325
 CSC 210
 ----------
 MATH 881 Selected Topics in Combinatorics 
 Review of fundamental combinatorial objects, addressing questions of existence, structure, and enumeration, then treating a well-established area of combinatorics in detail. May be repeated for a total of 6 units. [Formerly a topic under MATH 890]
 Prereqs:
-MATH 301GW
 MATH 335
+MATH 301GW
 ----------
 MATH 882 Advanced Number Theory 
 Topics in computational, analytic, and algebraic number theory, including recognition of primes, modern methods of factorization, partitions, modular forms, elliptic curves, class numbers, and quadratic fields. May be repeated for a total of 6 units. [Formerly a topic under MATH 890]
 Prereqs:
 MATH 335
-MATH 370
 MATH 310
+MATH 370
 ----------
 MATH 883 Polytopes and Varieties 
 Central concepts in polytope theory and simplicial complexes, elements of affine and projective algebraic geometry, commutative algebra of special ideals and related effective methods, applications to one of the following: discrete geometry, toric varieties, algebraic statistics, polytope theory, optimization. May be repeated for a total of 6 unit. [Formerly a topic under MATH 890]
 Prereqs:
-MATH 435
-MATH 850
 MATH 735
+MATH 850
+MATH 435
 ----------
 MATH 884 Algebraic Geometry 
 Examination of current topics in the field of algebraic geometry. May be repeated for a total of 6 units. [Formerly a topic under MATH 890]
@@ -567,9 +570,9 @@ MATH 885 Advanced Frame Theory and Its Applications
 Frames in Hilbert spaces, finite frame theory, frames vs. Riesz bases, particular frames structures including frames of translates, Gabor frames, wavelet frames, frame multi-resolution, compressed sensing and sampling theory, and applications. [Formerly a topic under MATH 890]
 Prereqs:
 MATH 725
-MATH 471
 MATH 770
 MATH 470
+MATH 471
 ----------
 MATH 886 Discrete Geometry 
 Theory of polytopes. Counting lattice points in polytopes. Unimodular triangulations and unimodular coverings. May be repeated once, as topics vary. [Formerly a topic under MATH 890]
@@ -623,9 +626,9 @@ CSC 210
 CSC 220 Data Structures 
 Linear and non-linear data structures in Java, including lists, stacks, queues, trees, tables, and graphs. Recursion, iteration over collections, sorting, searching, Big O notation, and hash tables.
 Prereqs:
-CSC 306
-CSC 210
 CSC 309
+CSC 210
+CSC 306
 ----------
 CSC 306 An Interdisciplinary Approach to Computer Programming 
 Basics of programming for interdisciplinary problem-solving, using Python. Topics include basic building blocks of programming (variables, control statements, loops, function, abstraction, and more) and problem-solving approaches relevant to problems in the natural sciences.
@@ -634,8 +637,8 @@ CSC 221 Data Structure Lab
 Training on the principles of object-oriented programming, data structures (such as stacks, queues, lists, trees, sets, HashMaps, etc.), implementation, and usage in solving real-life problems, recursion, and algorithm analysis. Activity. (CR/NC grading only)
 Prereqs:
 CSC 220
-CSC 211
 CSC 210
+CSC 211
 ----------
 CSC 256 Machine Structures 
 Digital logic circuits, data representation, assembly language programming, subroutine linkage, machine language encoding, interrupt and exception handling, memory system concepts, and CPU organization and performance.
@@ -674,8 +677,8 @@ CSC 230
 CSC 412 Advanced Software Lab 
 Hands-on exercises in advanced programming, software development tools, and web technologies. Students are encouraged to bring their laptops. Activity. May be repeated for a total of 2 units. (Plus-minus letter grade only)
 Prereqs:
-CSC 340
 CSC 220
+CSC 340
 ----------
 CSC 413 Software Development 
 Modern software applications. Object-oriented techniques: encapsulation, inheritance, and polymorphism as a mechanism for data design and problem solution. Software design, debugging, testing, and UI design. Software maintenance. Software development tools. Extra fee required. (Plus-minus letter grade only)
@@ -685,10 +688,10 @@ CSC 220
 CSC 415 Operating System Principles 
 Operating system concepts: concurrent processes, basic synchronization techniques, deadlock, memory management, file systems, security, networks, and distributed processing. Extra fee required.
 Prereqs:
-CSC 340
-CSC 256
-PHYS 230
 MATH 324
+PHYS 230
+CSC 256
+CSC 340
 ----------
 PHYS 230 
 ----------
@@ -705,8 +708,8 @@ CSC 308
 CSC 510 Analysis of Algorithms I 
 Notions of main algorithm design methods. Measures of algorithm complexity in space and time. Algorithms of classic problems including sorting and scheduling and complexity analysis of such algorithms.
 Prereqs:
-CSC 340
 MATH 324
+CSC 340
 ----------
 CSC 520 Theory of Computing 
 Automata, formal languages, and the notion of computability. Sequential machines as language acceptors. Context-free and context-sensitive grammars. Recursive functions and universal Turing machines. Unsolvable problems.
@@ -718,8 +721,8 @@ MATH 325
 CSC 600 Programming Paradigms and Languages 
 Concepts for high-level programming languages. Procedural, logic, functional, and object-oriented programming paradigms. Comparative study of several languages and an introduction to grammars and parsing techniques. Extra fee required.
 Prereqs:
-CSC 413
 CSC 510
+CSC 413
 ----------
 CSC 601 Data Science and Machine Learning Seminar Series 
 The Data Science and Machine Learning for Biotechnology seminar series features scientists in related areas from Genentech or other biotechnology industry or academia. Covers broad view of the topics on Drug design, modeling to predict drug performance or a new drug approval processes. (Plus-minus letter grade only)
@@ -740,52 +743,52 @@ CSC 415
 CSC 620 (aka CSC 620, CSC 820) Natural Language Technologies 
 Introduction to the fundamental concepts and techniques of Natural Language Processing (NLP). In-depth understanding of the computational properties of natural language and the commonly used algorithms for processing language data. Illustration of the pervasiveness of natural language technologies through real-world applications. Practical experience in NLP through hands-on exercises. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 413
 CSC 820
+CSC 413
 CSC 620
 ----------
 CSC 820 (aka CSC 620, CSC 820) Natural Language Technologies 
 Introduction to the fundamental concepts and techniques of Natural Language Processing (NLP). In-depth understanding of the computational properties of natural language and the commonly used algorithms for processing language data. Illustration of the pervasiveness of natural language technologies through real-world applications. Practical experience in NLP through hands-on exercises. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 413
 CSC 820
 CSC 620
+CSC 413
 ----------
-CSC 621 (aka CSC 621, CSC 821) Biomedical Imaging and Analysis 
+CSC 621 (aka CSC 821, CSC 621) Biomedical Imaging and Analysis 
 Introduction to medical and biological imaging, imaging physics, 3D image formats, and visualization. Basic digital image processing and analysis, filtering, registration, segmentation, quantification, and performance evaluation. (Plus-minus letter grade only)
 Prereqs:
-MATH 325
 CSC 821
+MATH 325
 CSC 621
 CSC 510
 ----------
-CSC 821 (aka CSC 621, CSC 821) Biomedical Imaging and Analysis 
+CSC 821 (aka CSC 821, CSC 621) Biomedical Imaging and Analysis 
 Introduction to medical and biological imaging, imaging physics, 3D image formats, and visualization. Basic digital image processing and analysis, filtering, registration, segmentation, quantification, and performance evaluation. (Plus-minus letter grade only)
 Prereqs:
-MATH 325
 CSC 821
+MATH 325
 CSC 621
 CSC 510
 ----------
 CSC 630 Computer Graphics Systems Design 
 Graphics system design and display hardware architecture. Overview of device-independent graphic systems, 2- & 3-dimensional viewing pipelines, hidden line and surface removal algorithms, raster graphics techniques, and color space models. Webpage design and Flash exercises for an introduction to animation and multimedia. Course fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 340
 MATH 325
+CSC 340
 ----------
-CSC 631 (aka CSC 631, CSC 831) Multiplayer Game Development 
+CSC 631 (aka CSC 831, CSC 631) Multiplayer Game Development 
 Computer graphics and network characteristics of multiplayer games.  Design and development of a game as a team project. 
 Prereqs:
 CSC 831
-CSC 413
 CSC 631
+CSC 413
 ----------
-CSC 831 (aka CSC 631, CSC 831) Multiplayer Game Development 
+CSC 831 (aka CSC 831, CSC 631) Multiplayer Game Development 
 Computer graphics and network characteristics of multiplayer games.  Design and development of a game as a team project. 
 Prereqs:
 CSC 831
-CSC 413
 CSC 631
+CSC 413
 ----------
 CSC 637 Software Techniques for Computer Music 
 Algorithms and software design for digital audio and computer music. Analysis and synthesis techniques. Real-time control and interaction. Extra fee required.
@@ -795,36 +798,36 @@ CSC 413
 CSC 641 (aka CSC 841, CSC 641) Computer Performance Evaluation 
 Computer performance analysis problems related to system design, selection, and tuning. Modeling using stochastic and operational queuing models. Workload characterization, design, and performance measurement methods. Design of simulation models for computer systems.  Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 641
 CSC 841
+CSC 641
 CSC 415
 ----------
 CSC 841 (aka CSC 841, CSC 641) Computer Performance Evaluation 
 Computer performance analysis problems related to system design, selection, and tuning. Modeling using stochastic and operational queuing models. Workload characterization, design, and performance measurement methods. Design of simulation models for computer systems.  Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 641
 CSC 841
+CSC 641
 CSC 415
 ----------
 CSC 642 (aka CSC 642, CSC 842) Human-Computer Interaction 
 The design, implementation, and evaluation of human-computer interfaces. Topics include interface devices, interface metaphors, interaction styles, user-centered design, testing, and quality assessment. Extra fee required.
 Prereqs:
+CSC 842
 CSC 642
 CSC 413
-CSC 842
 ----------
 CSC 842 (aka CSC 642, CSC 842) Human-Computer Interaction 
 The design, implementation, and evaluation of human-computer interfaces. Topics include interface devices, interface metaphors, interaction styles, user-centered design, testing, and quality assessment. Extra fee required.
 Prereqs:
+CSC 842
 CSC 642
 CSC 413
-CSC 842
 ----------
 CSC 644 Computer Measurements 
 Software measurement and experimentation tools. Data collection and analysis. Web measurements. Benchmarking and design of benchmarks. Use of software monitors. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 413
 CSC 415
+CSC 413
 ----------
 CSC 645 Computer Networks 
 Computer network design, evaluation, and testing. Computer network standards and implementation. Hardware and software design and compatibility issues. Extra fee required.
@@ -834,27 +837,27 @@ CSC 415
 CSC 648 (aka CSC 848, CSC 648) Software Engineering 
 Practical methods and tools for SW engineering including organizational teamwork. 
 Prereqs:
-CSC 317
-CSC 648
 CSC 848
+CSC 317
 CSC 413
+CSC 648
 ----------
 CSC 848 (aka CSC 848, CSC 648) Software Engineering 
 Practical methods and tools for SW engineering including organizational teamwork. 
 Prereqs:
-CSC 317
-CSC 648
 CSC 848
+CSC 317
 CSC 413
+CSC 648
 ----------
-CSC 649 (aka CSC 649, CSC 849) Search Engines 
+CSC 649 (aka CSC 849, CSC 649) Search Engines 
 Introduction to the internals of modern search engines. Methods and tools for representation, storage, organization of, and access to textual data. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
 CSC 849
 CSC 413
 CSC 649
 ----------
-CSC 849 (aka CSC 649, CSC 849) Search Engines 
+CSC 849 (aka CSC 849, CSC 649) Search Engines 
 Introduction to the internals of modern search engines. Methods and tools for representation, storage, organization of, and access to textual data. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
 CSC 849
@@ -864,36 +867,36 @@ CSC 649
 CSC 651 System Administration 
 User administration. Operating system installation, tuning, and control. Network administration. Security management. Performance tuning and management. Extra fee required. (ABC/NC grading only)
 Prereqs:
+CSC 415
 CSC 413
-CSC 415
 ----------
-CSC 652 (aka CSC 852, CSC 652) Introduction to Security and Data Privacy 
+CSC 652 (aka CSC 652, CSC 852) Introduction to Security and Data Privacy 
 Introduction to fundamental concepts in cybersecurity, cryptography, and data privacy. Practice different privacy mechanisms in databases and present applications to a wide range of data analysis tasks. Extra fee required.
 Prereqs:
-CSC 652
 CSC 852
+CSC 652
 CSC 415
 ----------
-CSC 852 (aka CSC 852, CSC 652) Introduction to Security and Data Privacy 
+CSC 852 (aka CSC 652, CSC 852) Introduction to Security and Data Privacy 
 Introduction to fundamental concepts in cybersecurity, cryptography, and data privacy. Practice different privacy mechanisms in databases and present applications to a wide range of data analysis tasks. Extra fee required.
 Prereqs:
-CSC 652
 CSC 852
+CSC 652
 CSC 415
 ----------
 CSC 653 (aka CSC 853, CSC 653) Network Security 
 Introduction to the fundamental concepts of computer network security as well as standard security mechanisms and protocols.
 Prereqs:
-CSC 853
 CSC 653
 CSC 645
+CSC 853
 ----------
 CSC 853 (aka CSC 853, CSC 653) Network Security 
 Introduction to the fundamental concepts of computer network security as well as standard security mechanisms and protocols.
 Prereqs:
+CSC 645
 CSC 853
 CSC 653
-CSC 645
 ----------
 CSC 656 Computer Organization 
 Instruction set design. Pipelined datapath and control. Cache and memory system design. Input and output subsystems. Parallel processing. Software and hardware interactions. Extra fee required.
@@ -914,94 +917,94 @@ CSC 413
 CSC 664 (aka CSC 664, CSC 864) Multimedia Systems 
 Comprehensive topics in multimedia such as basics of image and video processing, compression, multimedia databases, standard, synchronization, formats in the perspective of systems, and algorithms. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 413
 CSC 864
 CSC 664
+CSC 413
 ----------
 CSC 864 (aka CSC 664, CSC 864) Multimedia Systems 
 Comprehensive topics in multimedia such as basics of image and video processing, compression, multimedia databases, standard, synchronization, formats in the perspective of systems, and algorithms. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
-CSC 413
 CSC 864
 CSC 664
+CSC 413
 ----------
 CSC 665 (aka CSC 865, CSC 665) Artificial Intelligence 
 Overview of algorithms and approaches to artificial intelligence. Study of fundamental concepts needed to attain human-level intelligence in computer systems, and gain experience in working with these concepts through assignments and programming exercises. Topics include problem-solving methods, heuristic search, game playing, agent architectures, machine learning, and various topics selected from knowledge representation, symbolic reasoning, computational models of virtual humans, neural networks, and genetic algorithms. Extra fee required.
 Prereqs:
-CSC 413
-CSC 665
 CSC 865
+CSC 665
+CSC 413
 ----------
 CSC 865 (aka CSC 865, CSC 665) Artificial Intelligence 
 Overview of algorithms and approaches to artificial intelligence. Study of fundamental concepts needed to attain human-level intelligence in computer systems, and gain experience in working with these concepts through assignments and programming exercises. Topics include problem-solving methods, heuristic search, game playing, agent architectures, machine learning, and various topics selected from knowledge representation, symbolic reasoning, computational models of virtual humans, neural networks, and genetic algorithms. Extra fee required.
 Prereqs:
+CSC 865
 CSC 665
 CSC 413
-CSC 865
 ----------
-CSC 667 (aka CSC 667, CSC 867) Internet Application Design and Development 
+CSC 667 (aka CSC 867, CSC 667) Internet Application Design and Development 
+Fundamental technologies on which the World Wide Web is based. Extra fee required.
+Prereqs:
+CSC 413
+CSC 667
+CSC 867
+----------
+CSC 867 (aka CSC 867, CSC 667) Internet Application Design and Development 
 Fundamental technologies on which the World Wide Web is based. Extra fee required.
 Prereqs:
 CSC 867
-CSC 413
 CSC 667
-----------
-CSC 867 (aka CSC 667, CSC 867) Internet Application Design and Development 
-Fundamental technologies on which the World Wide Web is based. Extra fee required.
-Prereqs:
-CSC 867
 CSC 413
-CSC 667
 ----------
 CSC 668 (aka CSC 868, CSC 668) Advanced Object Oriented Software Design and Development 
 Object-oriented analysis and design utilizing UML, design patterns, frameworks, and toolkits. Agile software design processes. Development of a mid-size programming project working in teams. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
 CSC 668
-CSC 413
 CSC 868
+CSC 413
 ----------
 CSC 868 (aka CSC 868, CSC 668) Advanced Object Oriented Software Design and Development 
 Object-oriented analysis and design utilizing UML, design patterns, frameworks, and toolkits. Agile software design processes. Development of a mid-size programming project working in teams. Extra fee required. (Plus-minus letter grade only)
 Prereqs:
 CSC 668
-CSC 413
 CSC 868
+CSC 413
 ----------
-CSC 671 (aka CSC 871, CSC 671) Neural Networks 
-Artificial neural networks including associative memories, learning, search, databases, fuzzy set techniques, pattern recognition, and adaptive processing. Extra fee required.
-Prereqs:
-CSC 510
-CSC 871
-CSC 671
-----------
-CSC 871 (aka CSC 871, CSC 671) Neural Networks 
+CSC 671 (aka CSC 671, CSC 871) Neural Networks 
 Artificial neural networks including associative memories, learning, search, databases, fuzzy set techniques, pattern recognition, and adaptive processing. Extra fee required.
 Prereqs:
 CSC 871
-CSC 510
 CSC 671
+CSC 510
 ----------
-CSC 675 (aka CSC 675, CSC 775) Introduction to Database Systems 
+CSC 871 (aka CSC 671, CSC 871) Neural Networks 
+Artificial neural networks including associative memories, learning, search, databases, fuzzy set techniques, pattern recognition, and adaptive processing. Extra fee required.
+Prereqs:
+CSC 871
+CSC 671
+CSC 510
+----------
+CSC 675 (aka CSC 775, CSC 675) Introduction to Database Systems 
+Relational query languages. Semantic data models. Logical and physical database design. Privacy issues. Implementation techniques (catalogs, query optimization, concurrency control, security, and integrity enforcement). Extra fee required.
+Prereqs:
+CSC 413
+CSC 775
+CSC 675
+----------
+CSC 775 (aka CSC 775, CSC 675) Introduction to Database Systems 
 Relational query languages. Semantic data models. Logical and physical database design. Privacy issues. Implementation techniques (catalogs, query optimization, concurrency control, security, and integrity enforcement). Extra fee required.
 Prereqs:
 CSC 775
-CSC 675
 CSC 413
-----------
-CSC 775 (aka CSC 675, CSC 775) Introduction to Database Systems 
-Relational query languages. Semantic data models. Logical and physical database design. Privacy issues. Implementation techniques (catalogs, query optimization, concurrency control, security, and integrity enforcement). Extra fee required.
-Prereqs:
-CSC 775
 CSC 675
-CSC 413
 ----------
-CSC 676 (aka CSC 676, CSC 876) Soft Computing and Decision Support Systems 
+CSC 676 (aka CSC 876, CSC 676) Soft Computing and Decision Support Systems 
 Development of software systems for decision support including applications of soft computing. Topics include fuzzy sets, fuzzy logic, fuzzy systems, fuzzy decision-making, fuzzy controllers, approximate reasoning, possibility theory, rough sets, graded evaluation logic, logic aggregation operators, information fusion models, decision engineering methods, computing with words, perceptual computing, granular computing, and the LSP method for evaluation and optimization of complex systems. (Plus-minus letter grade only)
 Prereqs:
 CSC 876
 CSC 676
 ----------
-CSC 876 (aka CSC 676, CSC 876) Soft Computing and Decision Support Systems 
+CSC 876 (aka CSC 876, CSC 676) Soft Computing and Decision Support Systems 
 Development of software systems for decision support including applications of soft computing. Topics include fuzzy sets, fuzzy logic, fuzzy systems, fuzzy decision-making, fuzzy controllers, approximate reasoning, possibility theory, rough sets, graded evaluation logic, logic aggregation operators, information fusion models, decision engineering methods, computing with words, perceptual computing, granular computing, and the LSP method for evaluation and optimization of complex systems. (Plus-minus letter grade only)
 Prereqs:
 CSC 876
@@ -1018,8 +1021,8 @@ CSC 780 (aka CSC 780, CSC 680) Application Development for Mobile Devices
 Introduction to and comparison of different popular mobile application frameworks. Conceptual and hands-on experience in writing mobile applications using native and cross-platform tools. (Plus-minus letter grade only)
 Prereqs:
 CSC 780
-CSC 680
 CSC 415
+CSC 680
 ----------
 CSC 690 Interactive Multimedia Application Development 
 Basics of multimedia data formats and algorithms to build applications using non-standard interfaces such as game controllers and multi-touch surfaces. (Plus-minus letter grade only)
@@ -1038,9 +1041,9 @@ Extensive fieldwork training Bay Area non-profit agencies in the use of computer
 CSC 697 Senior Project in Computer Science 
 Culminating experience in individual design, implementation, and professional documentation of a software product under the close supervision of a faculty member. (Plus-minus letter grade only)
 Prereqs:
-CSC 648
-CSC 510
 CSC 415
+CSC 510
+CSC 648
 ----------
 CSC 698 Topics in Computing 
 Current topics in computer hardware and software technologies. Topics to be specified in the Class Schedule. May be repeated for a total of 9 units when topics vary.
@@ -1051,16 +1054,16 @@ Library and laboratory research and development projects. A final report must be
 CSC 720 Advanced Operating Systems 
 Analysis of scheduling and memory management algorithms and the use of concurrent languages for systems development and distributed systems. Design and implementation of major components of an operating system. Extra fee required.
 Prereqs:
-SCI 614
 CSC 415
+SCI 614
 ----------
 SCI 614 
 ----------
 CSC 730 Advanced Database Systems 
 Standard SQL, query optimization, concurrency control, crash recovery, authorization, and integrity enforcement. Object-oriented, extensible, deductive, and distributed database systems. Extra fee required.
 Prereqs:
-CSC 675
 CSC 413
+CSC 675
 ----------
 CSC 746 High-Performance Computing 
 Principles and current practices in high-performance computing. Basics of multiprocessor systems such as clusters and graphics processors. Message-passing and shared memory-based software development. Cloud computing.
@@ -1117,8 +1120,8 @@ CSC 413
 CSC 856 Advanced Computer Architecture 
 Advanced pipelining. Instruction-level parallelism. Advanced memory system design. Compiler techniques for performance. New technologies and applications. Extra fee required.
 Prereqs:
-SCI 614
 CSC 656
+SCI 614
 ----------
 CSC 858 Foundations of Biotechnology and Life Sciences 
 Foundations in biotechnology and life sciences. Prepare for further study and careers in biotechnology and computational life sciences R&D and industry.
@@ -1132,8 +1135,8 @@ Knowledge discovery process, basic data mining concepts, key mining algorithms, 
 CSC 870 Computational Discrete Geometry 
 A comprehensive overview of basic topics in computational discrete geometry including generating functions, complexity theory, convex hull, nearest-neighbor problems, and efficient algorithms. Extra fee required.
 Prereqs:
-MATH 325
 CSC 230
+MATH 325
 CSC 210
 ----------
 CSC 872 Pattern Analysis and Machine Intelligence 

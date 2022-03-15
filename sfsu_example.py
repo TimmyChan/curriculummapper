@@ -1,6 +1,7 @@
 #! python3
 
 
+from time import perf_counter
 import re
 import unicodedata
 from curriculum import Course, Curriculum
@@ -11,6 +12,7 @@ def main():
     An example scraper for the case western MS Data Science program webpage
     '''
     # initiating an empty curriculum object
+    true_start_time = perf_counter()
     school_name = "San Francisco State University"
     degree_name = "MA in Mathematics"
     curriculum = Curriculum(school_name, degree_name, "MATH",
@@ -76,6 +78,8 @@ def main():
                                          prereqs, aliases))
 
     curriculum.print_all()
+    true_finish_time = perf_counter()
+    print("\t\tTOTAL TIME: %s" % str(true_finish_time - true_start_time))
 
 
 if __name__ == "__main__":

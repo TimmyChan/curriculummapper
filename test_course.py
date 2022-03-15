@@ -90,14 +90,36 @@ def test_get_course_code_int_tricky():
 
 
 # appending course title with shorter string does nothing
-def test_append_course_desc_no_action():
+def test_append_course_title_no_action():
     x = Course("DSCS", 5679, "To the left", "Everything you own")
     x.append_course_title("yeee")
     assert x.course_title == "To the left"
 
 
 # appending longer string for course title will replace
-def test_append_course_desc_change():
+def test_append_course_title_change():
     x = Course()
     x.append_course_title("Chocolate Star Fish")
     assert x.course_title == "Chocolate Star Fish"
+
+
+# appending course title with shorter string does nothing
+def test_append_course_desc_no_action():
+    x = Course("DSCS", 5679, "To the left", "Everything you own")
+    x.append_course_description("yeee")
+    assert x.course_description == "Everything you own"
+
+
+# appending longer string for course title will replace
+def test_append_course_desc_change():
+    x = Course()
+    x.append_course_description("And the hot dog flavored water")
+    assert x.course_description == "And the hot dog flavored water"
+
+
+# full_desc rly just spits out a long string representation with some options
+# to output lines instead of one long string.
+def test_full_desc():
+    x = Course()
+    assert isinstance(x.full_desc(), str)
+

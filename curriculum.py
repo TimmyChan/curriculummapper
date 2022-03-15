@@ -95,7 +95,7 @@ class Course:
             return self.course_code
         else:
             try:
-                return int(re.findall(r'([0-9]+)', self.course_code)[0])
+                return int(re.search(r'([0-9]{3}[0-9]*)', self.course_code)[0])
             except Exception:
                 return int(self.course_code)
 
@@ -156,8 +156,8 @@ class Course:
         i = 0
         for word in long_list:
             temp += word
-            i += 1
-            if i == 6:
+            i += len(word)
+            if i >= 23:
                 temp += r"<br>"
                 i = 0
             else:
@@ -168,7 +168,7 @@ class Course:
     def absorb(self, other):
         self.append_course_title(other.course_title)
         self.append_course_description(other.course_description)  # noqa: E501
-        self.append_prerequisites(other.prerequisites)
+        self.append_prerequisites(other.prerequisites.copy())
         self.append_alias_list(list(other.alias_set))
 
     def copypasta(self, other):
@@ -393,7 +393,7 @@ class Curriculum:
         sys.stdout = original_stdout
         self.print_graph(notebook=notebook, defaults=defaults)
         finish_time = perf_counter()
-        print("Printing time: %d" % finish_time - init_time)
+        print("Printing time: %s" % str(finish_time - init_time))
 
     def get_course(self, course_id=""):
         ''' tries to retreive a Course object using the key (subj_code course_code)
@@ -612,9 +612,3 @@ class Curriculum:
             for alias in alias_list:
                 self.course_dict[key].add_alias(alias)
                 self.course_dict[key].copypasta(self.course_dict[alias])
-        try:
-            for course in self.course_dict.values():
-                for prereq in course.prerequisites:
-                    self.add_course(prereq)
-        except Exception:
-            pass
