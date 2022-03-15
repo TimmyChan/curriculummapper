@@ -13,16 +13,20 @@ def main():
     school_name = "Case Western"
     degree_name = "MS in Data Science"
     cwru_curriculum = Curriculum(school_name, degree_name, "CSDS",
-                                 colored_subjects=["ECSE", "MATH"])
-    url_list = ["https://bulletin.case.edu/schoolofengineering/compdatasci/",
-                "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",  # noqa: E501
-                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  # noqa: E501
-                "https://bulletin.case.edu/course-descriptions/dsci/",
-                "https://bulletin.case.edu/course-descriptions/engr/",
-                "https://bulletin.case.edu/course-descriptions/buai/",
-                "https://bulletin.case.edu/course-descriptions/phys/"]
+                                 colored_subjects=["STAT", "MATH"])
+    url_list = ["https://bulletin.case.edu/schoolofengineering/compdatasci/",   # COMPSCI  # noqa: E501
+                "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",  # MATH # noqa: E501
+                "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  #COMPSCI # noqa: E501
+                "https://bulletin.case.edu/course-descriptions/dsci/", #DATA SCI
+                #"https://bulletin.case.edu/course-descriptions/engr/", #ENGEINEERING
+                #"https://bulletin.case.edu/course-descriptions/buai/", #BUSINESS ANALYTICS
+                #"https://bulletin.case.edu/course-descriptions/phys/", #PHYSICS
+                "https://bulletin.case.edu/course-descriptions/stat/",#STAT
+                "https://bulletin.case.edu/course-descriptions/scmg/",
+                #"https://bulletin.case.edu/bulletinarchives/2017-18/course-descriptions/eecs/"
+                ]
     for URL in url_list:
-        print("trying \n\t%s..." % URL)
+        print("Connecting: %s..." % URL)
         soup = cwru_curriculum.get_soup(URL)
         # Getting prereq names from course tables first
         print("Scraping tables...")
@@ -53,7 +57,7 @@ def main():
             blocktitle_tag = course_tag.find("p", {"class": "courseblocktitle"}).find("strong")  # noqa: E501
             # convert the content to UNICODE to minimize memory use
             blocktitle_string = str(blocktitle_tag.string)
-            print(blocktitle_string)
+            # print(blocktitle_string)
             # search for the first instance in blocktitle_string
             # that matches course_search
             course_id = cwru_curriculum.course_id_list_from_string(

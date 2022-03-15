@@ -119,9 +119,12 @@ class Course:
         for alias in alias_list:
             self.alias_set.add(alias)
 
-    def full_desc(self, heading=False):
+    def full_desc(self, tooltip=False, heading=False):
         ''' returning a string that gives the full course description '''
         temp = ""
+        newline = "\n"
+        if tooltip:
+            newline = r"<br>"
         if heading:
             temp += str(self) + " "
             if len(self.alias_set) > 0:
@@ -131,13 +134,33 @@ class Course:
                 aka = aka[:-2]+") "
                 temp += aka
         temp += self.course_title
+        course_desc = self.course_description
+        if tooltip:
+            course_desc = self.tooltip(course_desc)
         if len(self.course_description) > 0:
-            temp += ": " + self.course_description
+            temp += newline + course_desc
         if len(self.prerequisites) > 0:
             ''' if the list of prerequists is not empty list them'''
-            temp += "Prereqs:\n"
+            temp += newline + "Prereqs:"
             for prereq in self.prerequisites:
-                temp += str(prereq) + "\n"
+                temp += newline + str(prereq)
+        if tooltip:
+            return r"<small>" + temp + r"</small>"
+        return temp
+
+    def tooltip(self, longstring):
+        long_list = longstring.split(" ")
+        temp = ""
+        i = 0
+        for word in long_list:
+            temp += word
+            i += 1
+            if i == 6:
+                temp += r"<br>"
+                i = 0
+            else:
+                temp += " "
+
         return temp
 
     def absorb(self, other):
@@ -250,6 +273,7 @@ class Curriculum:
                     # print("Found Aliases %s in Curriculum.add_course(x)" %
                     #      x.alias_list)
                     # generating alias_dict[key] : [alias_1, alias_2, etc]
+                    x.alias_set.add(str(x))
                     self.add_alias_group(x.alias_set)
             else:
                 # print("\tUpdating %s as existing key" % key)
@@ -406,7 +430,7 @@ class Curriculum:
                     pass
                 self.diGraph.add_node(course_key,
                                       label=course_key,
-                                      title=self.course_dict[course_key].full_desc(),  # noqa: E501,
+                                      title=self.course_dict[course_key].full_desc(tooltip=True),  # noqa: E501,
                                       group=color_group)
                 if len(course.prerequisites) > 0:
                     for prereq in course.prerequisites:
@@ -423,7 +447,7 @@ class Curriculum:
                             pass
                         self.diGraph.add_node(str(prereq_true_self),
                                               label=str(prereq_true_self),
-                                              title=prereq_true_self.full_desc(),  # noqa: E501,
+                                              title=prereq_true_self.full_desc(tooltip=True),  # noqa: E501,
                                               group=color_group)
                         # Adding edge (prereq_key => course_key)
                         self.diGraph.add_edge(prereq_key, course_key)
@@ -437,7 +461,7 @@ class Curriculum:
                                        np.quantile(course_ints, 0.1)) &
                                       (course_ints <
                                        np.quantile(course_ints, 0.9))].tolist()
-            color_min = min(course_ints) / 2
+            color_min = 0
             color_max = max(course_ints)
             # print(color_min, color_max)
             for node in self.diGraph:
@@ -475,7 +499,8 @@ class Curriculum:
         net = Network('768px', '1024px', notebook)
 
         net.from_nx(self.diGraph)
-        # net.show_buttons()
+        net.show_buttons()
+        """
         net.set_options('''
             var options = {
               "edges": {
@@ -499,10 +524,11 @@ class Curriculum:
               }
             }
             ''')
+        """
         # net.enable_physics(True)
         # net.show_buttons(filter_=True)
         net.show("%s.html" % self.preferred_subject_code)
-        net.show_buttons(filter_=['physics'])
+        # net.show_buttons(filter_=['physics'])
 
     def set_url(self, new_url):
         if isinstance(new_url, str):
@@ -531,15 +557,17 @@ class Curriculum:
             pass
         try:
             # try to open html, where we cache the soup
-            print("Trying to open '%s'..." % str(data_dir + "/" + filename))
+            print("Reading from '%s'..." % str(data_dir + "/" + filename))
             with open(data_dir + "/" + filename, "r") as file:
                 self.soup = BeautifulSoup(file, "lxml")
             return self.soup
         except Exception:
             try:
+                print("\t\tPinging Server")
                 res = requests.get(self.url)
                 # using lxml because of bs4 doc
                 self.soup = BeautifulSoup(res.content, "lxml")
+                print("Writing to '%s'..." % str(data_dir + "/" + filename))
                 with open(data_dir + "/" + filename, "w") as file:
                     file.write(str(self.soup))
                 return self.soup
