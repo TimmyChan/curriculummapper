@@ -370,15 +370,19 @@ class Curriculum:
         '''
         # Save a reference to the original standard output
         init_time = perf_counter()
+        self.print_graph(notebook=notebook, defaults=defaults)
         original_stdout = sys.stdout
 
-        with open(str(self)+' output.txt', 'w') as f:
+        with open(self.data_dir + "/" +
+                  str(self).replace(" ", "_") +
+                  '_output.txt', 'w') as f:
             # Change the standard output to the file we created.
             if logging:
                 sys.stdout = f
             print('Sources:')
             for u in self.url_list:
                 print("\t" + str(u) + "\n")
+            printbreak()
             print(str(self))
             printbreak()
             print("Course Inventory contains %d courses..." %
@@ -391,7 +395,6 @@ class Curriculum:
                 # print(self.alias_dict)
         # Reset the standard output to its original value
         sys.stdout = original_stdout
-        self.print_graph(notebook=notebook, defaults=defaults)
         finish_time = perf_counter()
         print("Printing time: %s" % str(finish_time - init_time))
 
@@ -506,7 +509,7 @@ class Curriculum:
                     defaults=True):
 
         self.generate_nx(emphasize_in_degree=emphasize_in_degree)
-
+        self.diGraph.draw_kamada_kawai(arrows=True)
         net = Network('768px', '1024px', notebook)
 
         net.from_nx(self.diGraph)
