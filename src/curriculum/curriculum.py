@@ -556,7 +556,11 @@ class Curriculum:
             net.show_buttons(True)
         # net.enable_physics(True)
         # net.show_buttons(filter_=True)
-        net.show("%s_%s.html" % (str(self).replace(" ", "_"),
+        try:
+            os.makedirs("visualization")
+        except Exception:
+            pass
+        net.show("visualization/%s_%s.html" % (str(self).replace(" ", "_"),
                  self.preferred_subject_code))
         # net.show_buttons(filter_=['physics'])
 
