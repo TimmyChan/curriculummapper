@@ -509,7 +509,7 @@ class Curriculum:
                     defaults=True):
 
         self.generate_nx(emphasize_in_degree=emphasize_in_degree)
-        self.diGraph.draw_kamada_kawai(arrows=True)
+        nx.draw_kamada_kawai(self.diGraph, arrows=True)
         net = Network('768px', '1024px', notebook)
 
         net.from_nx(self.diGraph)
