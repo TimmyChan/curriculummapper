@@ -122,4 +122,3 @@ def test_append_course_desc_change():
 def test_full_desc():
     x = Course()
     assert isinstance(x.full_desc(), str)
-
