@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/curriculummapper/__init__.py
+src/curriculummapper/curriculummapper.py
+src/curriculummapper.egg-info/PKG-INFO
+src/curriculummapper.egg-info/SOURCES.txt
+src/curriculummapper.egg-info/dependency_links.txt
+src/curriculummapper.egg-info/top_level.txt

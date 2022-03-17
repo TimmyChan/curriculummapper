@@ -1,9 +1,0 @@
-LICENSE.txt
-README.md
-pyproject.toml
-setup.py
-src/curriculum
-src/curriculum_mapper.egg-info/PKG-INFO
-src/curriculum_mapper.egg-info/SOURCES.txt
-src/curriculum_mapper.egg-info/dependency_links.txt
-src/curriculum_mapper.egg-info/top_level.txt

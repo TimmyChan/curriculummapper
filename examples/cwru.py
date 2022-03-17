@@ -2,7 +2,7 @@
 
 
 import re
-from curriculum import Course, Curriculum
+from curriculummapper import Course, Curriculum
 
 
 def main():
@@ -12,8 +12,8 @@ def main():
     # initiating an empty curriculum object
     school_name = "Case Western"
     degree_name = "MS in Data Science"
-    cwru_curriculum = Curriculum(school_name, degree_name, "CSDS",
-                                 colored_subjects=["STAT", "MATH"])
+    curriculum = Curriculum(school_name, degree_name, "CSDS",
+                            colored_subjects=["STAT", "MATH"])
     url_list = ["https://bulletin.case.edu/schoolofengineering/compdatasci/",   # COMPSCI  # noqa: E501
                 "https://bulletin.case.edu/collegeofartsandsciences/mathematics/",  # MATH # noqa: E501
                 "https://bulletin.case.edu/schoolofengineering/eleccompsyseng/",  # COMPSCI # noqa: E501
@@ -22,7 +22,7 @@ def main():
                 ]
     for URL in url_list:
         print("Connecting: %s..." % URL)
-        soup = cwru_curriculum.get_soup(URL)
+        soup = curriculum.get_soup(URL)
         # Getting prereq names from course tables first
         print("Scraping tables...")
         for table_tag in soup.find_all("table", {"class": "sc_courselist"}):
@@ -30,16 +30,16 @@ def main():
                 cells = row_tag.findChildren("td")
                 try:
                     course_title = str(cells[1].string)
-                    course_id = cwru_curriculum.course_id_list_from_string(
+                    course_id = curriculum.course_id_list_from_string(
                         str(row_tag.findChildren("a")[0].string))[0]
                     '''
                     subject_code, course_code = course_id_to_list(course_id)
-                    cwru_curriculum.add_course(Course(subject_code,
+                    curriculum.add_course(Course(subject_code,
                                                       course_code,
                                                       course_title))
                     '''
-                    cwru_curriculum.add_courses_from_string(course_id)
-                    cwru_curriculum.course_dict[course_id].append_course_title(
+                    curriculum.add_courses_from_string(course_id)
+                    curriculum.course_dict[course_id].append_course_title(
                         course_title)
                 except Exception:
                     pass
@@ -55,9 +55,9 @@ def main():
             # print(blocktitle_string)
             # search for the first instance in blocktitle_string
             # that matches course_search
-            course_id = cwru_curriculum.course_id_list_from_string(
+            course_id = curriculum.course_id_list_from_string(
                 blocktitle_string)[0]
-            subject_code, course_code = cwru_curriculum.course_id_to_list(
+            subject_code, course_code = curriculum.course_id_to_list(
                 course_id)
             # apparently some universitys have letters in their course codes
             # so leave as string. Remove the spaces and periods tho.
@@ -90,7 +90,7 @@ def main():
             if prereq_match is not None:
                 try:
                     # find every instance of a course in the remaining string
-                    prereqs = cwru_curriculum.course_list_from_string(
+                    prereqs = curriculum.course_list_from_string(
                         prereq_match[0])
                 except IndexError:
                     # print("No prereqs.")
@@ -103,15 +103,15 @@ def main():
             if alias_match is not None:
                 try:
                     # find every instance of a course in the remaining string
-                    aliases = cwru_curriculum.course_id_list_from_string(
+                    aliases = curriculum.course_id_list_from_string(
                         str(alias_match[0]))
                 except IndexError:
                     pass
-            cwru_curriculum.add_course(Course(subject_code, course_code,
-                                              course_title, course_description,
-                                              prereqs, aliases))
+            curriculum.add_course(Course(subject_code, course_code,
+                                         course_title, course_description,
+                                         prereqs, aliases))
 
-    cwru_curriculum.print_all()
+    curriculum.print_all()
 
 
 if __name__ == "__main__":

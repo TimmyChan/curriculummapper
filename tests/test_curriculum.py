@@ -2,7 +2,7 @@
 Unit tests for the curriculum class
 """
 
-from curriculum import Course, Curriculum
+from curriculummapper import Course, Curriculum
 
 
 def test_init():

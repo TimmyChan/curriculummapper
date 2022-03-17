@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
-Name: curriculum-mapper
-Version: 0.1
-Summary: A Utility for Mapping University Curriculum using NetworkX and PyVis
+Name: curriculummapper
+Version: 0.0.1
+Summary: Visualization tool for university curricula
 Home-page: https://github.com/TimmyChan/curriculum_mapper
 Author: Timmy Chan
 Author-email: mathtodata@gmail.com
-License: UNKNOWN
+License: MIT License
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

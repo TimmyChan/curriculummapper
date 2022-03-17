@@ -2,7 +2,7 @@
 Unit tests for the Course class
 """
 
-from curriculum import Course
+from curriculummapper import Course
 
 
 # No parameters passed should give blink course

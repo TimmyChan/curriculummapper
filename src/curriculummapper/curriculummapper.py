@@ -181,7 +181,7 @@ class Curriculum:
     prerequisites'''
     def __init__(self, university="",
                  degree_name="", preferred_subject_code="", course_list=None,
-                 URL=None, data_directory="canned_soup",
+                 URL=None, data_directory="data",
                  # RegEx: course id is four capitals with space then three
                  # numbers with a possible letter after the numbers then stop
                  # with a non-word
@@ -575,7 +575,7 @@ class Curriculum:
         if URL is not None:
             self.set_url(URL)
 
-        data_dir = "canned_soup"
+        data_dir = "data"
         if self.data_dir != "":
             data_dir = self.data_dir
         filename = "DATA"

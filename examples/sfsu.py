@@ -4,7 +4,7 @@
 from time import perf_counter
 import re
 import unicodedata
-from curriculum import Course, Curriculum
+from curriculummapper import Course, Curriculum
 
 
 def main():
