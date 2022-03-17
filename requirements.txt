@@ -8,10 +8,12 @@ backcall==0.2.0
 beautifulsoup4==4.10.0
 bleach==4.1.0
 bs4==0.0.1
+build==0.7.0
 certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.12
 coverage==6.3.2
+curriculummapper==0.0.1
 cycler==0.11.0
 debugpy==1.5.1
 decorator==5.1.1
@@ -58,6 +60,7 @@ packaging==21.3
 pandas==1.4.1
 pandocfilters==1.5.0
 parso==0.8.3
+pep517==0.12.0
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.0.1
