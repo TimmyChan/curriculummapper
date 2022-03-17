@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/curriculum_mapper/src/
+    working_directory: ~/curriculummapper
     docker:
       - image: cimg/python:3.8.4
 
@@ -12,9 +12,11 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv curriculum_mapper_venv
-            . curriculum_mapper_venv/bin/activate
+            python3 -m venv curriculummappervenv
+            . curriculummappervenv/bin/activate
             pip install -r requirements.txt
+            python -m build
+            pip install dist/*
       # step 3: run linter and tests
       - run:
           name: run linter and tests
