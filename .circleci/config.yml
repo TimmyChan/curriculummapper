@@ -5,6 +5,8 @@ jobs:
     docker:
       - image: cimg/python:3.8.4
 
+    parallelism: 4
+
     steps:
       # step 1: obtain repo from GitHub
       - checkout
