@@ -14,13 +14,13 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv curriculummappervenv
-            . curriculummappervenv/bin/activate
+            python3 -m venv CMvenv
+            . CMvenv/bin/activate
             pip install -r requirements.txt
       # step 3: run linter and tests
       - run:
           name: run linter and tests
           command: |
-            . curriculummappervenv/bin/activate
-            flake8 --exclude=curriculummappervenv/* --statistics
-            pytest -v --cov
+            . CMvenv/bin/activate
+            flake8 --exclude=CMvenv/* --statistics
+            pytest -v
