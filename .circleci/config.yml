@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/curriculummapper
     docker:
-      - image: cimg/python:3.8.4
+      - image: cimg/python:3.9.11
 
     parallelism: 4
 
@@ -17,8 +17,6 @@ jobs:
             python3 -m venv curriculummappervenv
             . curriculummappervenv/bin/activate
             pip install -r requirements.txt
-            python -m build
-            pip install dist/*
       # step 3: run linter and tests
       - run:
           name: run linter and tests
