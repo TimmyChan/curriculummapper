@@ -1,8 +1,12 @@
 """
 Unit tests for the Course class
 """
+import os
+import sys
 
-from curriculummapper import Course
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                             'src/'))
+from curriculummapper import Course  # noqa: E402
 
 
 # No parameters passed should give blink course

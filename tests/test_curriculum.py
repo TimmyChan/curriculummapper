@@ -1,8 +1,12 @@
 """
 Unit tests for the curriculum class
 """
+import os
+import sys
 
-from curriculummapper import Course, Curriculum
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                             'src/'))
+from curriculummapper import Course, Curriculum  # noqa: E402
 
 
 def test_init():

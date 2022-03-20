@@ -2,7 +2,7 @@ Metadata-Version: 2.1
 Name: curriculummapper
 Version: 0.0.1
 Summary: Visualization tool for university curricula
-Home-page: https://github.com/TimmyChan/curriculum_mapper
+Home-page: https://github.com/TimmyChan/curriculummapper
 Author: Timmy Chan
 Author-email: mathtodata@gmail.com
 License: MIT License
@@ -10,7 +10,7 @@ Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
-Requires-Python: >=3.8
+Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 
