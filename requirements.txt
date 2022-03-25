@@ -6,7 +6,6 @@ bs4==0.0.1
 build==0.7.0
 certifi==2021.10.8
 charset-normalizer==2.0.12
-curriculummapper @ file:///home/tc/Dev/curriculummapper/dist/curriculummapper-0.0.1.tar.gz
 cycler==0.11.0
 decorator==5.1.1
 executing==0.8.3
