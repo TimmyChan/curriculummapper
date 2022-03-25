@@ -1,4 +1,4 @@
-#! python3
+#! python3.9
 
 # Scraping and logic
 from time import perf_counter
@@ -217,8 +217,8 @@ class Curriculum:
         self.url_list = []
         if URL is not None:
             self.set_url(URL)
-
-        self.data_dir = data_directory
+        SOURCE_DIR = os.path.dirname(os.path.realpath(__file__))
+        self.data_dir = os.path.join(SOURCE_DIR, "data/")
         self.alias_dict = {}
         # for a directed graph
         # this will stay empty until generate_graph is called!
@@ -373,9 +373,8 @@ class Curriculum:
         self.print_graph(notebook=notebook, defaults=defaults)
         original_stdout = sys.stdout
 
-        with open(self.data_dir + "/" +
-                  str(self).replace(" ", "_") +
-                  '_output.txt', 'w') as f:
+        with open(os.path.join( self.data_dir,
+                  str(str(self).replace(" ", "_") + "_output.txt")),'w+') as f:
             # Change the standard output to the file we created.
             if logging:
                 sys.stdout = f
@@ -575,9 +574,7 @@ class Curriculum:
         if URL is not None:
             self.set_url(URL)
 
-        data_dir = "data"
-        if self.data_dir != "":
-            data_dir = self.data_dir
+
         filename = "DATA"
         filename = str(self).replace(" ", "_")
         i = 1
@@ -586,15 +583,15 @@ class Curriculum:
         filename += "_" + self.url.split("/")[-i] + ".html"
         # print("Trying %s/%s" % (data_dir, filename))
         try:
-            os.makedirs(data_dir)
+            os.makedirs(self.data_dir)
         except Exception:
             # only here if already have the directory
             # do nothing safely
             pass
         try:
             # try to open html, where we cache the soup
-            print("Reading from '%s'..." % str(data_dir + "/" + filename))
-            with open(data_dir + "/" + filename, "r") as file:
+            print("Reading from '%s'..." % os.path.join(self.data_dir, filename))
+            with open(os.path.join(self.data_dir, filename), "r") as file:
                 self.soup = BeautifulSoup(file, "lxml")
             return self.soup
         except Exception:
@@ -603,13 +600,14 @@ class Curriculum:
                 res = requests.get(self.url)
                 # using lxml because of bs4 doc
                 self.soup = BeautifulSoup(res.content, "lxml")
-                print("Writing to '%s'..." % str(data_dir + "/" + filename))
-                with open(data_dir + "/" + filename, "w") as file:
+                print("Writing to '%s'..." % os.path.join(self.data_dir, filename))
+                with open(os.path.join(self.data_dir, filename), 'w+') as file:
                     file.write(str(self.soup))
                 return self.soup
             except Exception:
                 print("Why are you even here?")
-                return self.soup
+                print(str(Exception))
+                return BeautifulSoup(requests.get(self.url), "lxml")
 
     def get_soup(self, URL=None):
         return self.polite_crawler(URL)
