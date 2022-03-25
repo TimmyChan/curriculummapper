@@ -477,18 +477,23 @@ class Curriculum:
         # get the largest connected component
         self.graph_analysis['number_of_nodes'] = self.diGraph.number_of_nodes()
         undirected = self.diGraph.to_undirected()
-        largest_component = max(nx.connected_components(undirected),key=len)
+        largest_component = max(nx.connected_components(undirected), key=len)
         subgraph = undirected.subgraph(largest_component)
-        
-        self.graph_analysis['subgraph_number_of_nodes'] = subgraph.number_of_nodes()
-        self.graph_analysis['subgraph_density'] = nx.density(subgraph)
-        self.graph_analysis['subgraph_diameter'] = nx.diameter(subgraph)
-        self.graph_analysis['subgraph_transitivity'] = nx.transitivity(subgraph)
-        
+        self.graph_analysis['subgraph_definition'] =\
+            "largest connected component"
+        self.graph_analysis['subgraph_number_of_nodes'] =\
+            subgraph.number_of_nodes()
+        self.graph_analysis['subgraph_density'] =\
+            nx.density(subgraph)
+        self.graph_analysis['subgraph_diameter'] =\
+            nx.diameter(subgraph)
+        self.graph_analysis['subgraph_transitivity'] =\
+            nx.transitivity(subgraph)
+
     def print_graph_analysis(self):
         for key in self.graph_analysis:
-            print("\t%s: %.2f" % (key, self.graph_analysis[key]))
-        
+            print("\t%s: %s" % (key, self.graph_analysis[key]))
+
     def print_graph(self, notebook=False, emphasize_in_degree=False,
                     defaults=True):
 
@@ -559,8 +564,6 @@ class Curriculum:
         if URL is not None:
             self.set_url(URL)
 
-
-        filename = "DATA"
         filename = str(self).replace(" ", "_")
         i = 1
         if self.url.split("/")[-i] == "":
@@ -575,7 +578,8 @@ class Curriculum:
             pass
         try:
             # try to open html, where we cache the soup
-            print("Reading from '%s'..." % os.path.join(self.data_dir, filename))
+            print("Reading from '%s'..." %
+                  os.path.join(self.data_dir, filename))
             with open(os.path.join(self.data_dir, filename), "r") as file:
                 self.soup = BeautifulSoup(file, "lxml")
             return self.soup
@@ -585,7 +589,8 @@ class Curriculum:
                 res = requests.get(self.url)
                 # using lxml because of bs4 doc
                 self.soup = BeautifulSoup(res.content, "lxml")
-                print("Writing to '%s'..." % os.path.join(self.data_dir, filename))
+                print("Writing to '%s'..." %
+                      os.path.join(self.data_dir, filename))
                 with open(os.path.join(self.data_dir, filename), 'w+') as file:
                     file.write(str(self.soup))
                 return self.soup
@@ -614,8 +619,9 @@ class Curriculum:
         self.print_graph(notebook=notebook, defaults=defaults)
         original_stdout = sys.stdout
 
-        with open(os.path.join( self.data_dir,
-                  str(str(self).replace(" ", "_") + "_output.txt")),'w+') as f:
+        with open(os.path.join(self.data_dir,
+                  str(str(self).replace(" ", "_") +
+                      "_output.txt")), 'w+') as f:
             # Change the standard output to the file we created.
             if logging:
                 sys.stdout = f
