@@ -1,3 +1,3 @@
 #!/bin/sh
-python cwru.py
-python sfsu.py
+python cwru_example.py
+python sfsu_example.py
