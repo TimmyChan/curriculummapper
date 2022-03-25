@@ -221,7 +221,7 @@ class Curriculum:
         self.data_dir = os.path.join(SOURCE_DIR, "data/")
         self.alias_dict = {}
         # for a directed graph
-        # this will stay empty until generate_graph is called!
+        # this will stay empty until generate_nx is called!
         self.diGraph = nx.DiGraph()
         self.soup = None
 
@@ -244,6 +244,7 @@ class Curriculum:
         if len(course_list) > 0:
             for course in course_list:
                 self.add_course(course)
+        self.graph_analysis = {}
 
     def add_subject(self, subj):
         if re.match(self.subject_search, subj):
@@ -362,41 +363,6 @@ class Curriculum:
         ''' returns total number of unique courses'''
         return len(self.course_dict)
 
-    def print_all(self, notebook=False, logging=True, defaults=True):
-        '''
-        no unit test for this one
-        since it's rly just printing things out
-        for debugging purposes
-        '''
-        # Save a reference to the original standard output
-        init_time = perf_counter()
-        self.print_graph(notebook=notebook, defaults=defaults)
-        original_stdout = sys.stdout
-
-        with open(os.path.join( self.data_dir,
-                  str(str(self).replace(" ", "_") + "_output.txt")),'w+') as f:
-            # Change the standard output to the file we created.
-            if logging:
-                sys.stdout = f
-            print('Sources:')
-            for u in self.url_list:
-                print("\t" + str(u) + "\n")
-            printbreak()
-            print(str(self))
-            printbreak()
-            print("Course Inventory contains %d courses..." %
-                  self.num_courses())
-            if self.num_courses() > 0:
-                for x in self.course_dict:
-                    printbreak()
-                    print(self.course_dict[x].full_desc(heading=True))
-                printbreak()
-                # print(self.alias_dict)
-        # Reset the standard output to its original value
-        sys.stdout = original_stdout
-        finish_time = perf_counter()
-        print("Printing time: %s" % str(finish_time - init_time))
-
     def get_course(self, course_id=""):
         ''' tries to retreive a Course object using the key (subj_code course_code)
             scans thru alias list and returns one.
@@ -497,6 +463,7 @@ class Curriculum:
                 self.diGraph.nodes[node]['color'] = \
                     matplotlib.colors.rgb2hex(cmap(norm(
                         self.course_dict[node].get_course_code_int())))
+            self.generate_graph_analysis()
         else:
             print("Add courses first!")
 
@@ -504,6 +471,24 @@ class Curriculum:
         self.generate_nx()
         return self.diGraph
 
+    def generate_graph_analysis(self):
+        ''' generates internal dictionary of information on graph '''
+        self.graph_analysis['density'] = nx.density(self.diGraph)
+        # get the largest connected component
+        self.graph_analysis['number_of_nodes'] = self.diGraph.number_of_nodes()
+        undirected = self.diGraph.to_undirected()
+        largest_component = max(nx.connected_components(undirected),key=len)
+        subgraph = undirected.subgraph(largest_component)
+        
+        self.graph_analysis['subgraph_number_of_nodes'] = subgraph.number_of_nodes()
+        self.graph_analysis['subgraph_density'] = nx.density(subgraph)
+        self.graph_analysis['subgraph_diameter'] = nx.diameter(subgraph)
+        self.graph_analysis['subgraph_transitivity'] = nx.transitivity(subgraph)
+        
+    def print_graph_analysis(self):
+        for key in self.graph_analysis:
+            print("\t%s: %.2f" % (key, self.graph_analysis[key]))
+        
     def print_graph(self, notebook=False, emphasize_in_degree=False,
                     defaults=True):
 
@@ -617,3 +602,40 @@ class Curriculum:
             for alias in alias_list:
                 self.course_dict[key].add_alias(alias)
                 self.course_dict[key].copypasta(self.course_dict[alias])
+
+    def print_all(self, notebook=False, logging=True, defaults=True):
+        '''
+        no unit test for this one
+        since it's rly just printing things out
+        for debugging purposes
+        '''
+        # Save a reference to the original standard output
+        init_time = perf_counter()
+        self.print_graph(notebook=notebook, defaults=defaults)
+        original_stdout = sys.stdout
+
+        with open(os.path.join( self.data_dir,
+                  str(str(self).replace(" ", "_") + "_output.txt")),'w+') as f:
+            # Change the standard output to the file we created.
+            if logging:
+                sys.stdout = f
+            print('Sources:')
+            for u in self.url_list:
+                print("\t" + str(u) + "\n")
+            printbreak()
+            print(str(self))
+            printbreak()
+            print("Course Inventory contains %d courses..." %
+                  self.num_courses())
+            if self.num_courses() > 0:
+                for x in self.course_dict:
+                    printbreak()
+                    print(self.course_dict[x].full_desc(heading=True))
+                printbreak()
+                # print(self.alias_dict)
+            self.print_graph_analysis()
+        # Reset the standard output to its original value
+        sys.stdout = original_stdout
+        self.print_graph_analysis()
+        finish_time = perf_counter()
+        print("Printing time: %.6f seconds" % (finish_time - init_time))

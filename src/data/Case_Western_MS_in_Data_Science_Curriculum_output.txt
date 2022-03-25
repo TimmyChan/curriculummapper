@@ -23,17 +23,17 @@ In the first half of the course, students will develop a basic understanding of 
 Case studies and team project assignments in the second half of the course will be used to implement the ideas. Topics covered will include: Overview of large scale parallel and distributed (cloud) computing; file systems and file i/o; open source coding and distributed versioning, data query and retrieval; basic data analysis; visualization; data security, privacy and provenance.
 
 Prereqs:
-ENGR 131
 EECS 132
+ENGR 131
 ----------
-CSDS 233 (aka ECSE 233, CSDS 233)  Introduction to Data Structures
+CSDS 233 (aka CSDS 233, ECSE 233)  Introduction to Data Structures
 
 Different representations of data: lists, stacks and queues, trees, graphs, and files.  Manipulation of data: searching and sorting, hashing, recursion and higher order functions.  Abstract data types, templating, and the separation of interface and implementation.  Introduction to asymptotic analysis. The Java language is used to illustrate the concepts and as an implementation vehicle throughout the course.
 
 Prereqs:
-EECS 132
-ECSE 132
 CSDS 132
+ECSE 132
+EECS 132
 ----------
 CSDS 234 Structured and Unstructured Data
 
@@ -51,15 +51,15 @@ MATH 122
 MATH 124
 MATH 126
 ----------
-CSDS 310 (aka CSDS 310N, CSDS 310) Algorithms
+CSDS 310 (aka CSDS 310, CSDS 310N) Algorithms
 
 Fundamentals in algorithm design and analysis. Loop invariants, asymptotic notation, recurrence relations, sorting algorithms, divide-and-conquer, dynamic programming, greedy algorithms, basic graph algorithms.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 CSDS 312 Introduction to Data Science Systems
@@ -87,10 +87,10 @@ CSDS 341 (aka CSDS 341, CSDS 341N) Introduction to Database Systems
 Relational model, ER model, relational algebra and calculus, SQL, OBE, security, views, files and physical database structures, query processing and query optimization, normalization theory, concurrency control, object relational systems, multimedia databases, Oracle SQL server, Microsoft SQL server.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 CSDS 341D  Introduction to Databases: DS Major
@@ -102,17 +102,17 @@ Weeks 11-14 provide an overview of more advanced topics including Database Syste
 Students cannot receive credit for both CSDS341 and CSDS341D.
 
 Prereqs:
-CSDS 233
 ECSE 233
+CSDS 233
 CSDS 234
 ----------
 CSDS 344 (aka CSDS 344, CSDS 444)  Computer Security
 
 General types of security attacks; approaches to prevention; secret key and public key cryptography; message authentication and hash functions; digital signatures and authentication protocols; information gathering; password cracking; spoofing; session hijacking; denial of service attacks; buffer overruns; viruses, worms, etc., principles of secure software design, threat modeling; access control; least privilege; storing secrets; socket security; firewalls; intrusions; auditing; mobile security. 
 Prereqs:
-CSDS 338
 CSDS 325
 ECSE 132
+CSDS 338
 CSDS 293
 ----------
 CSDS 356 (aka CSDS 356, CSDS 456)  Data Privacy
@@ -136,14 +136,14 @@ Prereqs:
 MATH 223
 MATH 227
 ----------
-CSDS 293 (aka CSDS 293N, CSDS 293) Software Craftsmanship
+CSDS 293 (aka CSDS 293, CSDS 293N) Software Craftsmanship
 
 A course to improve programming skills, software quality, and the software development process.  Software design; Version control; Control issues and routines;  Pseudo-code programming process and developer testing; Defensive programming; Classes; Debugging; Self-documenting code; Refactoring.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 305 Files, Indexes and Access Structures for Big Data
 
@@ -157,8 +157,8 @@ including multidimensional data, high dimensional data and data in metric spaces
 partial match, exact match), and on dimensionality reduction techniques.
 
 Prereqs:
-CSDS 234
 ECSE 233
+CSDS 234
 ----------
 CSDS 315 Scalable Parallel Data Analysis
 
@@ -172,17 +172,17 @@ CSDS 338 (aka CSDS 338N, CSDS 338, ECSE 338N) Intro to Operating Systems and Con
 Intro to OS: OS Structures, processes, threads, CPU scheduling, deadlocks, memory management, file system implementations, virtual machines, cloud computing. Concurrent programming: fork, join, concurrent statement, critical section problem, safety and liveness properties of concurrent programs, process synchronization algorithms, semaphores, monitors.  UNIX systems programming: system calls, UNIX System V IPCs, threads, RPCs, shell programming.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 393 (aka CSDS 393, CSDS 393N, CSDS 493) Software Engineering
 
 Topics: Introduction to software engineering; software lifecycle models; development team organization and project management; requirements analysis and specification techniques; software design techniques; programming practices; software validation techniques; software maintenance practices; software engineering ethics. Undergraduates work in teams to complete a significant software development project. Graduate students are required to complete a research project.
 
 Prereqs:
-CSDS 233
 ECSE 233
+CSDS 233
 ----------
 STAT 243 Statistical Theory with Application I
 
@@ -199,7 +199,7 @@ Extension of inferences to continuous-valued random variables. Common continuous
 Prereqs:
 STAT 243
 ----------
-CSDS 390 (aka ECSE 390, CSDS 390, ECSE 487, CSDS 487)  Advanced Game Development Project
+CSDS 390 (aka CSDS 390, ECSE 487, ECSE 390, CSDS 487)  Advanced Game Development Project
 
 This game development project course will bring together an inter-professional group of students in the fields of engineering, computer science, and art to focus on the design and development of a complete, fully functioning computer game as an interdisciplinary team. The student teams are given complete liberty to design their own fully functional games from their original concept to a playable game published in an online marketplace. Student teams will experience the entire game development cycle as they execute their projects. Responsibilities include creating a game idea, writing a story, developing the artwork, designing characters, implementing music and sound effects, programming and testing the game, and publishing the final project. Students enrolled in 487 will develop a healthcare or education virtual environment or video game in collaboration with a mentor who has expertise in the chosen area.
 
@@ -212,9 +212,9 @@ CSDS 391 Introduction to Artificial Intelligence
 This course is an introduction to artificial intelligence.  We will study the concepts that underlie intelligent systems.  Topics covered include problem solving with search, constraint satisfaction, adversarial games, knowledge representation and reasoning using propositional and first order logic, reasoning under uncertainty, introduction to machine learning, automated planning, reinforcement learning and natural language processing.   Recommended: basic knowledge of probability and statistics.
 
 Prereqs:
-ENGR 131
-ECSE 132
 CSDS 132
+ECSE 132
+ENGR 131
 ----------
 CSDS 442 Causal Learning from Data
 
@@ -227,8 +227,8 @@ STAT 332
 STAT 333
 EECS 440
 STAT 312
-MATH 380
 STAT 313
+MATH 380
 ----------
 CSDS 491 Artificial Intelligence: Probabilistic Graphical Models
 
@@ -242,11 +242,11 @@ CSDS 339 Web Data Mining
 Web crawling technology, web search and information extraction, unsupervised and semi-supervised learning techniques and their application to web data extraction, social network analysis, various pagerank algorithms, link analysis, web resource discovery, web, resource description framework (RDF), XML, Web Ontology Language (OWL).
 
 Prereqs:
-ECSE 302
-CSDS 302
-CSDS 341
-ECSE 338
 CSDS 338
+ECSE 338
+ECSE 302
+CSDS 341
+CSDS 302
 MATH 304
 ----------
 CSDS 435  Data Mining
@@ -261,11 +261,11 @@ CSDS 477 Advanced Algorithms
 Design and analysis of efficient algorithms, with emphasis on network flow, combinatorial optimization, and randomized algorithms. Linear programming: duality, complementary slackness, total unimodularity. Minimum cost flow: optimality conditions, algorithms, applications. Game theory: two-person zero-sum games, minimax theorems. Probabilistic analysis and randomized algorithms: examples and lower bounds. Approximation algorithms for NP-hard problems: examples, randomized rounding of linear programs.
 
 Prereqs:
+MATH 307
 EECS 302
 MATH 380
-MATH 307
-MATH 201
 EECS 340
+MATH 201
 ----------
 MATH 201 Introduction to Linear Algebra for Applications (SC)
 
@@ -282,7 +282,7 @@ Prereqs:
 MATH 122
 MATH 124
 ----------
-MATH 327 (aka OPRE 427, MATH 427, MATH 327) Convexity and Optimization
+MATH 327 (aka MATH 327, MATH 427, OPRE 427) Convexity and Optimization
 
 Introduction to the theory of convex sets and functions and to the extremes in problems in areas of mathematics where convexity plays a role.  Among the topics discussed are basic properties of convex sets (extreme points, facial structure of polytopes), separation theorems, duality and polars, properties of convex functions, minima and maxima of convex functions over convex set, various optimization problems.
 
@@ -320,17 +320,17 @@ This course will focus on the development of a working knowledge and skills to r
 Prereqs:
 MATH 201
 ----------
-BIOL 319 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+BIOL 319 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
 BIOL 311A Survey of Bioinformatics: Technologies in Bioinformatics
 ----------
@@ -343,17 +343,17 @@ DSCI 330 (aka COGS 330, DSCI 330, DSCI 430, COGS 430) Cognition and Computation
 An introduction to (1) theories of the relationship between cognition and computation; (2) computational models of human cognition (e.g. models of decision-making or concept creation); and (3) computational tools for the study of human cognition. All three dimensions involve data science: theories are tested against archives of brain imaging data; models are derived from and tested against datasets of e.g., financial decisions (markets), legal rulings and findings (juries, judges, courts), legislative actions, and healthcare decisions; computational tools aggregate data and operate upon it analytically, for search, recognition, tagging, machine learning, statistical description, and hypothesis testing.
 
 ----------
-DSCI 351 (aka DSCI 351M, DSCI 451, DSCI 351) Exploratory Data Science
+DSCI 351 (aka DSCI 351M, DSCI 351, DSCI 451) Exploratory Data Science
 
 In this course, we will learn data science and analysis approaches to identify statistically significance relationships and better model and predict the behavior of these systems. We will assemble and explore real-world datasets, perform clustering and pair plot analyses to investigate correlations, and logistic regression will be employed to develop associated predictive models. Results will be interpreted, visualized and discussed. We will introduce basic elements of statistical analysis using R Project open source software for exploratory data analysis and model development. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and munging functions, and a rich selection of statistical packages, used for data analytics, model development and prediction. This will include an introduction to R data types, reading and writing data, looping, plotting and regular expressions, so that one can start performing variable transformations for linear fitting and developing structural equation models, while exploring for statistically significant relationships. The M section of 
 Prereqs:
-EPBI 431
 STAT 201R
-STAT 312R
-DSCI 134
-ENGR 131
-SYBB 310
+EPBI 431
 EECS 132
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 310
 ----------
 ECON 326 Econometrics
 ----------
@@ -380,7 +380,7 @@ MPHP 301 Introduction to Epidemiology
 ----------
 MPHP 426 An Introduction to GIS for Health and Social Sciences
 ----------
-CSDS 132 (aka CSDS 132, ECSE 132)  Introduction to Programming in Java
+CSDS 132 (aka ECSE 132, CSDS 132)  Introduction to Programming in Java
 
 An introduction to modern programming language features, computer programming and algorithmic problem solving with an emphasis on the Java language. Computers and code compilation; conditional statements, subprograms, loops, methods; object-oriented design, inheritance and polymorphism, abstract classes and interfaces; types, type systems, generic types, abstract data types, strings, arrays, linked lists; software development, modular code design, unit testing; strings, text and file I/O; GUI components, GUI event handling; threads; comparison of Java to C, C++, and C#.
 
@@ -390,11 +390,11 @@ CSDS 281 (aka ECSE 281, CSDS 281)  Logic Design and Computer Organization
 Fundamentals of digital systems in terms of both computer organization and logic level design.  Organization of digital computers; information representation; boolean algebra; analysis and synthesis of combinational and sequential circuits; datapaths and register transfers; instruction sets and assembly language; input/output and communication; memory.
 
 Prereqs:
-ENGR 131
 ECSE 132
 CSDS 132
+ENGR 131
 ----------
-CSDS 314 (aka ECSE 314, CSDS 314) Computer Architecture
+CSDS 314 (aka CSDS 314, ECSE 314) Computer Architecture
 
 This course provides students the opportunity to study and evaluate a modern computer architecture design.  The course covers topics in fundamentals of computer design, performance, cost, instruction set design, processor implementation, control unit, pipelining, communication and network, memory hierarchy, computer arithmetic, input-output, and an introduction to RISC and super-scalar processors.
 
@@ -406,19 +406,19 @@ CSDS 325 (aka CSDS 325, CSDS 325N) Computer Networks I
 An introduction to computer networks and the Internet.  Applications: http, ftp, e-mail, DNS, socket programming.  Transport: UDP, TCP, reliable data transfer, and congestion control.  Network layer: IP, routing, and NAT.  Link layer: taxonomy, Ethernet, 802.11.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 345 (aka CSDS 345N, CSDS 345) Programming Language Concepts
 
 This course examines the four main programming paradigms: imperative, object-oriented, functional, and logical. It is assumed that students will come to the course with significant exposure to object-oriented programming and some exposure to imperative programming.  The course will teach the functional paradigm in depth, enhance the students' knowledge of the object-oriented and imperative paradigms, and introduce the logical paradigm. The course will explore language syntax, semantics, names/scopes, types, expressions, assignment, subprograms, abstraction and inheritance.  This exploration will have several forms. Students will study the programming language concepts at a theoretical level, use the concepts in functional language programming, and implement the concepts by designing language interpreters.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 STAT 312 Basic Statistics for Engineering and Science
@@ -439,29 +439,29 @@ For advanced undergraduate students or beginning graduate students in engineerin
 Prereqs:
 MATH 122
 ----------
-STAT 333 (aka STAT 433, STAT 333) Uncertainty in Engineering and Science
+STAT 333 (aka STAT 333, STAT 433) Uncertainty in Engineering and Science
 
 Phenomena of uncertainty appear in engineering and science for various reasons and can be modeled in different ways. The course integrates the mainstream ideas in statistical data analysis with models of uncertain phenomena stemming from three distinct viewpoints: algorithmic/computational complexity; classical probability theory; and chaotic behavior of nonlinear systems. Descriptive statistics, estimation procedures and hypothesis testing (including design of experiments). Random number generators and their testing.  Monte Carlo Methods.  Mathematica notebooks and simulations will be used. Graduate students are required to do an extra project.
 
 Prereqs:
-MATH 122
 MATH 223
+MATH 122
 ----------
 CSDS 427 Internet Security and Privacy
 
 This course introduces students to research on Internet security and privacy. Covered topics include denial of service attacks, attacks enabled by man-in-the-middle surveillance, communication hijacking, botnet and fast-flux networks, email and Web spam, threats to privacy on the Internet, and Internet censorship. The course will be based on a collection of research papers. Students will be required to attend lectures, read the materials, prepare written summaries of discussed papers, present a paper in class, complete a course project and take the final exam (in the form of the course project presentation).
 
 Prereqs:
-EECS 425
 EECS 325
+EECS 425
 ----------
 CSDS 444 (aka CSDS 344, CSDS 444)  Computer Security
 
 General types of security attacks; approaches to prevention; secret key and public key cryptography; message authentication and hash functions; digital signatures and authentication protocols; information gathering; password cracking; spoofing; session hijacking; denial of service attacks; buffer overruns; viruses, worms, etc., principles of secure software design, threat modeling; access control; least privilege; storing secrets; socket security; firewalls; intrusions; auditing; mobile security. 
 Prereqs:
-CSDS 338
 CSDS 325
 ECSE 132
+CSDS 338
 CSDS 293
 ----------
 CSDS 448 Smartphone Security
@@ -477,30 +477,30 @@ Introduction to the mathematical theory of secure communication.  Topics include
 Prereqs:
 MATH 303
 ----------
-CSDS 337 (aka CSDS 337, ECSE 337) Compiler Design
+CSDS 337 (aka ECSE 337, CSDS 337) Compiler Design
 
 Design and implementation of compilers and other language processors. Scanners and lexical analysis; regular expressions and finite automata; scanner generators; parsers and syntax analysis; context free grammars; parser generators; semantic analysis; intermediate code generation; runtime environments; code generation; machine independent optimizations; data flow and dependence analysis. There will be a significant programming project involving the use of compiler tools and software development tools and techniques.
 
 Prereqs:
-ECSE 233
-EECS 281
-CSDS 233
-CSDS 281
 ECSE 281
+CSDS 233
+EECS 281
+CSDS 281
+ECSE 233
 EECS 233
 ----------
 CSDS 392 App Development for iOS
 
 This course is an introduction to app development for iPhone and iPad using Cocoa Touch Framework and Xcode development environment. Topics include Swift programming language and iOS SDK/foundations, object-oriented design and model-view-controller framework, user interface design using Xcode. Additional topics may include data management, map applications, animations and some recent developments in iOS.  
 ----------
-CSDS 438 (aka CSDS 438, ECSE 438) High Performance Computing
+CSDS 438 (aka ECSE 438, CSDS 438) High Performance Computing
 
 High performance computing (HPC) leverages parallel processing in order to maximize speed and throughput. This hands-on course will cover theoretical and practical aspects of HPC. Theoretical concepts covered include computer architecture, parallel programming, and performance optimization. Practical applications will be discussed from various information and scientific fields. Practical considerations will include HPC job management and Unix scripting. Weekly assessments and a course project will be required.
 
 Prereqs:
 EECS 233
 ----------
-CSDS 343 (aka CSDS 343, MATH 343) Theoretical Computer Science
+CSDS 343 (aka MATH 343, CSDS 343) Theoretical Computer Science
 
 Introduction to different classes of automata and their correspondence to different classes of formal languages and grammars, computability, complexity and various proof techniques.  
 
@@ -509,7 +509,7 @@ EECS 302
 MATH 304
 CSDS 310
 ----------
-CSDS 394 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+CSDS 394 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -536,17 +536,17 @@ CSDS 455 Applied Graph Theory
 This course serves as an introduction to many of the important aspects of graph theory. Topics include connectivity, flows, matchings, planar graphs, and graph coloring with additional topics selected from extremal graphs, random graphs, bounded treewidth graphs, social networks and small world graphs. The class will explore the underlying mathematical theory with a specific focus on the development and analysis of graph algorithms.
 
 Prereqs:
-EECS 302
-MATH 305
 MATH 307
+EECS 302
 MATH 304
+MATH 305
 ----------
-MATH 406 (aka PHIL 306, PHIL 406, MATH 406) Mathematical Logic and Model Theory
+MATH 406 (aka MATH 406, PHIL 306, PHIL 406) Mathematical Logic and Model Theory
 
 Propositional calculus and quantification theory; consistency and completeness theorems; Gödel incompleteness results and their philosophical significance; introduction to basic concepts of model theory; problems of formulation of arguments in philosophy and the sciences.
 
 ----------
-PHIL 306 (aka PHIL 306, PHIL 406, MATH 406) Mathematical Logic and Model Theory
+PHIL 306 (aka MATH 406, PHIL 306, PHIL 406) Mathematical Logic and Model Theory
 
 Propositional calculus and quantification theory; consistency and completeness theorems; Gödel incompleteness results and their philosophical significance; introduction to basic concepts of model theory; problems of formulation of arguments in philosophy and the sciences.
 
@@ -570,14 +570,14 @@ Basic issues in file processing and database management systems. Physical data o
 Prereqs:
 MATH 304
 ----------
-MATH 382 (aka STAT 382, MATH 382, STAT 482, MATH 482) High Dimensional Probability
+MATH 382 (aka MATH 482, STAT 382, STAT 482, MATH 382) High Dimensional Probability
 
 Behavior of random vectors, random matrices, and random projections in high dimensional spaces, with a view toward applications to data sciences.  Topics include tail inequalities for sums of independent random variables, norms of random matrices, concentration of measure, and bounds for random processes. Applications may include structure of random graphs, community detection, covariance estimation and clustering, randomized dimension reduction, empirical processes, statistical learning, and sparse recovery problems.  Additional work is required for graduate students.
 
 Prereqs:
-STAT 345
-STAT 445
 MATH 307
+STAT 445
+STAT 345
 MATH 380
 ----------
 MATH 444 Mathematics of Data Mining and Pattern Recognition
@@ -606,7 +606,7 @@ This course gives students an overview of the stat of the art in natural languag
 Prereqs:
 EECS 440
 ----------
-CSDS 499 (aka CSDS 499, ECSE 499) Algorithmic Robotics
+CSDS 499 (aka ECSE 499, CSDS 499) Algorithmic Robotics
 
 This course introduces basic algorithmic techniques in robotic perception and planning.  Course is divided into two parts.  The first part introduces probabilistic modeling of robotic motion and sensing, Gaussian and nonparametric filters, and algorithms for mobile robot localization.  The second part introduces fundamental deterministic and randomized algorithms for motion planning.
 
@@ -636,7 +636,7 @@ This course gives students the ability to design modern digital circuits.  The c
 Prereqs:
 EECS 281
 ----------
-ECSE 317 (aka ECSE 317, ECSE 417) Computer Design - FPGAs
+ECSE 317 (aka ECSE 417, ECSE 317) Computer Design - FPGAs
 
 The aim is to expose the student to methodologies for systematic design of digital systems with emphasis on programmable logic implementations and prototyping. The course requires a number of hands-on experiments and an overall lab project.  The lab involves a number of class lectures to familiarize the students with the modern design techniques based on VHDL/Verilog Hardware Design Languages, CAD tools, and FPGAs. 
 
@@ -663,8 +663,8 @@ MATH 330  Introduction to Scientific Computing
 An introductory survey to Scientific Computing from principles to applications.  Topics which will be covered in the course include: solution of linear systems and least squares, approximation and interpolation, solution of nonlinear systems, numerical integration and differentiation, and numerical solution of differential equations.  Projects where the numerical methods are used to solve problems from various application areas will be assigned throughout the semester.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 431 Introduction to Numerical Analysis I
 
@@ -674,28 +674,28 @@ Prereqs:
 MATH 307
 MATH 201
 ----------
-DSCI 352 (aka DSCI 452, DSCI 352, DSCI 352M) Applied Data Science Research
+DSCI 352 (aka DSCI 352M, DSCI 352, DSCI 452) Applied Data Science Research
 
 This is a project based data science research class, in which project teams identify a research project under the guidance of a domain expert professor. The research is structured as a data analysis project including the 6 steps of developing a reproducible data science project, including 1: Define the ADS question, 2: Identify, locate, and/or generate the data 3: Exploratory data analysis 4: Statistical modeling and prediction 5: Synthesizing the results in the domain context 6: Creation of reproducible research, Including code, datasets, documentation and reports.  During the course special topic lectures will include Ethics, Privacy, Openness, Security, Ethics. Value.  The M section of 
 Prereqs:
-OPRE 207
-DSCI 133
-EPBI 431
 STAT 201R
-SYBB 311D
-STAT 312R
 DSCI 351
-SYBB 311B
-MKMR 201
-SYBB 311C
-SYBB 311A
-DSCI 134
 SYBB 321
-ENGR 131
-SYBB 310
+SYBB 311A
+MKMR 201
+OPRE 207
+EPBI 431
 EECS 132
+DSCI 133
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 311C
+SYBB 311D
+SYBB 311B
+SYBB 310
 ----------
-DSCI 353 (aka DSCI 453, DSCI 353, DSCI 353M) Data Science: Statistical Learning, Modeling and Prediction
+DSCI 353 (aka DSCI 453, DSCI 353M, DSCI 353) Data Science: Statistical Learning, Modeling and Prediction
 
 In this course, we will use an open data science tool chain to develop reproducible data analyses useful for inference, modeling and prediction of the behavior of complex systems. In addition to the standard data cleaning, assembly and exploratory data analysis steps essential to all data analyses, we will identify statistically significant relationships from datasets derived from population samples, and infer the reliability of these findings. We will use regression methods to model a number of both real-world and lab-based systems producing predictive models applicable in comparable populations. We will assemble and explore real-world datasets, use pair-wise plots to explore correlations, perform clustering, self-similarity, and logistic regression develop both fixed-effect and mixed-effect predictive models. We will introduce machine-learning approaches for classification and tree-based methods. Results will be interpreted, visualized and discussed. We will introduce the basic elements of data science and analytics using R Project open source software. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and assembly functions, and a rich selection of statistical packages, used for data analytics, model development, prediction, inference and clustering. With this background, it becomes possible to start performing variable transformations for linear regression fitting and developing structural equation models, fixed-effects and mixed-effects models along with other statistical learning techniques, while exploring for statistically significant relationships. The class will be structured to have a balance of theory and practice. We'll split class into Foundation and Practicum a) Foundation: lectures, presentations, discussion b) Practicum: coding, demonstrations and hands-on data science work. The M section of 
 ----------
@@ -738,17 +738,17 @@ Prereqs:
 EECS 281
 EECS 315
 ----------
-ECSE 319 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+ECSE 319 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
 ECSE 324 Modeling and Simulation of Continuous Dynamical Systems
 
@@ -775,8 +775,8 @@ ECSE 375 (aka ECSE 375, ECSE 475) Applied Control
 
 This course provides a practical treatment of the study of control engineering systems. It emphasizes best practices in industry so that students learn what aspects of plant and control system design are critical. The course develops theory and practice for digital computer control systems; PID controller design (modes, forms and tuning methods); Control structure design (feed-forward, cascade control, predictive control, disturbance observers, multi-loop configurations, multivariable control); Actuators, sensors and common loops; Dynamic performance evaluation; and some advanced control techniques (quantitative robust control, gain-scheduling and adaptive control) to achieve a good performance over a range of operating conditions.  
 Prereqs:
-ECSE 474
 ECSE 374
+ECSE 474
 ----------
 ECSE 408 Introduction to Linear Systems
 
@@ -790,15 +790,15 @@ This course will provide an introduction to techniques used for the analysis of 
 Prereqs:
 ECSE 408
 ----------
-ECSE 414 (aka ECSE 316, ECSE 414) Wireless Communications
+ECSE 414 (aka ECSE 414, ECSE 316) Wireless Communications
 
 This course introduces the fundamentals of wireless communications including backgrounds, important concepts, and cutting-edge technologies. In particular, the course focuses on interesting and important topics in wireless communications, such as (but not limited to): Overview of wireless communication networks and protocols, the cellular concept, system design fundamentals, brief introduction to wireless physical layer fundamentals, multiple access control protocols for wireless systems, wireless networking (routing/rerouting, wireless TCP/IP), mobility management, call admission control and resource allocation, revolution/evolution towards future generation wireless networks, overview of wireless mesh networks, mobile ad hoc networks and wireless sensor networks, and wireless security (optional).
 
 Prereqs:
-EECS 351
 ECSE 351
+EECS 351
 ----------
-ECSE 489 (aka CSDS 489, ECSE 489, EMAE 489) Robotics I
+ECSE 489 (aka ECSE 489, CSDS 489, EMAE 489) Robotics I
 
 Orientation and configuration coordinate transformations, forward and inverse kinematics and Newton-Euler and Lagrange-Euler dynamic analysis. Planning of manipulator trajectories. Force, position, and hybrid control of robot manipulators. Analytical techniques applied to select industrial robots. 
 Prereqs:
@@ -855,13 +855,13 @@ Introduction to stochastic modeling of data. Emphasis on models and statistical 
 Prereqs:
 STAT 332
 STAT 333
-MATH 491
 STAT 312
-STAT 312R
-MATH 380
-STAT 345
-STAT 243
 STAT 313
+STAT 345
+STAT 312R
+STAT 243
+MATH 491
+MATH 380
 ----------
 PHIL 201 Introduction to Logic
 ----------
@@ -874,8 +874,8 @@ STAT 345 (aka STAT 445, STAT 345, PQHS 481) Theoretical Statistics I
 Topics provide the background for statistical inference. Random variables; distribution and density functions; transformations, expectation. Common univariate distributions. Multiple random variables; joint, marginal and conditional distributions; hierarchical models, covariance. Distributions of sample quantities, distributions of sums of random variables, distributions of order statistics. Methods of statistical inference.
 
 Prereqs:
-MATH 122
 MATH 223
+MATH 122
 EPBI 431
 ----------
 STAT 346 (aka STAT 346, STAT 446, PQHS 482) Theoretical Statistics II
@@ -883,9 +883,9 @@ STAT 346 (aka STAT 346, STAT 446, PQHS 482) Theoretical Statistics II
 Point estimation: maximum likelihood, moment estimators.  Methods of evaluating estimators including mean squared error, consistency, "best" unbiased and sufficiency.  Hypothesis testing; likelihood ratio and union-intersection tests.  Properties of tests including power function, bias.  Interval estimation by inversion of test statistics, use of pivotal quantities.  Application to regression.  Graduate students are responsible for mathematical derivations, and full proofs of principal theorems.
 
 Prereqs:
-STAT 345
-EPBI 481
 STAT 445
+EPBI 481
+STAT 345
 ----------
 MATH 121 Calculus for Science and Engineering I
 
@@ -903,9 +903,9 @@ MATH 122 Calculus for Science and Engineering II (or)
 
 Continuation of 
 Prereqs:
-MATH 126
 MATH 123
 MATH 121
+MATH 126
 ----------
 MATH 124  Calculus II
 
@@ -917,22 +917,22 @@ MATH 126  Math and Calculus Applications for Life, Managerial, and Social Sci II
 
 Continuation of 
 Prereqs:
+MATH 121
 MATH 125
 MATH 123
-MATH 121
 ----------
 BIOL 373 Introduction to Neurobiology
 ----------
 BIOL 374 Neurobiology of Behavior
 ----------
-CSDS 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+CSDS 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
 ECSE 352 Engineering Economics and Decision Analysis
 
@@ -941,12 +941,12 @@ Economic analysis of engineering projects, focusing on financial decisions conce
 The course will incorporate the use of Grand Challenges in the areas of Energy Systems, Control Systems, and Data Analytics in order to provide a framework for problems to study in the development and application of the concepts and tools studied in the course. Various aspects of important engineering skills relating to leadership, teaming, emotional intelligence, and effective communication are integrated into the course.
 
 ----------
-ECSE 360 (aka ECSE 460, ECSE 360) Manufacturing and Automated Systems
+ECSE 360 (aka ECSE 360, ECSE 460) Manufacturing and Automated Systems
 
 Formulation, modeling, planning, and control of manufacturing and automated systems with applications to computer science and engineering problems. Topics include, design of products and processes, location/spatial problems, transportation and assignment, product and process layout, group technology and clustering, cellular and network flow layouts, computer control systems, reliability and maintenance, and statistical quality control. Tools and analysis include: multi-objective optimization, artificial intelligence, and heuristics for combinatorial problems.
 
 ----------
-ECSE 411 (aka ECSE 411, EPOM 405) Applied Engineering Statistics
+ECSE 411 (aka EPOM 405, ECSE 411) Applied Engineering Statistics
 
 In this course a combination of lectures, demonstrations, case studies, and individual and group computer problems provides an intensive introduction to fundamental concepts, applications and the practice of contemporary engineering statistics.  Each topic is introduced through realistic sample problems to be solved first by using standard spreadsheet programs and then using more sophisticated software packages.  Primary attention is given to teaching the fundamental concepts underlying standard analysis methods.
 
@@ -955,8 +955,8 @@ ECSE 475 (aka ECSE 375, ECSE 475) Applied Control
 
 This course provides a practical treatment of the study of control engineering systems. It emphasizes best practices in industry so that students learn what aspects of plant and control system design are critical. The course develops theory and practice for digital computer control systems; PID controller design (modes, forms and tuning methods); Control structure design (feed-forward, cascade control, predictive control, disturbance observers, multi-loop configurations, multivariable control); Actuators, sensors and common loops; Dynamic performance evaluation; and some advanced control techniques (quantitative robust control, gain-scheduling and adaptive control) to achieve a good performance over a range of operating conditions.  
 Prereqs:
-ECSE 474
 ECSE 374
+ECSE 474
 ----------
 ECSE 589 (aka ECSE 589, CSDS 589) Robotics II
 
@@ -976,23 +976,23 @@ PSCL 357 Cognitive Psychology
 ----------
 PSCL 402 Cognition and Information Processing
 ----------
-ECSE 132 (aka CSDS 132, ECSE 132)  Introduction to Programming in Java
+ECSE 132 (aka ECSE 132, CSDS 132)  Introduction to Programming in Java
 
 An introduction to modern programming language features, computer programming and algorithmic problem solving with an emphasis on the Java language. Computers and code compilation; conditional statements, subprograms, loops, methods; object-oriented design, inheritance and polymorphism, abstract classes and interfaces; types, type systems, generic types, abstract data types, strings, arrays, linked lists; software development, modular code design, unit testing; strings, text and file I/O; GUI components, GUI event handling; threads; comparison of Java to C, C++, and C#.
 
 ----------
-ENGR 131 Elementary Computer Programming
-----------
 EECS 132 
 ----------
-ECSE 233 (aka ECSE 233, CSDS 233)  Introduction to Data Structures
+ENGR 131 Elementary Computer Programming
+----------
+ECSE 233 (aka CSDS 233, ECSE 233)  Introduction to Data Structures
 
 Different representations of data: lists, stacks and queues, trees, graphs, and files.  Manipulation of data: searching and sorting, hashing, recursion and higher order functions.  Abstract data types, templating, and the separation of interface and implementation.  Introduction to asymptotic analysis. The Java language is used to illustrate the concepts and as an implementation vehicle throughout the course.
 
 Prereqs:
+EECS 132
 CSDS 132
 ECSE 132
-EECS 132
 ----------
 CSDS 236 Introduction to C/C++ Programming
 
@@ -1001,38 +1001,38 @@ This course provides an introduction to C and C++ programming languages. Prior k
 Prereqs:
 CSDS 132
 ----------
-CSDS 275 (aka ECSE 275, CSDS 275) Fundamentals of Robotics
+CSDS 275 (aka CSDS 275, ECSE 275) Fundamentals of Robotics
 
 The Fundamentals of Robotics course will expose students to fundamental principles of robotics.  Students will explore high level conceptual foundations of robotics beginning with Braitenberg vehicles and apply this knowledge to simulated and physical robot hardware in laboratory experiences and in a final project.  Laboratory experiences will guide students through applying theory to practice increasingly complex tasks in a project oriented, group work environment.  The course culminates in a robotics challenge project at the end of the semester.  Topics covered are: sensors, actuators, kinematics, control, planning and programming.  Programming languages and concepts (e.g., C++, object oriented programming) used in robotics will be introduced and used with modern robotics programming toolboxes and frameworks.  Prior experience with these languages will not be necessary.  Previous experience with robotics is not required for this course.
 
 Prereqs:
-PHYS 121
-PHYS 121
-MATH 121
-ENGR 131
 EECS 132
+PHYS 121
+ENGR 131
+MATH 121
+PHYS 121
 ----------
 PHYS 121 General Physics I - Mechanics
 ----------
-ECSE 275 (aka ECSE 275, CSDS 275) Fundamentals of Robotics
+ECSE 275 (aka CSDS 275, ECSE 275) Fundamentals of Robotics
 
 The Fundamentals of Robotics course will expose students to fundamental principles of robotics.  Students will explore high level conceptual foundations of robotics beginning with Braitenberg vehicles and apply this knowledge to simulated and physical robot hardware in laboratory experiences and in a final project.  Laboratory experiences will guide students through applying theory to practice increasingly complex tasks in a project oriented, group work environment.  The course culminates in a robotics challenge project at the end of the semester.  Topics covered are: sensors, actuators, kinematics, control, planning and programming.  Programming languages and concepts (e.g., C++, object oriented programming) used in robotics will be introduced and used with modern robotics programming toolboxes and frameworks.  Prior experience with these languages will not be necessary.  Previous experience with robotics is not required for this course.
 
 Prereqs:
-PHYS 121
-PHYS 121
-MATH 121
-ENGR 131
 EECS 132
+PHYS 121
+ENGR 131
+MATH 121
+PHYS 121
 ----------
 ECSE 281 (aka ECSE 281, CSDS 281)  Logic Design and Computer Organization
 
 Fundamentals of digital systems in terms of both computer organization and logic level design.  Organization of digital computers; information representation; boolean algebra; analysis and synthesis of combinational and sequential circuits; datapaths and register transfers; instruction sets and assembly language; input/output and communication; memory.
 
 Prereqs:
-ENGR 131
-ECSE 132
 CSDS 132
+ECSE 132
+ENGR 131
 ----------
 CSDS 285 Linux Tools and Scripting
 
@@ -1043,8 +1043,8 @@ CSDS 290 (aka CSDS 290, ECSE 290)  Introduction to Computer Game Design and Impl
 This class begins with an examination of the history of video games and of game design. Games will be examined in a systems context to understand gaming and game design fundamentals. Various topics relating directly to the implementation of computer games will be introduced including graphics, animation, artificial intelligence, user interfaces, the simulation of motion, sound generation, and networking. Extensive study of past and current computer games will be used to illustrate course concepts. Individual and group projects will be used throughout the semester to motivate, illustrate and demonstrate the course concepts and ideas. Group game development and implementation projects will culminate in classroom presentation and evaluation.
 
 Prereqs:
-CSDS 132
 EECS 132
+CSDS 132
 ----------
 ECSE 290 (aka CSDS 290, ECSE 290)  Introduction to Computer Game Design and Implementation
 
@@ -1056,21 +1056,21 @@ CSDS 132
 ----------
 EECS 233 
 ----------
-CSDS 293N (aka CSDS 293N, CSDS 293) Software Craftsmanship
+CSDS 293N (aka CSDS 293, CSDS 293N) Software Craftsmanship
 
 A course to improve programming skills, software quality, and the software development process.  Software design; Version control; Control issues and routines;  Pseudo-code programming process and developer testing; Defensive programming; Classes; Debugging; Self-documenting code; Refactoring.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 296 Independent Projects
 
 Independent projects in Computer and Data Science.  
 Prereqs:
-ENGR 131
 ECSE 132
+ENGR 131
 ----------
 CSDS 297 Special Topics
 
@@ -1095,15 +1095,15 @@ MATH 122
 MATH 124
 MATH 126
 ----------
-CSDS 310N (aka CSDS 310N, CSDS 310) Algorithms
+CSDS 310N (aka CSDS 310, CSDS 310N) Algorithms
 
 Fundamentals in algorithm design and analysis. Loop invariants, asymptotic notation, recurrence relations, sorting algorithms, divide-and-conquer, dynamic programming, greedy algorithms, basic graph algorithms.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 EECS 340 
@@ -1112,7 +1112,7 @@ DSCI 234
 ----------
 EECS 281 
 ----------
-ECSE 314 (aka ECSE 314, CSDS 314) Computer Architecture
+ECSE 314 (aka CSDS 314, ECSE 314) Computer Architecture
 
 This course provides students the opportunity to study and evaluate a modern computer architecture design.  The course covers topics in fundamentals of computer design, performance, cost, instruction set design, processor implementation, control unit, pipelining, communication and network, memory hierarchy, computer arithmetic, input-output, and an introduction to RISC and super-scalar processors.
 
@@ -1124,9 +1124,9 @@ CSDS 325N (aka CSDS 325, CSDS 325N) Computer Networks I
 An introduction to computer networks and the Internet.  Applications: http, ftp, e-mail, DNS, socket programming.  Transport: UDP, TCP, reliable data transfer, and congestion control.  Network layer: IP, routing, and NAT.  Link layer: taxonomy, Ethernet, 802.11.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 335D Data Mining for Big Data
 
@@ -1137,24 +1137,15 @@ Prereqs:
 CSDS 313
 CSDS 234
 ----------
-ECSE 337 (aka CSDS 337, ECSE 337) Compiler Design
+ECSE 337 (aka ECSE 337, CSDS 337) Compiler Design
 
 Design and implementation of compilers and other language processors. Scanners and lexical analysis; regular expressions and finite automata; scanner generators; parsers and syntax analysis; context free grammars; parser generators; semantic analysis; intermediate code generation; runtime environments; code generation; machine independent optimizations; data flow and dependence analysis. There will be a significant programming project involving the use of compiler tools and software development tools and techniques.
 
 Prereqs:
-ECSE 233
-EECS 281
-CSDS 233
-CSDS 281
 ECSE 281
-EECS 233
-----------
-ECSE 338N (aka CSDS 338N, CSDS 338, ECSE 338N) Intro to Operating Systems and Concurrent Programming
-
-Intro to OS: OS Structures, processes, threads, CPU scheduling, deadlocks, memory management, file system implementations, virtual machines, cloud computing. Concurrent programming: fork, join, concurrent statement, critical section problem, safety and liveness properties of concurrent programs, process synchronization algorithms, semaphores, monitors.  UNIX systems programming: system calls, UNIX System V IPCs, threads, RPCs, shell programming.
-
-Prereqs:
 CSDS 233
+EECS 281
+CSDS 281
 ECSE 233
 EECS 233
 ----------
@@ -1163,18 +1154,27 @@ CSDS 338N (aka CSDS 338N, CSDS 338, ECSE 338N) Intro to Operating Systems and Co
 Intro to OS: OS Structures, processes, threads, CPU scheduling, deadlocks, memory management, file system implementations, virtual machines, cloud computing. Concurrent programming: fork, join, concurrent statement, critical section problem, safety and liveness properties of concurrent programs, process synchronization algorithms, semaphores, monitors.  UNIX systems programming: system calls, UNIX System V IPCs, threads, RPCs, shell programming.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
+----------
+ECSE 338N (aka CSDS 338N, CSDS 338, ECSE 338N) Intro to Operating Systems and Concurrent Programming
+
+Intro to OS: OS Structures, processes, threads, CPU scheduling, deadlocks, memory management, file system implementations, virtual machines, cloud computing. Concurrent programming: fork, join, concurrent statement, critical section problem, safety and liveness properties of concurrent programs, process synchronization algorithms, semaphores, monitors.  UNIX systems programming: system calls, UNIX System V IPCs, threads, RPCs, shell programming.
+
+Prereqs:
+ECSE 233
+EECS 233
+CSDS 233
 ----------
 ECSE 338 (aka CSDS 338N, CSDS 338, ECSE 338N) Intro to Operating Systems and Concurrent Programming
 
 Intro to OS: OS Structures, processes, threads, CPU scheduling, deadlocks, memory management, file system implementations, virtual machines, cloud computing. Concurrent programming: fork, join, concurrent statement, critical section problem, safety and liveness properties of concurrent programs, process synchronization algorithms, semaphores, monitors.  UNIX systems programming: system calls, UNIX System V IPCs, threads, RPCs, shell programming.
 
 Prereqs:
-CSDS 233
 ECSE 233
 EECS 233
+CSDS 233
 ----------
 CSDS 340D Machine Learning for Big Data
 
@@ -1194,15 +1194,15 @@ CSDS 341N (aka CSDS 341, CSDS 341N) Introduction to Database Systems
 Relational model, ER model, relational algebra and calculus, SQL, OBE, security, views, files and physical database structures, query processing and query optimization, normalization theory, concurrency control, object relational systems, multimedia databases, Oracle SQL server, Microsoft SQL server.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 EECS 302 
 ----------
-MATH 343 (aka CSDS 343, MATH 343) Theoretical Computer Science
+MATH 343 (aka MATH 343, CSDS 343) Theoretical Computer Science
 
 Introduction to different classes of automata and their correspondence to different classes of formal languages and grammars, computability, complexity and various proof techniques.  
 
@@ -1216,10 +1216,10 @@ CSDS 345N (aka CSDS 345N, CSDS 345) Programming Language Concepts
 This course examines the four main programming paradigms: imperative, object-oriented, functional, and logical. It is assumed that students will come to the course with significant exposure to object-oriented programming and some exposure to imperative programming.  The course will teach the functional paradigm in depth, enhance the students' knowledge of the object-oriented and imperative paradigms, and introduce the logical paradigm. The course will explore language syntax, semantics, names/scopes, types, expressions, assignment, subprograms, abstraction and inheritance.  This exploration will have several forms. Students will study the programming language concepts at a theoretical level, use the concepts in functional language programming, and implement the concepts by designing language interpreters.
 
 Prereqs:
-CSDS 302
-ECSE 302
-ECSE 233
 CSDS 233
+ECSE 302
+CSDS 302
+ECSE 233
 MATH 304
 ----------
 CSDS 456 (aka CSDS 356, CSDS 456)  Data Privacy
@@ -1235,108 +1235,108 @@ CSDS 364 (aka CSDS 364, CSDS 464) Computational Perception
 An introduction to the information processing and computational algorithms that underlie perception. The course focuses on vision and audition but also covers other senses and various types of perceptual processing in biological systems. The motivating question is: What are the fundamental computational problems faced by perceptual systems in complex environments? The course draws from fields in engineering and the study of biological perception. Specific topics include signal detection and processing; sound localization; motion perception and estimation; sensory coding; perception of structure; active perception; perceptual invariance; attention; object, sound and speech recognition; visual and auditory scene analysis.
 
 Prereqs:
-ENGR 131
 CSDS 132
+ENGR 131
 ----------
 CSDS 464 (aka CSDS 364, CSDS 464) Computational Perception
 
 An introduction to the information processing and computational algorithms that underlie perception. The course focuses on vision and audition but also covers other senses and various types of perceptual processing in biological systems. The motivating question is: What are the fundamental computational problems faced by perceptual systems in complex environments? The course draws from fields in engineering and the study of biological perception. Specific topics include signal detection and processing; sound localization; motion perception and estimation; sensory coding; perception of structure; active perception; perceptual invariance; attention; object, sound and speech recognition; visual and auditory scene analysis.
 
 Prereqs:
-ENGR 131
 CSDS 132
+ENGR 131
 ----------
-CSDS 366 (aka CSDS 466, ECSE 466, CSDS 366, ECSE 366)  Computer Graphics
+CSDS 366 (aka CSDS 466, CSDS 366, ECSE 366, ECSE 466)  Computer Graphics
 
 Theory and practice of computer graphics: object and environment representation including coordinate transformations image extraction including perspective, hidden surface, and shading algorithms; and interaction.  Covers a wide range of graphic display devices and systems with emphasis in interactive shaded graphics.
 
 Prereqs:
 EECS 233
 ----------
-CSDS 466 (aka CSDS 466, ECSE 466, CSDS 366, ECSE 366)  Computer Graphics
+CSDS 466 (aka CSDS 366, CSDS 466, ECSE 466, ECSE 366)  Computer Graphics
 
 Theory and practice of computer graphics: object and environment representation including coordinate transformations image extraction including perspective, hidden surface, and shading algorithms; and interaction.  Covers a wide range of graphic display devices and systems with emphasis in interactive shaded graphics.
 
 Prereqs:
 EECS 233
 ----------
-ECSE 466 (aka CSDS 466, ECSE 466, CSDS 366, ECSE 366)  Computer Graphics
+ECSE 366 (aka CSDS 366, CSDS 466, ECSE 466, ECSE 366)  Computer Graphics
 
 Theory and practice of computer graphics: object and environment representation including coordinate transformations image extraction including perspective, hidden surface, and shading algorithms; and interaction.  Covers a wide range of graphic display devices and systems with emphasis in interactive shaded graphics.
 
 Prereqs:
 EECS 233
 ----------
-ECSE 366 (aka CSDS 466, ECSE 466, CSDS 366, ECSE 366)  Computer Graphics
+ECSE 466 (aka CSDS 366, CSDS 466, ECSE 466, ECSE 366)  Computer Graphics
 
 Theory and practice of computer graphics: object and environment representation including coordinate transformations image extraction including perspective, hidden surface, and shading algorithms; and interaction.  Covers a wide range of graphic display devices and systems with emphasis in interactive shaded graphics.
 
 Prereqs:
 EECS 233
 ----------
-CSDS 373 (aka ECSE 373, CSDS 473, CSDS 373, ECSE 473)  Modern Robot Programming
+CSDS 373 (aka CSDS 373, ECSE 473, ECSE 373, CSDS 473)  Modern Robot Programming
 
 The goal of this course is to learn modern methods for building up robot capabilities using the Robot Operating System (ROS). Through a sequence of assignments, students learn how to write software to control both simulated and physical robots. Material includes: interfacing software to robot I/O; path and trajectory planning for robot arms; object identification and localization from 3-D sensing; manipulation planning; and development of graphical interfaces for supervisory robot control. Laboratory assignments are scheduled in small groups to explore implementations on specific robots.  Graduate students will also perform an independent project.
 
 Prereqs:
-ENGR 131
 EECS 132
+ENGR 131
 ----------
-ECSE 373 (aka ECSE 373, CSDS 473, CSDS 373, ECSE 473)  Modern Robot Programming
+ECSE 473 (aka CSDS 373, ECSE 473, ECSE 373, CSDS 473)  Modern Robot Programming
 
 The goal of this course is to learn modern methods for building up robot capabilities using the Robot Operating System (ROS). Through a sequence of assignments, students learn how to write software to control both simulated and physical robots. Material includes: interfacing software to robot I/O; path and trajectory planning for robot arms; object identification and localization from 3-D sensing; manipulation planning; and development of graphical interfaces for supervisory robot control. Laboratory assignments are scheduled in small groups to explore implementations on specific robots.  Graduate students will also perform an independent project.
 
 Prereqs:
-ENGR 131
 EECS 132
+ENGR 131
 ----------
-CSDS 473 (aka ECSE 373, CSDS 473, CSDS 373, ECSE 473)  Modern Robot Programming
+ECSE 373 (aka CSDS 373, ECSE 473, ECSE 373, CSDS 473)  Modern Robot Programming
 
 The goal of this course is to learn modern methods for building up robot capabilities using the Robot Operating System (ROS). Through a sequence of assignments, students learn how to write software to control both simulated and physical robots. Material includes: interfacing software to robot I/O; path and trajectory planning for robot arms; object identification and localization from 3-D sensing; manipulation planning; and development of graphical interfaces for supervisory robot control. Laboratory assignments are scheduled in small groups to explore implementations on specific robots.  Graduate students will also perform an independent project.
 
 Prereqs:
-ENGR 131
 EECS 132
+ENGR 131
 ----------
-ECSE 473 (aka ECSE 373, CSDS 473, CSDS 373, ECSE 473)  Modern Robot Programming
+CSDS 473 (aka CSDS 373, ECSE 473, ECSE 373, CSDS 473)  Modern Robot Programming
 
 The goal of this course is to learn modern methods for building up robot capabilities using the Robot Operating System (ROS). Through a sequence of assignments, students learn how to write software to control both simulated and physical robots. Material includes: interfacing software to robot I/O; path and trajectory planning for robot arms; object identification and localization from 3-D sensing; manipulation planning; and development of graphical interfaces for supervisory robot control. Laboratory assignments are scheduled in small groups to explore implementations on specific robots.  Graduate students will also perform an independent project.
 
 Prereqs:
-ENGR 131
 EECS 132
+ENGR 131
 ----------
-CSDS 376 (aka ECSE 376, CSDS 376) Mobile Robotics
+CSDS 376 (aka CSDS 376, ECSE 376) Mobile Robotics
 
 Design of software systems for mobile robot control, including: motion control; sensory processing; localization and mapping; mobile-robot planning and navigation; and implementation of goal-directed behaviors.  The course has a heavy lab component involving a sequence of design challenges and competitions performed in teams.
 
 Prereqs:
+ECSE 373
 CSDS 373
 CSDS 473
 ECSE 473
-ECSE 373
 ----------
-ECSE 376 (aka ECSE 376, CSDS 376) Mobile Robotics
+ECSE 376 (aka CSDS 376, ECSE 376) Mobile Robotics
 
 Design of software systems for mobile robot control, including: motion control; sensory processing; localization and mapping; mobile-robot planning and navigation; and implementation of goal-directed behaviors.  The course has a heavy lab component involving a sequence of design challenges and competitions performed in teams.
 
 Prereqs:
-CSDS 373
-CSDS 473
-ECSE 473
 ECSE 373
+CSDS 373
+ECSE 473
+CSDS 473
 ----------
-CSDS 377 (aka CSDS 377, ECSE 377) Introduction to Connected Devices
+CSDS 377 (aka ECSE 377, CSDS 377) Introduction to Connected Devices
 
 Introduction to Connected Devices (e.g., Internet of Things).  Undergraduates work in pairs to build a complete connected-device system, an embedded device with wireless networking, cloud and web, and mobile, and then develop hands-on experience with systems-level aspects of the connected-device system, including analytics, remote firmware update, load testing, and essential security.  Students learn about current architectures, languages, and technologies, such as Pub/Sub (MQTT), Python, Objective-C, Python Django, JavaScript, HTML/CSS, and Bluetooth Low Energy.
 
 ----------
-ECSE 377 (aka CSDS 377, ECSE 377) Introduction to Connected Devices
+ECSE 377 (aka ECSE 377, CSDS 377) Introduction to Connected Devices
 
 Introduction to Connected Devices (e.g., Internet of Things).  Undergraduates work in pairs to build a complete connected-device system, an embedded device with wireless networking, cloud and web, and mobile, and then develop hands-on experience with systems-level aspects of the connected-device system, including analytics, remote firmware update, load testing, and essential security.  Students learn about current architectures, languages, and technologies, such as Pub/Sub (MQTT), Python, Objective-C, Python Django, JavaScript, HTML/CSS, and Bluetooth Low Energy.
 
 ----------
-CSDS 386 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+CSDS 386 (aka MATH 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486, ECSE 386) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1349,26 +1349,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
-ECSE 132
-PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
 MATH 224
+PHYS 221
 MATH 223
+ENGR 131
 ECSE 233
 MATH 227
-CSDS 132
-MATH 307
-PHYS 122
-MATH 228
 MATH 201
 CSDS 233
-CSDS 281
-ENGR 131
+ECSE 281
+MATH 228
 MATH 223
+PHYS 122
+ECSE 132
+PHYS 122
+CSDS 132
+PHYS 124
+MATH 227
+PHYS 124
+CSDS 281
+MATH 307
+----------
+PHYS 122 General Physics II - Electricity and Magnetism
 ----------
 MATH 223 Calculus for Science and Engineering III
 
@@ -1385,9 +1387,7 @@ Vector algebra and geometry. Linear maps and matrices. Calculus of vector valued
 Prereqs:
 MATH 124
 ----------
-PHYS 122 General Physics II - Electricity and Magnetism
-----------
-ECSE 486 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+MATH 386 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1400,28 +1400,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
+MATH 224
+PHYS 221
+MATH 223
+ENGR 131
+ECSE 233
+MATH 201
+MATH 227
+CSDS 233
+ECSE 281
+MATH 228
+MATH 223
+PHYS 122
 ECSE 132
 PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
-MATH 224
-MATH 223
-ECSE 233
-MATH 227
 CSDS 132
-MATH 307
-PHYS 122
-MATH 228
-MATH 201
-CSDS 233
+PHYS 124
+MATH 227
+PHYS 124
 CSDS 281
-ENGR 131
-MATH 223
+MATH 307
 ----------
-PHYS 386 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+PHYS 386 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1434,28 +1434,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
-ECSE 132
-PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
 MATH 224
+PHYS 221
 MATH 223
+ENGR 131
 ECSE 233
 MATH 227
-CSDS 132
-MATH 307
-PHYS 122
-MATH 228
 MATH 201
 CSDS 233
-CSDS 281
-ENGR 131
+ECSE 281
+MATH 228
 MATH 223
+PHYS 122
+ECSE 132
+PHYS 122
+CSDS 132
+PHYS 124
+MATH 227
+PHYS 124
+CSDS 281
+MATH 307
 ----------
-PHYS 486 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+ECSE 486 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1468,28 +1468,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
+MATH 224
+PHYS 221
+MATH 223
+ENGR 131
+ECSE 233
+MATH 201
+MATH 227
+CSDS 233
+ECSE 281
+MATH 228
+MATH 223
+PHYS 122
 ECSE 132
 PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
-MATH 224
-MATH 223
-ECSE 233
-MATH 227
 CSDS 132
-MATH 307
-PHYS 122
-MATH 228
-MATH 201
-CSDS 233
+PHYS 124
+MATH 227
+PHYS 124
 CSDS 281
-ENGR 131
-MATH 223
+MATH 307
 ----------
-MATH 486 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+PHYS 486 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1502,28 +1502,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
-ECSE 132
-PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
 MATH 224
+PHYS 221
 MATH 223
+ENGR 131
 ECSE 233
 MATH 227
-CSDS 132
-MATH 307
-PHYS 122
-MATH 228
 MATH 201
 CSDS 233
-CSDS 281
-ENGR 131
+ECSE 281
+MATH 228
 MATH 223
+PHYS 122
+ECSE 132
+PHYS 122
+CSDS 132
+PHYS 124
+MATH 227
+PHYS 124
+CSDS 281
+MATH 307
 ----------
-MATH 386 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+CSDS 486 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1536,28 +1536,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
+MATH 224
+PHYS 221
+MATH 223
+ENGR 131
+ECSE 233
+MATH 201
+MATH 227
+CSDS 233
+ECSE 281
+MATH 228
+MATH 223
+PHYS 122
 ECSE 132
 PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
-MATH 224
-MATH 223
-ECSE 233
-MATH 227
 CSDS 132
-MATH 307
-PHYS 122
-MATH 228
-MATH 201
-CSDS 233
+PHYS 124
+MATH 227
+PHYS 124
 CSDS 281
-ENGR 131
-MATH 223
+MATH 307
 ----------
-ECSE 386 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+MATH 486 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1570,28 +1570,28 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
+MATH 224
+PHYS 221
+MATH 223
+ENGR 131
+ECSE 233
+MATH 201
+MATH 227
+CSDS 233
+ECSE 281
+MATH 228
+MATH 223
+PHYS 122
 ECSE 132
 PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
-MATH 224
-MATH 223
-ECSE 233
-MATH 227
 CSDS 132
-MATH 307
-PHYS 122
-MATH 228
-MATH 201
-CSDS 233
+PHYS 124
+MATH 227
+PHYS 124
 CSDS 281
-ENGR 131
-MATH 223
+MATH 307
 ----------
-CSDS 486 (aka ECSE 486, PHYS 386, PHYS 486, MATH 486, MATH 386, ECSE 386, CSDS 386, CSDS 486) Quantum Computing, Information, and Devices
+ECSE 386 (aka MATH 386, ECSE 386, PHYS 386, ECSE 486, PHYS 486, CSDS 486, CSDS 386, MATH 486) Quantum Computing, Information, and Devices
 
 An introduction to the math, physics, engineering, and computer science underlying the rapidly emerging fields of quantum computing, quantum information, and quantum devices. The course is taught by a group of faculty from physics, engineering, computer science, and math, and is geared towards students with diverse backgrounds and interests in these fields.  Students will select a concentration in one of these four areas, and the coursework, while still covering all topics, will be adjusted to focus on the selected area in the most detail.  Note that the listed prerequisites depend on choice of concentration. 
 
@@ -1604,30 +1604,30 @@ Topics will include:
 The course consists of lectures, homework, and group projects.  Group projects will aim to synthesize the diverse backgrounds of the students and instructors to capture the interdisciplinary nature of the field. Students taking the course for graduate credit will complete an additional literature research project and presentation, in addition to enhanced problem sets.
 
 Prereqs:
-PHYS 124
+MATH 224
+PHYS 221
+MATH 223
+ENGR 131
+ECSE 233
+MATH 201
+MATH 227
+CSDS 233
+ECSE 281
+MATH 228
+MATH 223
+PHYS 122
 ECSE 132
 PHYS 122
-MATH 227
-ECSE 281
-PHYS 124
-PHYS 221
-MATH 224
-MATH 223
-ECSE 233
-MATH 227
 CSDS 132
-MATH 307
-PHYS 122
-MATH 228
-MATH 201
-CSDS 233
+PHYS 124
+MATH 227
+PHYS 124
 CSDS 281
-ENGR 131
-MATH 223
+MATH 307
 ----------
 EECS 290 
 ----------
-ECSE 390 (aka ECSE 390, CSDS 390, ECSE 487, CSDS 487)  Advanced Game Development Project
+ECSE 487 (aka CSDS 390, ECSE 487, ECSE 390, CSDS 487)  Advanced Game Development Project
 
 This game development project course will bring together an inter-professional group of students in the fields of engineering, computer science, and art to focus on the design and development of a complete, fully functioning computer game as an interdisciplinary team. The student teams are given complete liberty to design their own fully functional games from their original concept to a playable game published in an online marketplace. Student teams will experience the entire game development cycle as they execute their projects. Responsibilities include creating a game idea, writing a story, developing the artwork, designing characters, implementing music and sound effects, programming and testing the game, and publishing the final project. Students enrolled in 487 will develop a healthcare or education virtual environment or video game in collaboration with a mentor who has expertise in the chosen area.
 
@@ -1635,7 +1635,7 @@ Prereqs:
 EECS 290
 EECS 233
 ----------
-ECSE 487 (aka ECSE 390, CSDS 390, ECSE 487, CSDS 487)  Advanced Game Development Project
+ECSE 390 (aka CSDS 390, ECSE 487, ECSE 390, CSDS 487)  Advanced Game Development Project
 
 This game development project course will bring together an inter-professional group of students in the fields of engineering, computer science, and art to focus on the design and development of a complete, fully functioning computer game as an interdisciplinary team. The student teams are given complete liberty to design their own fully functional games from their original concept to a playable game published in an online marketplace. Student teams will experience the entire game development cycle as they execute their projects. Responsibilities include creating a game idea, writing a story, developing the artwork, designing characters, implementing music and sound effects, programming and testing the game, and publishing the final project. Students enrolled in 487 will develop a healthcare or education virtual environment or video game in collaboration with a mentor who has expertise in the chosen area.
 
@@ -1643,7 +1643,7 @@ Prereqs:
 EECS 290
 EECS 233
 ----------
-CSDS 487 (aka ECSE 390, CSDS 390, ECSE 487, CSDS 487)  Advanced Game Development Project
+CSDS 487 (aka CSDS 390, ECSE 487, ECSE 390, CSDS 487)  Advanced Game Development Project
 
 This game development project course will bring together an inter-professional group of students in the fields of engineering, computer science, and art to focus on the design and development of a complete, fully functioning computer game as an interdisciplinary team. The student teams are given complete liberty to design their own fully functional games from their original concept to a playable game published in an online marketplace. Student teams will experience the entire game development cycle as they execute their projects. Responsibilities include creating a game idea, writing a story, developing the artwork, designing characters, implementing music and sound effects, programming and testing the game, and publishing the final project. Students enrolled in 487 will develop a healthcare or education virtual environment or video game in collaboration with a mentor who has expertise in the chosen area.
 
@@ -1656,18 +1656,18 @@ CSDS 393N (aka CSDS 393, CSDS 393N, CSDS 493) Software Engineering
 Topics: Introduction to software engineering; software lifecycle models; development team organization and project management; requirements analysis and specification techniques; software design techniques; programming practices; software validation techniques; software maintenance practices; software engineering ethics. Undergraduates work in teams to complete a significant software development project. Graduate students are required to complete a research project.
 
 Prereqs:
-CSDS 233
 ECSE 233
+CSDS 233
 ----------
 CSDS 493 (aka CSDS 393, CSDS 393N, CSDS 493) Software Engineering
 
 Topics: Introduction to software engineering; software lifecycle models; development team organization and project management; requirements analysis and specification techniques; software design techniques; programming practices; software validation techniques; software maintenance practices; software engineering ethics. Undergraduates work in teams to complete a significant software development project. Graduate students are required to complete a research project.
 
 Prereqs:
-CSDS 233
 ECSE 233
+CSDS 233
 ----------
-MATH 494 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+CSDS 494 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -1677,7 +1677,7 @@ Prereqs:
 MATH 307
 MATH 201
 ----------
-CSDS 494 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+MATH 494 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -1687,7 +1687,7 @@ Prereqs:
 MATH 307
 MATH 201
 ----------
-MATH 394 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+ECSE 394 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -1697,7 +1697,7 @@ Prereqs:
 MATH 307
 MATH 201
 ----------
-ECSE 394 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+ECSE 494 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -1707,7 +1707,7 @@ Prereqs:
 MATH 307
 MATH 201
 ----------
-ECSE 494 (aka CSDS 394, MATH 494, CSDS 494, MATH 394, ECSE 394, ECSE 494) Introduction to Information Theory
+MATH 394 (aka CSDS 494, CSDS 394, MATH 494, ECSE 494, ECSE 394, MATH 394) Introduction to Information Theory
 
 This course is intended as an introduction to information and coding theory with emphasis on the mathematical aspects.  It is suitable for advanced undergraduate and graduate students in mathematics, applied mathematics, statistics, physics, computer science and electrical engineering.  
 
@@ -1751,13 +1751,13 @@ An introduction to computer networks and the Internet. Applications: http, ftp, 
 Prereqs:
 ECSE 338
 ----------
-EECS 425 
-----------
 EECS 325 
+----------
+EECS 425 
 ----------
 EECS 341 
 ----------
-ECSE 438 (aka CSDS 438, ECSE 438) High Performance Computing
+ECSE 438 (aka ECSE 438, CSDS 438) High Performance Computing
 
 High performance computing (HPC) leverages parallel processing in order to maximize speed and throughput. This hands-on course will cover theoretical and practical aspects of HPC. Theoretical concepts covered include computer architecture, parallel programming, and performance optimization. Practical applications will be discussed from various information and scientific fields. Practical considerations will include HPC job management and Unix scripting. Weekly assessments and a course project will be required.
 
@@ -1789,117 +1789,117 @@ SYBB 459 (aka SYBB 459, CSDS 459) Bioinformatics for Systems Biology
 Description of omic data (biological sequences, gene expression, protein-protein interactions, protein-DNA interactions, protein expression, metabolomics, biological ontologies), regulatory network inference, topology of regulatory networks, computational inference of protein-protein interactions, protein interaction databases, topology of protein interaction networks, module and protein complex discovery, network alignment and mining, computational models for network evolution, network-based functional inference, metabolic pathway databases, topology of metabolic pathways, flux models for analysis of metabolic networks, network integration, inference of domain-domain interactions, signaling pathway inference from protein interaction networks, network models and algorithms for disease gene identification, identification of dysregulated subnetworks network-based disease classification.
 
 Prereqs:
-BIOL 250
 CSDS 458
+BIOL 250
 ----------
 ECSE 465 (aka ECSE 465, CSDS 465) Computer Vision
 
 The goal of computer vision is to create visual systems that recognize objects and recover structures in complex 3D scenes.  This course emphasizes both the science behind our understanding of the fundamental problems in vision and the engineering that develops mathematical models and inference algorithms to solve these problems.  Specific topics include feature detection, matching, and classification; visual representations and dimensionality reduction; motion detection and optical flow; image segmentation; depth perception, multi-view geometry, and 3D reconstruction; shape and surface perception; visual scene analysis and object recognition.
 
 ----------
-CSDS 476 (aka CSDS 476, ECSE 476)  Mobile Robotics
+CSDS 476 (aka ECSE 476, CSDS 476)  Mobile Robotics
 
 Design of software systems for mobile robot control, including: motion control; sensory processing; localization and mapping; mobile-robot planning and navigation; and implementation of goal-directed behaviors.  The course has a heavy lab component involving a sequence of design challenges and competitions performed in teams.
 
 Prereqs:
-EECS 473
 EECS 373
-----------
-EECS 473 
+EECS 473
 ----------
 EECS 373 
+----------
+EECS 473 
 ----------
 ECSE 476 (aka CSDS 476, ECSE 476)  Mobile Robotics
 
 Design of software systems for mobile robot control, including: motion control; sensory processing; localization and mapping; mobile-robot planning and navigation; and implementation of goal-directed behaviors.  The course has a heavy lab component involving a sequence of design challenges and competitions performed in teams.
 
 Prereqs:
-EECS 473
 EECS 373
-----------
-BIOL 300 
+EECS 473
 ----------
 BIOL 306 (aka BIOL 306, MATH 376) Mathematical Analysis of Biological Models
 
 This course focuses on the mathematical methods used to analyze biological models, with examples drawn largely from ecology but also from epidemiology, developmental biology, and other areas.  Mathematical topics include equilibrium and stability in discrete and continuous time, some aspects of transient dynamics, and reaction-diffusion equations (steady state, diffusive instabilities, and traveling waves).  Biological topics include several "classic" models, such as the Lotka-Volterra model, the Ricker model, and Michaelis-Menten/type II/saturating responses.  The emphasis is on approximations that lead to analytic solutions, not numerical analysis.  An important aspect of this course is translating between verbal and mathematical descriptions: the goal is not just to solve mathematical problems but to extract biological meaning from the answers we find.  
 
 Prereqs:
-BIOL 300
 MATH 224
+BIOL 300
 ----------
-MATH 378 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+BIOL 300 
+----------
+MATH 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-EBME 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+BIOL 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-MATH 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+ECSE 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-NEUR 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+NEUR 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-BIOL 378 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+BIOL 378 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-BIOL 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+EBME 478 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-ECSE 478 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+MATH 378 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-COGS 378 (aka MATH 378, CSDS 478, EBME 478, MATH 478, NEUR 478, BIOL 378, BIOL 478, ECSE 478, COGS 378)  Computational Neuroscience
+COGS 378 (aka MATH 478, BIOL 478, MATH 378, NEUR 478, CSDS 478, BIOL 378, EBME 478, ECSE 478, COGS 378)  Computational Neuroscience
 
 Computer simulations and mathematical analysis of neurons and neural circuits, and the computational properties of nervous systems.  Students are taught a range of models for neurons and neural circuits, and are asked to implement and explore the computational and dynamic properties of these models.  The course introduces students to dynamical systems theory for the analysis of neurons and neural learning, models of brain systems, and their relationship to artificial and neural networks.  Term project required.  Students enrolled in 
 Prereqs:
-BIOL 300
 MATH 223
 MATH 224
 BIOL 306
+BIOL 300
 ----------
-CSDS 489 (aka CSDS 489, ECSE 489, EMAE 489) Robotics I
+CSDS 489 (aka ECSE 489, CSDS 489, EMAE 489) Robotics I
 
 Orientation and configuration coordinate transformations, forward and inverse kinematics and Newton-Euler and Lagrange-Euler dynamic analysis. Planning of manipulator trajectories. Force, position, and hybrid control of robot manipulators. Analytical techniques applied to select industrial robots. 
 Prereqs:
@@ -1907,7 +1907,7 @@ EMAE 181
 ----------
 EMAE 181 
 ----------
-EMAE 489 (aka CSDS 489, ECSE 489, EMAE 489) Robotics I
+EMAE 489 (aka ECSE 489, CSDS 489, EMAE 489) Robotics I
 
 Orientation and configuration coordinate transformations, forward and inverse kinematics and Newton-Euler and Lagrange-Euler dynamic analysis. Planning of manipulator trajectories. Force, position, and hybrid control of robot manipulators. Analytical techniques applied to select industrial robots. 
 Prereqs:
@@ -1923,7 +1923,7 @@ ECSE 490 (aka ECSE 490, CSDS 490) Digital Image Processing
 Digital images are introduced as two-dimensional sampled arrays of data.  The course begins with one-to-one operations such as image addition and subtraction and image descriptors such as the histogram.  Basic filters such as the gradient and Laplacian in the spatial domain are used to enhance images.  The 2-D Fourier transform is introduced and frequency domain operations such as high and low-pass filtering are developed.  It is shown how filtering techniques can be used to remove noise and other image degradation.  The different methods of representing color images are described and fundamental concepts of color image transformations and color image processing are developed.  One or more advanced topics such as wavelets, image compression, and pattern recognition will be covered as time permits.  Programming assignments using software such as MATLAB will illustrate the application and implementation of digital image processing.
 
 ----------
-ECSE 499 (aka CSDS 499, ECSE 499) Algorithmic Robotics
+ECSE 499 (aka ECSE 499, CSDS 499) Algorithmic Robotics
 
 This course introduces basic algorithmic techniques in robotic perception and planning.  Course is divided into two parts.  The first part introduces probabilistic modeling of robotic motion and sensing, Gaussian and nonparametric filters, and algorithms for mobile robot localization.  The second part introduces fundamental deterministic and randomized algorithms for motion planning.
 
@@ -1978,7 +1978,7 @@ CSDS 701 Dissertation Ph.D.
 Credit as arranged.
 
 ----------
-MATH 321 (aka MATH 321, MATH 421)  Fundamentals of Analysis I
+MATH 321 (aka MATH 421, MATH 321)  Fundamentals of Analysis I
 
 Abstract mathematical reasoning in the context of analysis in Euclidean space.  Introduction to formal reasoning, sets and functions, and the number systems.  Sequences and series; Cauchy sequences and convergence.  Required for all mathematics majors. Additional work required for graduate students. (May not be taken for graduate credit by graduate students in the Department of Mathematics.)
 
@@ -1986,20 +1986,20 @@ Prereqs:
 MATH 223
 MATH 227
 ----------
-MATH 322 (aka MATH 422, MATH 322)  Fundamentals of Analysis II
+MATH 322 (aka MATH 322, MATH 422)  Fundamentals of Analysis II
 
 Continuation of 
 Prereqs:
-MATH 421
 MATH 321
+MATH 421
 ----------
 MATH 324 Introduction to Complex Analysis
 
 Properties, singularities, and representations of analytic functions, complex integration. Cauchy's theorems, series residues, conformal mapping and analytic continuation. Riemann surfaces. Relevance to the theory of physical problems.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 425  Complex Analysis I
 
@@ -2020,7 +2020,7 @@ EEPS 110 None
 ----------
 EEPS 210  Earth History: Time, Tectonics, Climate, and Life
 ----------
-MATH 421 (aka MATH 321, MATH 421)  Fundamentals of Analysis I
+MATH 421 (aka MATH 421, MATH 321)  Fundamentals of Analysis I
 
 Abstract mathematical reasoning in the context of analysis in Euclidean space.  Introduction to formal reasoning, sets and functions, and the number systems.  Sequences and series; Cauchy sequences and convergence.  Required for all mathematics majors. Additional work required for graduate students. (May not be taken for graduate credit by graduate students in the Department of Mathematics.)
 
@@ -2028,12 +2028,12 @@ Prereqs:
 MATH 223
 MATH 227
 ----------
-MATH 422 (aka MATH 422, MATH 322)  Fundamentals of Analysis II
+MATH 422 (aka MATH 322, MATH 422)  Fundamentals of Analysis II
 
 Continuation of 
 Prereqs:
-MATH 421
 MATH 321
+MATH 421
 ----------
 PHYS 123  Physics and Frontiers I - Mechanics
 ----------
@@ -2104,12 +2104,12 @@ Basic exploratory data analysis for univariate response with single or multiple 
 Prereqs:
 EPBI 431
 STAT 312
-EPBI 441
 STAT 312R
-EPBI 458
 STAT 243
+EPBI 441
+EPBI 458
 ----------
-STAT 326 (aka STAT 326, STAT 426) Multivariate Analysis and Data Mining
+STAT 326 (aka STAT 426, STAT 326) Multivariate Analysis and Data Mining
 
 Extensions of exploratory data analysis and modeling to multivariate response observations and to non-Gaussian data. Singular value decomposition and projection, principal components, factor analysis and latent structure analysis, discriminant analysis and clustering techniques, cross-validation, E-M algorithm, CART.  Introduction to generalized linear modeling.  Case studies of complex data sets with multiple objectives for analysis. 
 Prereqs:
@@ -2148,8 +2148,8 @@ MATH 461 Introduction to Topology
 Metric spaces, topological spaces, and continuous functions. Compactness, connectedness, path connectedness. Topological manifolds; topological groups. Polyhedra, simplical complexes. Fundamental groups.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 462 Algebraic Topology
 
@@ -2177,8 +2177,8 @@ MATH 471 Advanced Engineering Mathematics
 Vector analysis, Fourier series and integrals. Laplace transforms, separable partial differential equations, and boundary value problems. Bessel and Legendre functions. Emphasis on techniques and applications.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 405 Advanced Matrix Analysis
 
@@ -2193,25 +2193,25 @@ Probabilistic concepts. Discrete probability, elementary distributions. Measure 
 Prereqs:
 MATH 322
 ----------
-MATH 419 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+MATH 419 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
 MATH 432 Numerical Differential Equations
 
 Numerical solution of differential equations for scientists and engineers. Solution of ordinary differential equations by multistep and single step methods. Stability, consistency, and convergence.  Stiff equations.  Finite difference schemes.  Introduction to the finite element method.  Introduction to multigrid techniques.  The diffusion equation: numerical schemes and stability analysis.  Introduction to hyperbolic equations.  MATLAB will be used in this course.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 433 Numerical Solutions of Nonlinear Systems and Optimization
 
@@ -2219,8 +2219,8 @@ The course provides an introduction to numerical solution methods for systems of
 
 Prereqs:
 MATH 223
-MATH 431
 MATH 227
+MATH 431
 ----------
 MATH 435 Ordinary Differential Equations
 
@@ -2236,9 +2236,9 @@ MATH 445 Introduction to Partial Differential Equations
 Method of characteristics for linear and quasilinear equations. Second order equations of elliptic, parabolic, type; initial and boundary value problems. Method of separation of variables, eigenfunction expansions, Sturm-Liouville theory. Fourier, Laplace, Hankel transforms; Bessel functions, Legendre polynomials. Green's functions. Examples include: heat diffusion, Laplace's equation, wave equations, one dimensional gas dynamics and others. Appropriate for seniors and graduate students in science, engineering, and mathematics.
 
 Prereqs:
-MATH 228
 MATH 307
 MATH 224
+MATH 228
 MATH 201
 ----------
 MATH 449 Dynamical Models for Biology and Medicine
@@ -2246,10 +2246,10 @@ MATH 449 Dynamical Models for Biology and Medicine
 Introduction to discrete and continuous dynamical models with applications to biology and medicine.  Topics include: population dynamics and ecology; models of infectious diseases; population genetics and evolution; biological motion (reaction-diffusion and chemotaxis); Molecular and cellular biology (biochemical kinetics, metabolic pathways, immunology).  The course will introduce students to the basic mathematical concepts and techniques of dynamical systems theory (equilibria, stability, bifurcations, discrete and continuous dynamics, diffusion and wave propagation, elements of system theory and control).  Mathematical exposition is supplemented with introduction to computer tools and techniques (Mathematica, Matlab).
 
 Prereqs:
-MATH 228
-EBME 300
 MATH 224
+MATH 228
 MATH 201
+EBME 300
 ----------
 MATH 440  Computational Inverse Problems
 
@@ -2265,10 +2265,10 @@ MATH 441 Mathematical Modeling
 Mathematics is a powerful language for describing real world phenomena and providing predictions that otherwise are hard or impossible to obtain.  The course gives the students pre-requisites for translating qualitative descriptions given in the professional non-mathematical language into the quantitative language for mathematics.  While the variety in the subject matter is wide, some general principles and methodologies that a modeler can pursue are similar in many applications.  The course focuses on these similarities.  The course is based on representative case studies that are discussed and analyzed in the classroom, the emphasis being on general principles of developing and analyzing mathematical models.  The examples will be taken from different fields of science and engineering, including life sciences, environmental sciences, biomedical engineering and physical sciences.  Modeling relies increasingly on computation, so the students should have basic skills for using computers and programs like Matlab or Mathematica.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
-MATH 427 (aka OPRE 427, MATH 427, MATH 327) Convexity and Optimization
+MATH 427 (aka MATH 327, MATH 427, OPRE 427) Convexity and Optimization
 
 Introduction to the theory of convex sets and functions and to the extremes in problems in areas of mathematics where convexity plays a role.  Among the topics discussed are basic properties of convex sets (extreme points, facial structure of polytopes), separation theorems, duality and polars, properties of convex functions, minima and maxima of convex functions over convex set, various optimization problems.
 
@@ -2296,18 +2296,18 @@ Basic exploratory data analysis for univariate response with single or multiple 
 Prereqs:
 EPBI 431
 STAT 312
-EPBI 441
 STAT 312R
-EPBI 458
 STAT 243
+EPBI 441
+EPBI 458
 ----------
 STAT 445 (aka STAT 445, STAT 345, PQHS 481) Theoretical Statistics I
 
 Topics provide the background for statistical inference. Random variables; distribution and density functions; transformations, expectation. Common univariate distributions. Multiple random variables; joint, marginal and conditional distributions; hierarchical models, covariance. Distributions of sample quantities, distributions of sums of random variables, distributions of order statistics. Methods of statistical inference.
 
 Prereqs:
-MATH 122
 MATH 223
+MATH 122
 EPBI 431
 ----------
 STAT 455 Linear Models
@@ -2316,8 +2316,8 @@ Theory of least squares estimation, interval estimation and tests for models wit
 
 Prereqs:
 STAT 346
-STAT 446
 MATH 201
+STAT 446
 ----------
 STAT 495A Consulting Forum
 
@@ -2336,79 +2336,79 @@ MATH 301 Undergraduate Reading Course
 Students must obtain the approval of a supervising professor before registration. More than one credit hour must be approved by the undergraduate committee of the department.
 
 ----------
-MATH 319 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+MATH 319 (aka ECSE 319, BIOL 419, SYBB 319, EBME 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-PHOL 419 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+BIOL 419 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-BIOL 419 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+SYBB 319 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-EBME 419 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+EBME 419 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-SYBB 419 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+SYBB 419 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-SYBB 319 (aka MATH 419, ECSE 319, PHOL 419, MATH 319, BIOL 419, EBME 419, BIOL 319, SYBB 419, SYBB 319) Applied Probability and Stochastic Processes for Biology
+PHOL 419 (aka ECSE 319, EBME 419, SYBB 319, BIOL 419, BIOL 319, SYBB 419, MATH 319, PHOL 419, MATH 419) Applied Probability and Stochastic Processes for Biology
 
 Applications of probability and stochastic processes to biological systems. Mathematical topics will include: introduction to discrete and continuous probability spaces (including numerical generation of pseudo random samples from specified probability distributions), Markov processes in discrete and continuous time with discrete and continuous sample spaces, point processes including homogeneous and inhomogeneous Poisson processes and Markov chains on graphs, and diffusion processes including Brownian motion and the Ornstein-Uhlenbeck process.  Biological topics will be determined by the interests of the students and the instructor.  Likely topics include: stochastic ion channels, molecular motors and stochastic ratchets, actin and tubulin polymerization, random walk models for neural spike trains, bacterial chemotaxis, signaling and genetic regulatory networks, and stochastic predator-prey dynamics.  The emphasis will be on practical simulation and analysis of stochastic phenomena in biological systems.  Numerical methods will be developed using a combination of MATLAB, the R statistical package, MCell, and/or URDME, at the discretion of the instructor.  Student projects will comprise a major part of the course.
 
 Prereqs:
-MATH 223
-MATH 307
-MATH 201
-BIOL 306
-BIOL 300
 MATH 224
+MATH 223
+BIOL 300
+MATH 307
+BIOL 306
+MATH 201
 ----------
-OPRE 427 (aka OPRE 427, MATH 427, MATH 327) Convexity and Optimization
+OPRE 427 (aka MATH 327, MATH 427, OPRE 427) Convexity and Optimization
 
 Introduction to the theory of convex sets and functions and to the extremes in problems in areas of mathematics where convexity plays a role.  Among the topics discussed are basic properties of convex sets (extreme points, facial structure of polytopes), separation theorems, duality and polars, properties of convex functions, minima and maxima of convex functions over convex set, various optimization problems.
 
@@ -2432,8 +2432,8 @@ MATH 333 Mathematics and Brain
 This course is intended for upper level undergraduate students in Mathematics, Cognitive Science, Biomedical Engineering, Biology or Neuroscience who have an interest in quantitative investigation of the brain and its functions.  Students will be introduced to a variety of mathematical techniques needed to model and simulate different brain functions, and to analyze the results of the simulations and of available measured data.  The mathematical exposition will be followed--when appropriate--by the corresponding implementation in Matlab.  The course will cover some basic topics in the mathematical aspects of differential equations, electromagnetism, Inverse problems and imaging related to brain functions.  Validation and falsification of the mathematical models in the light of available experimental data will be addressed.  This course will be a first step towards organizing the different brain investigative modalities within a unified mathematical framework.  Lectures will include a discussion portion.  A final presentation and written report are part of the course requirements. Counts as SAGES Departmental Seminar.
 
 Prereqs:
-MATH 228
 MATH 224
+MATH 228
 ----------
 MATH 338 Introduction to Dynamical Systems
 
@@ -2451,50 +2451,50 @@ In order to register, a student must first obtain the consent of a Capstone Advi
 Students are strongly encouraged to begin well in advance of registration to initiate discussions with a potential Capstone Advisor.  Before granting approval, an advisor may require a Capstone Proposal outlining the goals, expected background, methodology and time frame of the project. The determination as to whether the expectations for the Capstone Project and for the SAGES Capstone Requirement have been met are the sole responsibility of the Capstone Advisor. Counts as SAGES Senior Capstone.
 
 ----------
-MATH 357 (aka MATH 357, ORIG 401, ORIG 301) Mathematical Modeling Across the Sciences
+MATH 357 (aka ORIG 401, ORIG 301, MATH 357) Mathematical Modeling Across the Sciences
 
 A three credit course on mathematical modeling as it applies to the origins sciences. Students gain practical experience in a wide range of techniques for modeling research questions in cosmology and astrophysics, integrative evolutionary biology (including physical anthropology, ecology, paleontology, and evolutionary cognitive science), and planetary science and astrobiology.
 
 Prereqs:
-BIOL 225
-PHYS 124
-MATH 122
-CHEM 106
 PHYS 122
-ORIG 201
+MATH 122
+PHYS 124
+CHEM 106
+BIOL 225
 ORIG 202
+ORIG 201
 ----------
 BIOL 225 
 ----------
-ORIG 201 
-----------
 ORIG 202 
 ----------
-ORIG 401 (aka MATH 357, ORIG 401, ORIG 301) Mathematical Modeling Across the Sciences
-
-A three credit course on mathematical modeling as it applies to the origins sciences. Students gain practical experience in a wide range of techniques for modeling research questions in cosmology and astrophysics, integrative evolutionary biology (including physical anthropology, ecology, paleontology, and evolutionary cognitive science), and planetary science and astrobiology.
-
-Prereqs:
-BIOL 225
-PHYS 124
-MATH 122
-CHEM 106
-PHYS 122
-ORIG 201
-ORIG 202
+ORIG 201 
 ----------
-ORIG 301 (aka MATH 357, ORIG 401, ORIG 301) Mathematical Modeling Across the Sciences
+ORIG 401 (aka ORIG 401, ORIG 301, MATH 357) Mathematical Modeling Across the Sciences
 
 A three credit course on mathematical modeling as it applies to the origins sciences. Students gain practical experience in a wide range of techniques for modeling research questions in cosmology and astrophysics, integrative evolutionary biology (including physical anthropology, ecology, paleontology, and evolutionary cognitive science), and planetary science and astrobiology.
 
 Prereqs:
-BIOL 225
-PHYS 124
-MATH 122
-CHEM 106
 PHYS 122
-ORIG 201
+MATH 122
+PHYS 124
+CHEM 106
+BIOL 225
 ORIG 202
+ORIG 201
+----------
+ORIG 301 (aka ORIG 401, ORIG 301, MATH 357) Mathematical Modeling Across the Sciences
+
+A three credit course on mathematical modeling as it applies to the origins sciences. Students gain practical experience in a wide range of techniques for modeling research questions in cosmology and astrophysics, integrative evolutionary biology (including physical anthropology, ecology, paleontology, and evolutionary cognitive science), and planetary science and astrobiology.
+
+Prereqs:
+PHYS 122
+MATH 122
+PHYS 124
+CHEM 106
+BIOL 225
+ORIG 202
+ORIG 201
 ----------
 MATH 361 Geometry I
 
@@ -2516,48 +2516,48 @@ MATH 365 Introduction To Algebraic Geometry
 This is a first introduction to algebraic geometry--the study of solutions of polynomial equations-- for advanced undergraduate students.  Recent applications of this large and important area include number theory, combinatorics, theoretical physics, robotics, cryptology and coding theory. The contents of the course may vary from one semester to another, and may include, for example:  the classical theory of algebraic curves in the setting of affine and projective planes over the real or complex fields; affine and projective equivalence; invariants; tangents; singularities; intersection multiplicities; resultants and Bezout's Theorem; linear systems; rational curves; flexes and group structure on a cubic.
 
 Prereqs:
-MATH 308
 MATH 307
+MATH 308
 ----------
 MATH 376 (aka BIOL 306, MATH 376) Mathematical Analysis of Biological Models
 
 This course focuses on the mathematical methods used to analyze biological models, with examples drawn largely from ecology but also from epidemiology, developmental biology, and other areas.  Mathematical topics include equilibrium and stability in discrete and continuous time, some aspects of transient dynamics, and reaction-diffusion equations (steady state, diffusive instabilities, and traveling waves).  Biological topics include several "classic" models, such as the Lotka-Volterra model, the Ricker model, and Michaelis-Menten/type II/saturating responses.  The emphasis is on approximations that lead to analytic solutions, not numerical analysis.  An important aspect of this course is translating between verbal and mathematical descriptions: the goal is not just to solve mathematical problems but to extract biological meaning from the answers we find.  
 
 Prereqs:
-BIOL 300
 MATH 224
+BIOL 300
 ----------
-STAT 382 (aka STAT 382, MATH 382, STAT 482, MATH 482) High Dimensional Probability
+MATH 482 (aka MATH 482, STAT 382, STAT 482, MATH 382) High Dimensional Probability
 
 Behavior of random vectors, random matrices, and random projections in high dimensional spaces, with a view toward applications to data sciences.  Topics include tail inequalities for sums of independent random variables, norms of random matrices, concentration of measure, and bounds for random processes. Applications may include structure of random graphs, community detection, covariance estimation and clustering, randomized dimension reduction, empirical processes, statistical learning, and sparse recovery problems.  Additional work is required for graduate students.
 
 Prereqs:
-STAT 345
-STAT 445
 MATH 307
+STAT 445
+STAT 345
 MATH 380
 ----------
-STAT 482 (aka STAT 382, MATH 382, STAT 482, MATH 482) High Dimensional Probability
+STAT 382 (aka MATH 482, STAT 382, STAT 482, MATH 382) High Dimensional Probability
 
 Behavior of random vectors, random matrices, and random projections in high dimensional spaces, with a view toward applications to data sciences.  Topics include tail inequalities for sums of independent random variables, norms of random matrices, concentration of measure, and bounds for random processes. Applications may include structure of random graphs, community detection, covariance estimation and clustering, randomized dimension reduction, empirical processes, statistical learning, and sparse recovery problems.  Additional work is required for graduate students.
 
 Prereqs:
-STAT 345
-STAT 445
 MATH 307
+STAT 445
+STAT 345
 MATH 380
 ----------
-MATH 482 (aka STAT 382, MATH 382, STAT 482, MATH 482) High Dimensional Probability
+STAT 482 (aka MATH 482, STAT 382, STAT 482, MATH 382) High Dimensional Probability
 
 Behavior of random vectors, random matrices, and random projections in high dimensional spaces, with a view toward applications to data sciences.  Topics include tail inequalities for sums of independent random variables, norms of random matrices, concentration of measure, and bounds for random processes. Applications may include structure of random graphs, community detection, covariance estimation and clustering, randomized dimension reduction, empirical processes, statistical learning, and sparse recovery problems.  Additional work is required for graduate students.
 
 Prereqs:
-STAT 345
-STAT 445
 MATH 307
+STAT 445
+STAT 345
 MATH 380
 ----------
-PHIL 406 (aka PHIL 306, PHIL 406, MATH 406) Mathematical Logic and Model Theory
+PHIL 406 (aka MATH 406, PHIL 306, PHIL 406) Mathematical Logic and Model Theory
 
 Propositional calculus and quantification theory; consistency and completeness theorems; Gödel incompleteness results and their philosophical significance; introduction to basic concepts of model theory; problems of formulation of arguments in philosophy and the sciences.
 
@@ -2582,7 +2582,7 @@ Recommended Preparation: linear algebra, multivariate calculus, and ordinary dif
 ----------
 EBME 300 
 ----------
-STAT 312R (aka STAT 312R, SYBB 312R) Basic Statistics for Engineering and Science Using R Programming
+STAT 312R (aka SYBB 312R, STAT 312R) Basic Statistics for Engineering and Science Using R Programming
 
 For advanced undergraduate students in engineering, physical sciences, life sciences. Comprehensive introduction to probability models and statistical methods of analyzing data with the object of formulating statistical models and choosing appropriate methods for inference from experimental and observational data and for testing the model's validity. Balanced approach with equal emphasis on probability, fundamental concepts of statistics, point and interval estimation, hypothesis testing, analysis of variance, design of experiments, and regression modeling.  Note: Credit given for only one (1) of 
 Prereqs:
@@ -2648,13 +2648,13 @@ SYBB 201R (aka SYBB 201R, STAT 201R) Basic Statistics for Social and Life Scienc
 
 Designed for undergraduates in the social sciences and life sciences who need to use statistical techniques in their fields. Descriptive statistics, probability models, sampling distributions. Point and confidence interval estimation, hypothesis testing. Elementary regression and analysis of variance.  Not for credit toward major or minor in Statistics. Students may earn credit for only one of the following courses: 
 ----------
-SYBB 312R (aka STAT 312R, SYBB 312R) Basic Statistics for Engineering and Science Using R Programming
+SYBB 312R (aka SYBB 312R, STAT 312R) Basic Statistics for Engineering and Science Using R Programming
 
 For advanced undergraduate students in engineering, physical sciences, life sciences. Comprehensive introduction to probability models and statistical methods of analyzing data with the object of formulating statistical models and choosing appropriate methods for inference from experimental and observational data and for testing the model's validity. Balanced approach with equal emphasis on probability, fundamental concepts of statistics, point and interval estimation, hypothesis testing, analysis of variance, design of experiments, and regression modeling.  Note: Credit given for only one (1) of 
 Prereqs:
 MATH 122
 ----------
-STAT 317 (aka STAT 417, STAT 317) Actuarial Science I
+STAT 317 (aka STAT 317, STAT 417) Actuarial Science I
 
 Practical knowledge of the theory of interest in both finite and continuous time. That knowledge should include how these concepts are used in the various annuity functions, and apply the concepts of present and accumulated value for various streams of cash flows as a basis for future use in: reserving, valuation, pricing, duration, asset/liability management, investment income, capital budgeting, and contingencies. Valuation of discrete and continuous streams of payments, including the case in which the interest conversion period differs from the payment period will be considered. Application of interest theory to amortization of lump sums, fixed income securities, depreciation, mortgages, etc., as well as annuity functions in a broad finance context will be covered. Topics covered include areas examined in the American Society of Actuaries Exam 2. 
 
@@ -2662,7 +2662,7 @@ Prereqs:
 MATH 122
 MATH 126
 ----------
-STAT 417 (aka STAT 417, STAT 317) Actuarial Science I
+STAT 417 (aka STAT 317, STAT 417) Actuarial Science I
 
 Practical knowledge of the theory of interest in both finite and continuous time. That knowledge should include how these concepts are used in the various annuity functions, and apply the concepts of present and accumulated value for various streams of cash flows as a basis for future use in: reserving, valuation, pricing, duration, asset/liability management, investment income, capital budgeting, and contingencies. Valuation of discrete and continuous streams of payments, including the case in which the interest conversion period differs from the payment period will be considered. Application of interest theory to amortization of lump sums, fixed income securities, depreciation, mortgages, etc., as well as annuity functions in a broad finance context will be covered. Topics covered include areas examined in the American Society of Actuaries Exam 2. 
 
@@ -2675,20 +2675,20 @@ STAT 318 (aka STAT 418, STAT 318) Actuarial Science II
 Theory of life contingencies. Life table analysis for simple and multiple decrement functions. Life and special annuities. Life insurance and reserves for life insurance. Statistical issues for prediction from actuarial models. Topics covered include areas examined in the American Society of Actuaries Exam 3.  
 
 Prereqs:
-STAT 345
-STAT 312R
 STAT 312
 STAT 317
+STAT 345
+STAT 312R
 ----------
 STAT 418 (aka STAT 418, STAT 318) Actuarial Science II
 
 Theory of life contingencies. Life table analysis for simple and multiple decrement functions. Life and special annuities. Life insurance and reserves for life insurance. Statistical issues for prediction from actuarial models. Topics covered include areas examined in the American Society of Actuaries Exam 3.  
 
 Prereqs:
-STAT 345
-STAT 312R
 STAT 312
 STAT 317
+STAT 345
+STAT 312R
 ----------
 EPBI 431 
 ----------
@@ -2696,7 +2696,7 @@ EPBI 441
 ----------
 EPBI 458 
 ----------
-STAT 426 (aka STAT 326, STAT 426) Multivariate Analysis and Data Mining
+STAT 426 (aka STAT 426, STAT 326) Multivariate Analysis and Data Mining
 
 Extensions of exploratory data analysis and modeling to multivariate response observations and to non-Gaussian data. Singular value decomposition and projection, principal components, factor analysis and latent structure analysis, discriminant analysis and clustering techniques, cross-validation, E-M algorithm, CART.  Introduction to generalized linear modeling.  Case studies of complex data sets with multiple objectives for analysis. 
 Prereqs:
@@ -2708,21 +2708,21 @@ For advanced undergraduate students or beginning graduate students in engineerin
 Prereqs:
 MATH 122
 ----------
-STAT 433 (aka STAT 433, STAT 333) Uncertainty in Engineering and Science
+STAT 433 (aka STAT 333, STAT 433) Uncertainty in Engineering and Science
 
 Phenomena of uncertainty appear in engineering and science for various reasons and can be modeled in different ways. The course integrates the mainstream ideas in statistical data analysis with models of uncertain phenomena stemming from three distinct viewpoints: algorithmic/computational complexity; classical probability theory; and chaotic behavior of nonlinear systems. Descriptive statistics, estimation procedures and hypothesis testing (including design of experiments). Random number generators and their testing.  Monte Carlo Methods.  Mathematica notebooks and simulations will be used. Graduate students are required to do an extra project.
 
 Prereqs:
-MATH 122
 MATH 223
+MATH 122
 ----------
 PQHS 481 (aka STAT 445, STAT 345, PQHS 481) Theoretical Statistics I
 
 Topics provide the background for statistical inference. Random variables; distribution and density functions; transformations, expectation. Common univariate distributions. Multiple random variables; joint, marginal and conditional distributions; hierarchical models, covariance. Distributions of sample quantities, distributions of sums of random variables, distributions of order statistics. Methods of statistical inference.
 
 Prereqs:
-MATH 122
 MATH 223
+MATH 122
 EPBI 431
 ----------
 EPBI 481 
@@ -2732,18 +2732,18 @@ STAT 446 (aka STAT 346, STAT 446, PQHS 482) Theoretical Statistics II
 Point estimation: maximum likelihood, moment estimators.  Methods of evaluating estimators including mean squared error, consistency, "best" unbiased and sufficiency.  Hypothesis testing; likelihood ratio and union-intersection tests.  Properties of tests including power function, bias.  Interval estimation by inversion of test statistics, use of pivotal quantities.  Application to regression.  Graduate students are responsible for mathematical derivations, and full proofs of principal theorems.
 
 Prereqs:
-STAT 345
-EPBI 481
 STAT 445
+EPBI 481
+STAT 345
 ----------
 PQHS 482 (aka STAT 346, STAT 446, PQHS 482) Theoretical Statistics II
 
 Point estimation: maximum likelihood, moment estimators.  Methods of evaluating estimators including mean squared error, consistency, "best" unbiased and sufficiency.  Hypothesis testing; likelihood ratio and union-intersection tests.  Properties of tests including power function, bias.  Interval estimation by inversion of test statistics, use of pivotal quantities.  Application to regression.  Graduate students are responsible for mathematical derivations, and full proofs of principal theorems.
 
 Prereqs:
-STAT 345
-EPBI 481
 STAT 445
+EPBI 481
+STAT 345
 ----------
 STAT 395 Senior Project in Statistics
 
@@ -2756,12 +2756,12 @@ Introduction to stochastic modeling of data. Emphasis on models and statistical 
 Prereqs:
 STAT 332
 STAT 333
-MATH 491
 STAT 312
-MATH 380
+STAT 313
 STAT 345
 STAT 243
-STAT 313
+MATH 491
+MATH 380
 ----------
 STAT 448 Bayesian Theory with Applications
 
@@ -2802,7 +2802,7 @@ Fourier transform analysis and sampling of signals.  AM, FM and SSB modulation a
 Prereqs:
 EECS 246
 ----------
-ECSE 374 (aka ECSE 474, ECSE 374) Advanced Control and Energy Systems
+ECSE 374 (aka ECSE 374, ECSE 474) Advanced Control and Energy Systems
 
 This course introduces applied quantitative robust and nonlinear control engineering techniques to regulate automatically renewable energy systems in general and wind turbines in particular.  The course also studies the fundamentals for dynamic multidisciplinary modeling and analysis of large multi-megawatt wind turbines (mechanics, aerodynamics, electrical systems, control concepts, etc.).  The course combines lecture sessions and lab hours.  The 400-level includes an experimental lab competition, where the object is to design, implement, and experimentally validate a control strategy to regulate a real system in the laboratory (helicopter control competition or similar); it will also include additional project design reports.
 
@@ -2888,21 +2888,21 @@ PHYS 115 Introductory Physics I
 ----------
 PHYS 116 Introductory Physics II
 ----------
-ECSE 368 (aka ECSE 468, ECSE 368) Power System Analysis I
+ECSE 368 (aka ECSE 368, ECSE 468) Power System Analysis I
 
 This course introduces the steady-state modeling and analysis of electric power systems. The course discusses the modeling of essential power system network components such as transformers and transmission lines. The course also discusses important steady-state analysis of three-phase power system network, such as the power flow and economic operation studies. Through the use of PowerWorld Simulator education software, further understanding and knowledge can be gained on the operational characteristics of AC power systems. Special topics concerning new grid technologies will be discussed towards the semester end. The prerequisite requirements of the course include the concepts and computational techniques of Alternative Current (AC) circuit and electromagnetic field.
 
 Prereqs:
 EECS 245
 ----------
-ECSE 369 (aka ECSE 369, ECSE 469) Power System Analysis II
+ECSE 369 (aka ECSE 469, ECSE 369) Power System Analysis II
 
 This course extends upon the steady state analysis of power systems to cover study topics that are essential for power system planning and operation. Special system operating conditions are considered, such as unbalanced network operation and component faults. Among the most important analytical methods developed, are symmetrical components and sequence networks. Other study topics discussed include the electric machine modeling and power system transient stability. The latter half of the course presents computational methods and control algorithms that are essential for power system operation, such as generation control and state estimation.
 
 Prereqs:
 EECS 368
 ----------
-ECSE 370 (aka ECSE 370, ECSE 470) Smart Grid
+ECSE 370 (aka ECSE 470, ECSE 370) Smart Grid
 
 This course starts with an introduction to the US electric power system infrastructure and national electricity policy. Then power system operations and reliability practices are described. In the context of currently existing infrastructure and operation strategies, the course discusses the new Smart Grid technologies such as renewable resources, distributed generation, demand response, energy storage and electric vehicles. Additional important topics of discussion include Advanced Meter Infrastructure, microgrids, the IEEE 1547 Interconnection Standard, and other interoperability standards. The course captures the evolving progress made in Smart Grid technologies and the impacts on power system economics and reliability.
 
@@ -2934,8 +2934,8 @@ ECSE 296 Independent Projects
 
 Independent projects in Electrical Engineering, Computer Engineering and Systems Engineering.  
 Prereqs:
-ENGR 131
 ECSE 132
+ENGR 131
 ----------
 ECSE 297 Special Topics
 
@@ -2956,7 +2956,7 @@ EECS 351
 ----------
 EECS 351 
 ----------
-ECSE 417 (aka ECSE 317, ECSE 417) Computer Design - FPGAs
+ECSE 417 (aka ECSE 417, ECSE 317) Computer Design - FPGAs
 
 The aim is to expose the student to methodologies for systematic design of digital systems with emphasis on programmable logic implementations and prototyping. The course requires a number of hands-on experiments and an overall lab project.  The lab involves a number of class lectures to familiarize the students with the modern design techniques based on VHDL/Verilog Hardware Design Languages, CAD tools, and FPGAs. 
 
@@ -2995,12 +2995,12 @@ This study abroad course will acquaint students with history and culture of Indi
 ----------
 EECS 245 
 ----------
-ECSE 460 (aka ECSE 460, ECSE 360) Manufacturing and Automated Systems
+ECSE 460 (aka ECSE 360, ECSE 460) Manufacturing and Automated Systems
 
 Formulation, modeling, planning, and control of manufacturing and automated systems with applications to computer science and engineering problems. Topics include, design of products and processes, location/spatial problems, transportation and assignment, product and process layout, group technology and clustering, cellular and network flow layouts, computer control systems, reliability and maintenance, and statistical quality control. Tools and analysis include: multi-objective optimization, artificial intelligence, and heuristics for combinatorial problems.
 
 ----------
-ECSE 468 (aka ECSE 468, ECSE 368) Power System Analysis I
+ECSE 468 (aka ECSE 368, ECSE 468) Power System Analysis I
 
 This course introduces the steady-state modeling and analysis of electric power systems. The course discusses the modeling of essential power system network components such as transformers and transmission lines. The course also discusses important steady-state analysis of three-phase power system network, such as the power flow and economic operation studies. Through the use of PowerWorld Simulator education software, further understanding and knowledge can be gained on the operational characteristics of AC power systems. Special topics concerning new grid technologies will be discussed towards the semester end. The prerequisite requirements of the course include the concepts and computational techniques of Alternative Current (AC) circuit and electromagnetic field.
 
@@ -3009,21 +3009,21 @@ EECS 245
 ----------
 EECS 368 
 ----------
-ECSE 469 (aka ECSE 369, ECSE 469) Power System Analysis II
+ECSE 469 (aka ECSE 469, ECSE 369) Power System Analysis II
 
 This course extends upon the steady state analysis of power systems to cover study topics that are essential for power system planning and operation. Special system operating conditions are considered, such as unbalanced network operation and component faults. Among the most important analytical methods developed, are symmetrical components and sequence networks. Other study topics discussed include the electric machine modeling and power system transient stability. The latter half of the course presents computational methods and control algorithms that are essential for power system operation, such as generation control and state estimation.
 
 Prereqs:
 EECS 368
 ----------
-ECSE 470 (aka ECSE 370, ECSE 470) Smart Grid
+ECSE 470 (aka ECSE 470, ECSE 370) Smart Grid
 
 This course starts with an introduction to the US electric power system infrastructure and national electricity policy. Then power system operations and reliability practices are described. In the context of currently existing infrastructure and operation strategies, the course discusses the new Smart Grid technologies such as renewable resources, distributed generation, demand response, energy storage and electric vehicles. Additional important topics of discussion include Advanced Meter Infrastructure, microgrids, the IEEE 1547 Interconnection Standard, and other interoperability standards. The course captures the evolving progress made in Smart Grid technologies and the impacts on power system economics and reliability.
 
 Prereqs:
 EECS 368
 ----------
-ECSE 372 (aka EECS 372, ECSE 372, EECS 472, ECSE 472) Introduction to Distribution Systems
+ECSE 372 (aka EECS 372, EECS 472, ECSE 472, ECSE 372) Introduction to Distribution Systems
 
 Introduction to Distribution Systems provides students with a fundamental understanding of distribution power system configurations, equipment and loads. It also provides a detailed review of distributed energy resources and their impacts on utility distribution systems. Since today's distribution utilities are facing the challenge of managing a distribution network made up of assets from proven and mature technologies while integrating new technologies this course will also discuss a concept of smart grid and its application to distribution systems. The first part of the course reviews the fundamental methods used in the steady state analysis of AC circuits as applied to power distribution systems following by the steady-state modeling of electric power distribution systems. The second part of the course introduces fundamental analysis of electric power distribution systems such as power flow, state estimation, and fault calculation and discusses concerns such as reliability, power quality and voltage regulation.
 
@@ -3031,7 +3031,7 @@ Prereqs:
 PHYS 122
 MATH 224
 ----------
-EECS 372 (aka EECS 372, ECSE 372, EECS 472, ECSE 472) Introduction to Distribution Systems
+EECS 372 (aka EECS 372, EECS 472, ECSE 472, ECSE 372) Introduction to Distribution Systems
 
 Introduction to Distribution Systems provides students with a fundamental understanding of distribution power system configurations, equipment and loads. It also provides a detailed review of distributed energy resources and their impacts on utility distribution systems. Since today's distribution utilities are facing the challenge of managing a distribution network made up of assets from proven and mature technologies while integrating new technologies this course will also discuss a concept of smart grid and its application to distribution systems. The first part of the course reviews the fundamental methods used in the steady state analysis of AC circuits as applied to power distribution systems following by the steady-state modeling of electric power distribution systems. The second part of the course introduces fundamental analysis of electric power distribution systems such as power flow, state estimation, and fault calculation and discusses concerns such as reliability, power quality and voltage regulation.
 
@@ -3039,7 +3039,7 @@ Prereqs:
 PHYS 122
 MATH 224
 ----------
-EECS 472 (aka EECS 372, ECSE 372, EECS 472, ECSE 472) Introduction to Distribution Systems
+EECS 472 (aka EECS 372, EECS 472, ECSE 472, ECSE 372) Introduction to Distribution Systems
 
 Introduction to Distribution Systems provides students with a fundamental understanding of distribution power system configurations, equipment and loads. It also provides a detailed review of distributed energy resources and their impacts on utility distribution systems. Since today's distribution utilities are facing the challenge of managing a distribution network made up of assets from proven and mature technologies while integrating new technologies this course will also discuss a concept of smart grid and its application to distribution systems. The first part of the course reviews the fundamental methods used in the steady state analysis of AC circuits as applied to power distribution systems following by the steady-state modeling of electric power distribution systems. The second part of the course introduces fundamental analysis of electric power distribution systems such as power flow, state estimation, and fault calculation and discusses concerns such as reliability, power quality and voltage regulation.
 
@@ -3049,7 +3049,7 @@ MATH 224
 ----------
 EECS 304 
 ----------
-ECSE 474 (aka ECSE 474, ECSE 374) Advanced Control and Energy Systems
+ECSE 474 (aka ECSE 374, ECSE 474) Advanced Control and Energy Systems
 
 This course introduces applied quantitative robust and nonlinear control engineering techniques to regulate automatically renewable energy systems in general and wind turbines in particular.  The course also studies the fundamentals for dynamic multidisciplinary modeling and analysis of large multi-megawatt wind turbines (mechanics, aerodynamics, electrical systems, control concepts, etc.).  The course combines lecture sessions and lab hours.  The 400-level includes an experimental lab competition, where the object is to design, implement, and experimentally validate a control strategy to regulate a real system in the laboratory (helicopter control competition or similar); it will also include additional project design reports.
 
@@ -3099,7 +3099,7 @@ ECSE 410 Mobile Health (mHealth) Technology
 Advances in communications, computer, and medical technology have facilitated the practice of personalized health, which utilizes sensory computational communication systems to support improved and more personalized healthcare and healthy lifestyle choices. The current proliferation of broadband wireless services, along with more powerful and convenient handheld devices, is helping to introduce real-time monitoring and guidance for a wide array of patients. Indeed, a large research community and a nascent industry is beginning to connect medical care with technology developers, vendors of wireless and sensing hardware systems, network service providers, and enterprise data management communities. Students in the course and labs will explore cutting-edge technologies in 1) information technologies and 2) healthcare/medical applications, through lectures, lab assignments, exams, presentations, and final projects. The overall course objectives are to introduce electrical engineering, computer engineering, and computer science students the fundamentals of wearable sensors, mobile health informatics, big data analysis, telehealthcare security & privacy, and human computer interaction considerations.
 
 ----------
-EPOM 405 (aka ECSE 411, EPOM 405) Applied Engineering Statistics
+EPOM 405 (aka EPOM 405, ECSE 411) Applied Engineering Statistics
 
 In this course a combination of lectures, demonstrations, case studies, and individual and group computer problems provides an intensive introduction to fundamental concepts, applications and the practice of contemporary engineering statistics.  Each topic is introduced through realistic sample problems to be solved first by using standard spreadsheet programs and then using more sophisticated software packages.  Primary attention is given to teaching the fundamental concepts underlying standard analysis methods.
 
@@ -3138,37 +3138,37 @@ ECSE 450 Operations and Systems Design
 Introduction to design, modeling, and optimization of operations and scheduling systems with applications to computer science and engineering problems. Topics include, forecasting and times series, strategic, tactical, and operational planning, life cycle analysis, learning curves, resources allocation, materials requirement and capacity planning, sequencing, scheduling, inventory control, project management and planning. Tools for analysis include: multi-objective optimization, queuing models, simulation, and artificial intelligence.
 
 ----------
-ECSE 467 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+ECSE 467 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-MGMT 467 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+GENE 367 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-LAWS 5341 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+LAWS 5341 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-GENE 367 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+MGMT 467 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-GENE 467 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+EBME 467 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-EBME 467 (aka MGMT 467, ECSE 467, LAWS 5341, GENE 367, GENE 467, EBME 467) Commercialization and Intellectual Property Management
+GENE 467 (aka GENE 367, LAWS 5341, MGMT 467, ECSE 467, EBME 467, GENE 467) Commercialization and Intellectual Property Management
 
 This interdisciplinary course covers a variety of topics, including principles of intellectual property and intellectual property management, business strategies and modeling relevant to the creation of start-up companies and exploitation of IP rights as they relate to biomedical-related inventions.  The goal of this course is to address issues relating to the commercialization of biomedical-related inventions by exposing law students, MBA students, and Ph.D. candidates (in genetics and proteomics) to the challenges and opportunities encountered when attempting to develop biomedical intellectual property from the point of early discovery to the clinic and market.  Specifically, this course seeks to provide students with the ability to value a given technological advance or invention holistically, focusing on issues that extend beyond scientific efficacy and include patient and practitioner value propositions, legal and intellectual property protection, business modeling, potential market impacts, market competition, and ethical, social, and healthcare practitioner acceptance.  During this course, law students, MBA students, and Ph.D. candidates in genomics and proteomics will work in teams of five (two laws students, two MBA students and one Ph.D. candidate), focusing on issues of commercialization and IP management of biomedical-related inventions.  The instructors will be drawn from the law school, business school, and technology-transfer office.  Please visit the following website for more information: fusioninnovate.com.
 
 ----------
-ECSE 472 (aka EECS 372, ECSE 372, EECS 472, ECSE 472) Introduction to Distribution Systems
+ECSE 472 (aka EECS 372, EECS 472, ECSE 472, ECSE 372) Introduction to Distribution Systems
 
 Introduction to Distribution Systems provides students with a fundamental understanding of distribution power system configurations, equipment and loads. It also provides a detailed review of distributed energy resources and their impacts on utility distribution systems. Since today's distribution utilities are facing the challenge of managing a distribution network made up of assets from proven and mature technologies while integrating new technologies this course will also discuss a concept of smart grid and its application to distribution systems. The first part of the course reviews the fundamental methods used in the steady state analysis of AC circuits as applied to power distribution systems following by the steady-state modeling of electric power distribution systems. The second part of the course introduces fundamental analysis of electric power distribution systems such as power flow, state estimation, and fault calculation and discusses concerns such as reliability, power quality and voltage regulation.
 
@@ -3184,7 +3184,7 @@ Prereqs:
 PHYS 122
 MATH 224
 ----------
-ECSE 480A (aka EBME 480A, ECSE 480A) Introduction to Wireless Health
+ECSE 480A (aka ECSE 480A, EBME 480A) Introduction to Wireless Health
 
 Study of convergence of wireless communications, microsystems, information technology, persuasive psychology, and health care.  Discussion of health care delivery system, medical decision-making, persuasive psychology, and wireless health value chain and business models.  Understanding of health information technology, processing of monitoring data, wireless communication, biomedical sensing techniques, and health monitoring technical approaches and solutions.
 
@@ -3204,7 +3204,7 @@ EBME 480B (aka EBME 480B, ECSE 480B) The Human Body
 Study of structural organization of the body.  Introduction to anatomy, physiology, and pathology, covering the various systems of the body.  Comparison of elegant and efficient operation of the body and the related consequences of when things go wrong, presented in the context of each system of the body.  Introduction to medical diagnosis and terminology in the course of covering the foregoing.
 
 ----------
-ECSE 480C (aka ECSE 480C, EBME 480C) Biomedical Sensing Instrumentation
+ECSE 480C (aka EBME 480C, ECSE 480C) Biomedical Sensing Instrumentation
 
 Study of principles, applications, and design of biomedical instruments with special emphasis on transducers. Understanding of basic sensors, amplifiers, and signal processing. Discussion of the origin of biopotential, and biopotential electrodes and amplifiers (including biotelemetry). Understanding of chemical sensors and clinical laboratory instrumentation, including microfluidics.
 
@@ -3212,7 +3212,7 @@ Prereqs:
 EBME 480B
 EBME 480A
 ----------
-EBME 480C (aka ECSE 480C, EBME 480C) Biomedical Sensing Instrumentation
+EBME 480C (aka EBME 480C, ECSE 480C) Biomedical Sensing Instrumentation
 
 Study of principles, applications, and design of biomedical instruments with special emphasis on transducers. Understanding of basic sensors, amplifiers, and signal processing. Discussion of the origin of biopotential, and biopotential electrodes and amplifiers (including biotelemetry). Understanding of chemical sensors and clinical laboratory instrumentation, including microfluidics.
 
@@ -3265,22 +3265,22 @@ ECSE 480K Hardware Security
 This course begins with the keys to enabling secure, trustworthy operation of computer hardware - understanding security issues and how appropriate security measures are included during design, verification, test, and deployment. Increasingly the security primitives such as the Trusted Computing Module are being introduced at the hardware level to prevent the compromise of security in systems being deployed today. A comprehensive coverage of security issues in computer hardware is provided. Topics of embedded systems security, hardware Trojans, security in implantable medical devices, security in RFID/NFC, protection from side channel attacks, tamper resistance and crypto processor design, trusted FPGA design/JTAG, hardware-based cryptanalysis, and hardware IP protection against piracy and reverse-engineering are covered. A course project (Can you Hack It?) that challenges students to hack a hardware is included.
 
 ----------
-ECSE 480Q (aka EBME 480Q, ECSE 480Q) Regulatory Policy and Regulations
+ECSE 480Q (aka ECSE 480Q, EBME 480Q) Regulatory Policy and Regulations
 
 Introduction of wireless health technologies: spectrum, licensed versus unlicensed; personal area networks; body area networks; ultra-wideband low energy level short-range radios; wireless local area networks; wide area networks. The Federal system: separation of powers; the executive branch and its departments; the House of Representatives and its committees; the Senate and its committees; the FCC; policy versus regulatory versus legislative. What is a medical device: FDA; classification system; radiation-emitting products; software; RF in medical devices; converged medical devices; international aspects. Regulation of health information technology and wireless health: American Recovery and Reinvestment Act; Patient Protection and Affordable Care Act; FCC/FDA MoU; CMS and Reimbursement; privacy and security.
 
 ----------
-EBME 480Q (aka EBME 480Q, ECSE 480Q) Regulatory Policy and Regulations
+EBME 480Q (aka ECSE 480Q, EBME 480Q) Regulatory Policy and Regulations
 
 Introduction of wireless health technologies: spectrum, licensed versus unlicensed; personal area networks; body area networks; ultra-wideband low energy level short-range radios; wireless local area networks; wide area networks. The Federal system: separation of powers; the executive branch and its departments; the House of Representatives and its committees; the Senate and its committees; the FCC; policy versus regulatory versus legislative. What is a medical device: FDA; classification system; radiation-emitting products; software; RF in medical devices; converged medical devices; international aspects. Regulation of health information technology and wireless health: American Recovery and Reinvestment Act; Patient Protection and Affordable Care Act; FCC/FDA MoU; CMS and Reimbursement; privacy and security.
 
 ----------
-ECSE 480R (aka ECSE 480R, EBME 480R) User Experience Engineering
+ECSE 480R (aka EBME 480R, ECSE 480R) User Experience Engineering
 
 Social, cognitive, behavioral, and contextual elements in the design of healthcare technology and systems.  User-centered design paradigm from a broad perspective, exploring dimensions of product user experience and learning to assess and modify the design of healthcare technology. Practical utilization of user centered design method and assessment techniques for approaching a design problem.
 
 ----------
-EBME 480R (aka ECSE 480R, EBME 480R) User Experience Engineering
+EBME 480R (aka EBME 480R, ECSE 480R) User Experience Engineering
 
 Social, cognitive, behavioral, and contextual elements in the design of healthcare technology and systems.  User-centered design paradigm from a broad perspective, exploring dimensions of product user experience and learning to assess and modify the design of healthcare technology. Practical utilization of user centered design method and assessment techniques for approaching a design problem.
 
@@ -3392,17 +3392,17 @@ This course is an introduction to data science and analytics. In the first half 
 In the second half of the course, students will gain experience in data manipulation and analysis using scripted programming languages such as Python.
 
 ----------
+DSCI 430 (aka COGS 330, DSCI 330, DSCI 430, COGS 430) Cognition and Computation
+
+An introduction to (1) theories of the relationship between cognition and computation; (2) computational models of human cognition (e.g. models of decision-making or concept creation); and (3) computational tools for the study of human cognition. All three dimensions involve data science: theories are tested against archives of brain imaging data; models are derived from and tested against datasets of e.g., financial decisions (markets), legal rulings and findings (juries, judges, courts), legislative actions, and healthcare decisions; computational tools aggregate data and operate upon it analytically, for search, recognition, tagging, machine learning, statistical description, and hypothesis testing.
+
+----------
 COGS 330 (aka COGS 330, DSCI 330, DSCI 430, COGS 430) Cognition and Computation
 
 An introduction to (1) theories of the relationship between cognition and computation; (2) computational models of human cognition (e.g. models of decision-making or concept creation); and (3) computational tools for the study of human cognition. All three dimensions involve data science: theories are tested against archives of brain imaging data; models are derived from and tested against datasets of e.g., financial decisions (markets), legal rulings and findings (juries, judges, courts), legislative actions, and healthcare decisions; computational tools aggregate data and operate upon it analytically, for search, recognition, tagging, machine learning, statistical description, and hypothesis testing.
 
 ----------
 COGS 430 (aka COGS 330, DSCI 330, DSCI 430, COGS 430) Cognition and Computation
-
-An introduction to (1) theories of the relationship between cognition and computation; (2) computational models of human cognition (e.g. models of decision-making or concept creation); and (3) computational tools for the study of human cognition. All three dimensions involve data science: theories are tested against archives of brain imaging data; models are derived from and tested against datasets of e.g., financial decisions (markets), legal rulings and findings (juries, judges, courts), legislative actions, and healthcare decisions; computational tools aggregate data and operate upon it analytically, for search, recognition, tagging, machine learning, statistical description, and hypothesis testing.
-
-----------
-DSCI 430 (aka COGS 330, DSCI 330, DSCI 430, COGS 430) Cognition and Computation
 
 An introduction to (1) theories of the relationship between cognition and computation; (2) computational models of human cognition (e.g. models of decision-making or concept creation); and (3) computational tools for the study of human cognition. All three dimensions involve data science: theories are tested against archives of brain imaging data; models are derived from and tested against datasets of e.g., financial decisions (markets), legal rulings and findings (juries, judges, courts), legislative actions, and healthcare decisions; computational tools aggregate data and operate upon it analytically, for search, recognition, tagging, machine learning, statistical description, and hypothesis testing.
 
@@ -3421,129 +3421,135 @@ Geostatistical (spatial) mapping is applicable across many disciplines.  Example
 ----------
 SYBB 310 
 ----------
-DSCI 351M (aka DSCI 351M, DSCI 451, DSCI 351) Exploratory Data Science
+DSCI 351M (aka DSCI 351M, DSCI 351, DSCI 451) Exploratory Data Science
 
 In this course, we will learn data science and analysis approaches to identify statistically significance relationships and better model and predict the behavior of these systems. We will assemble and explore real-world datasets, perform clustering and pair plot analyses to investigate correlations, and logistic regression will be employed to develop associated predictive models. Results will be interpreted, visualized and discussed. We will introduce basic elements of statistical analysis using R Project open source software for exploratory data analysis and model development. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and munging functions, and a rich selection of statistical packages, used for data analytics, model development and prediction. This will include an introduction to R data types, reading and writing data, looping, plotting and regular expressions, so that one can start performing variable transformations for linear fitting and developing structural equation models, while exploring for statistically significant relationships. The M section of 
 Prereqs:
-EPBI 431
 STAT 201R
-STAT 312R
-DSCI 134
-ENGR 131
-SYBB 310
+EPBI 431
 EECS 132
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 310
 ----------
-DSCI 451 (aka DSCI 351M, DSCI 451, DSCI 351) Exploratory Data Science
+DSCI 451 (aka DSCI 351M, DSCI 351, DSCI 451) Exploratory Data Science
 
 In this course, we will learn data science and analysis approaches to identify statistically significance relationships and better model and predict the behavior of these systems. We will assemble and explore real-world datasets, perform clustering and pair plot analyses to investigate correlations, and logistic regression will be employed to develop associated predictive models. Results will be interpreted, visualized and discussed. We will introduce basic elements of statistical analysis using R Project open source software for exploratory data analysis and model development. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and munging functions, and a rich selection of statistical packages, used for data analytics, model development and prediction. This will include an introduction to R data types, reading and writing data, looping, plotting and regular expressions, so that one can start performing variable transformations for linear fitting and developing structural equation models, while exploring for statistically significant relationships. The M section of 
 Prereqs:
-EPBI 431
 STAT 201R
-STAT 312R
-DSCI 134
-ENGR 131
-SYBB 310
+EPBI 431
 EECS 132
-----------
-OPRE 207 
-----------
-DSCI 133 
-----------
-SYBB 311D 
-----------
-SYBB 311B 
-----------
-MKMR 201 
-----------
-SYBB 311C 
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 310
 ----------
 SYBB 311A 
 ----------
 SYBB 321 
 ----------
-DSCI 452 (aka DSCI 452, DSCI 352, DSCI 352M) Applied Data Science Research
+MKMR 201 
+----------
+OPRE 207 
+----------
+DSCI 133 
+----------
+SYBB 311C 
+----------
+SYBB 311D 
+----------
+SYBB 311B 
+----------
+DSCI 352M (aka DSCI 352M, DSCI 352, DSCI 452) Applied Data Science Research
 
 This is a project based data science research class, in which project teams identify a research project under the guidance of a domain expert professor. The research is structured as a data analysis project including the 6 steps of developing a reproducible data science project, including 1: Define the ADS question, 2: Identify, locate, and/or generate the data 3: Exploratory data analysis 4: Statistical modeling and prediction 5: Synthesizing the results in the domain context 6: Creation of reproducible research, Including code, datasets, documentation and reports.  During the course special topic lectures will include Ethics, Privacy, Openness, Security, Ethics. Value.  The M section of 
 Prereqs:
-OPRE 207
-DSCI 133
-EPBI 431
 STAT 201R
-SYBB 311D
-STAT 312R
 DSCI 351
-SYBB 311B
-MKMR 201
-SYBB 311C
-SYBB 311A
-DSCI 134
 SYBB 321
-ENGR 131
-SYBB 310
+SYBB 311A
+MKMR 201
+OPRE 207
+EPBI 431
 EECS 132
+DSCI 133
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 311C
+SYBB 311D
+SYBB 311B
+SYBB 310
 ----------
-DSCI 352M (aka DSCI 452, DSCI 352, DSCI 352M) Applied Data Science Research
+DSCI 452 (aka DSCI 352M, DSCI 352, DSCI 452) Applied Data Science Research
 
 This is a project based data science research class, in which project teams identify a research project under the guidance of a domain expert professor. The research is structured as a data analysis project including the 6 steps of developing a reproducible data science project, including 1: Define the ADS question, 2: Identify, locate, and/or generate the data 3: Exploratory data analysis 4: Statistical modeling and prediction 5: Synthesizing the results in the domain context 6: Creation of reproducible research, Including code, datasets, documentation and reports.  During the course special topic lectures will include Ethics, Privacy, Openness, Security, Ethics. Value.  The M section of 
 Prereqs:
-OPRE 207
-DSCI 133
-EPBI 431
 STAT 201R
-SYBB 311D
-STAT 312R
 DSCI 351
-SYBB 311B
-MKMR 201
-SYBB 311C
-SYBB 311A
-DSCI 134
 SYBB 321
-ENGR 131
-SYBB 310
+SYBB 311A
+MKMR 201
+OPRE 207
+EPBI 431
 EECS 132
+DSCI 133
+STAT 312R
+ENGR 131
+DSCI 134
+SYBB 311C
+SYBB 311D
+SYBB 311B
+SYBB 310
 ----------
-DSCI 453 (aka DSCI 453, DSCI 353, DSCI 353M) Data Science: Statistical Learning, Modeling and Prediction
+DSCI 453 (aka DSCI 453, DSCI 353M, DSCI 353) Data Science: Statistical Learning, Modeling and Prediction
 
 In this course, we will use an open data science tool chain to develop reproducible data analyses useful for inference, modeling and prediction of the behavior of complex systems. In addition to the standard data cleaning, assembly and exploratory data analysis steps essential to all data analyses, we will identify statistically significant relationships from datasets derived from population samples, and infer the reliability of these findings. We will use regression methods to model a number of both real-world and lab-based systems producing predictive models applicable in comparable populations. We will assemble and explore real-world datasets, use pair-wise plots to explore correlations, perform clustering, self-similarity, and logistic regression develop both fixed-effect and mixed-effect predictive models. We will introduce machine-learning approaches for classification and tree-based methods. Results will be interpreted, visualized and discussed. We will introduce the basic elements of data science and analytics using R Project open source software. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and assembly functions, and a rich selection of statistical packages, used for data analytics, model development, prediction, inference and clustering. With this background, it becomes possible to start performing variable transformations for linear regression fitting and developing structural equation models, fixed-effects and mixed-effects models along with other statistical learning techniques, while exploring for statistically significant relationships. The class will be structured to have a balance of theory and practice. We'll split class into Foundation and Practicum a) Foundation: lectures, presentations, discussion b) Practicum: coding, demonstrations and hands-on data science work. The M section of 
 ----------
-DSCI 353M (aka DSCI 453, DSCI 353, DSCI 353M) Data Science: Statistical Learning, Modeling and Prediction
+DSCI 353M (aka DSCI 453, DSCI 353M, DSCI 353) Data Science: Statistical Learning, Modeling and Prediction
 
 In this course, we will use an open data science tool chain to develop reproducible data analyses useful for inference, modeling and prediction of the behavior of complex systems. In addition to the standard data cleaning, assembly and exploratory data analysis steps essential to all data analyses, we will identify statistically significant relationships from datasets derived from population samples, and infer the reliability of these findings. We will use regression methods to model a number of both real-world and lab-based systems producing predictive models applicable in comparable populations. We will assemble and explore real-world datasets, use pair-wise plots to explore correlations, perform clustering, self-similarity, and logistic regression develop both fixed-effect and mixed-effect predictive models. We will introduce machine-learning approaches for classification and tree-based methods. Results will be interpreted, visualized and discussed. We will introduce the basic elements of data science and analytics using R Project open source software. R is an open-source software project with broad abilities to access machine-readable open-data resources, data cleaning and assembly functions, and a rich selection of statistical packages, used for data analytics, model development, prediction, inference and clustering. With this background, it becomes possible to start performing variable transformations for linear regression fitting and developing structural equation models, fixed-effects and mixed-effects models along with other statistical learning techniques, while exploring for statistically significant relationships. The class will be structured to have a balance of theory and practice. We'll split class into Foundation and Practicum a) Foundation: lectures, presentations, discussion b) Practicum: coding, demonstrations and hands-on data science work. The M section of 
 ----------
-DSCI 354 (aka DSCI 354M, DSCI 354, DSCI 454) Data Visualization and Analytics
+DSCI 354 (aka DSCI 454, DSCI 354M, DSCI 354) Data Visualization and Analytics
 
 Data Visualization and Analytics students will learn data visualization and analytics techniques focused on different types of data such as time-series, spectral, or image data science problems. This class will focus on increasing analysis of complex data sets through visualization by enhancing exploratory data analysis and data cleaning. This class will focus on creating effective data visualizations to communicate data analytics results to different audiences. Different datasets will be provided to develop different types of visualizations and analytics. Types of data visualizations include in interactive plots (e.g., bar graphs change over time), applications that allow users to adjust the visualizations based on their decisions (e.g., shiny applications), interactive maps, 3-D plots of data, etc. Discussing how an audience understands information and brings in data as well as the ethics of making data visualizations will be discussed. The class will also include ways to increase modeling and analysis with effective visualizations for credible, data-driven decision making. This will include a git repository for other students to use these codes as open source resources and the preparation of reproducible data science analyses for different types of problems.
 
 Prereqs:
 DSCI 451
+DSCI 351
+DSCI 353
+DSCI 351M
 DSCI 353M
 DSCI 453
-DSCI 351
-DSCI 351M
-DSCI 353
 ----------
-DSCI 354M (aka DSCI 354M, DSCI 354, DSCI 454) Data Visualization and Analytics
+DSCI 454 (aka DSCI 454, DSCI 354M, DSCI 354) Data Visualization and Analytics
 
 Data Visualization and Analytics students will learn data visualization and analytics techniques focused on different types of data such as time-series, spectral, or image data science problems. This class will focus on increasing analysis of complex data sets through visualization by enhancing exploratory data analysis and data cleaning. This class will focus on creating effective data visualizations to communicate data analytics results to different audiences. Different datasets will be provided to develop different types of visualizations and analytics. Types of data visualizations include in interactive plots (e.g., bar graphs change over time), applications that allow users to adjust the visualizations based on their decisions (e.g., shiny applications), interactive maps, 3-D plots of data, etc. Discussing how an audience understands information and brings in data as well as the ethics of making data visualizations will be discussed. The class will also include ways to increase modeling and analysis with effective visualizations for credible, data-driven decision making. This will include a git repository for other students to use these codes as open source resources and the preparation of reproducible data science analyses for different types of problems.
 
 Prereqs:
 DSCI 451
+DSCI 351
+DSCI 353
+DSCI 351M
 DSCI 353M
 DSCI 453
-DSCI 351
-DSCI 351M
-DSCI 353
 ----------
-DSCI 454 (aka DSCI 354M, DSCI 354, DSCI 454) Data Visualization and Analytics
+DSCI 354M (aka DSCI 454, DSCI 354M, DSCI 354) Data Visualization and Analytics
 
 Data Visualization and Analytics students will learn data visualization and analytics techniques focused on different types of data such as time-series, spectral, or image data science problems. This class will focus on increasing analysis of complex data sets through visualization by enhancing exploratory data analysis and data cleaning. This class will focus on creating effective data visualizations to communicate data analytics results to different audiences. Different datasets will be provided to develop different types of visualizations and analytics. Types of data visualizations include in interactive plots (e.g., bar graphs change over time), applications that allow users to adjust the visualizations based on their decisions (e.g., shiny applications), interactive maps, 3-D plots of data, etc. Discussing how an audience understands information and brings in data as well as the ethics of making data visualizations will be discussed. The class will also include ways to increase modeling and analysis with effective visualizations for credible, data-driven decision making. This will include a git repository for other students to use these codes as open source resources and the preparation of reproducible data science analyses for different types of problems.
 
 Prereqs:
-DSCI 353M
 DSCI 451
-DSCI 453
 DSCI 351
-DSCI 351M
 DSCI 353
+DSCI 351M
+DSCI 353M
+DSCI 453
 ----------
+	density: 0.00
+	number_of_nodes: 395.00
+	subgraph_number_of_nodes: 194.00
+	subgraph_density: 0.02
+	subgraph_diameter: 12.00
+	subgraph_transitivity: 0.05

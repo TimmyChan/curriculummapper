@@ -22,7 +22,7 @@ def main():
     url_list = ["https://bulletin.sfsu.edu/courses/math/",
                 "https://bulletin.sfsu.edu/courses/csc/"]
     for URL in url_list:
-        print("Connecting: %s..." % URL)
+        print("Politely Checking: %s..." % URL)
         soup = curriculum.get_soup(URL)
         # inpecting the source reveals that each course is neatly in div blocks
         # courseblock class. Iterating through each courseblock
@@ -79,7 +79,7 @@ def main():
 
     curriculum.print_all()
     true_finish_time = perf_counter()
-    print("\t\tTOTAL TIME: %s" % str(true_finish_time - true_start_time))
+    print("\t\tTOTAL TIME: %.6f" % (true_finish_time - true_start_time))
 
 
 if __name__ == "__main__":

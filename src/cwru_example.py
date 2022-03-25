@@ -1,6 +1,7 @@
 #! python3
 
 
+from time import perf_counter
 import re
 from curriculummapper import Course, Curriculum
 
@@ -10,6 +11,7 @@ def main():
     An example scraper for the case western MS Data Science program webpage
     '''
     # initiating an empty curriculum object
+    true_start_time = perf_counter()
     school_name = "Case Western"
     degree_name = "MS in Data Science"
     curriculum = Curriculum(school_name, degree_name, "CSDS",
@@ -21,7 +23,7 @@ def main():
                 "https://bulletin.case.edu/course-descriptions/stat/"
                 ]
     for URL in url_list:
-        print("Connecting: %s..." % URL)
+        print("Politely checking: %s..." % URL)
         soup = curriculum.get_soup(URL)
         # Getting prereq names from course tables first
         print("Scraping tables...")
@@ -112,7 +114,8 @@ def main():
                                          prereqs, aliases))
 
     curriculum.print_all()
-
+    true_finish_time = perf_counter()
+    print("\t\tTOTAL TIME: %.6f" % (true_finish_time - true_start_time))
 
 if __name__ == "__main__":
     main()
