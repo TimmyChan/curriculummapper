@@ -10,6 +10,7 @@ import unicodedata
 from bs4 import BeautifulSoup
 
 # Visualization
+from pprint import pprint
 import matplotlib.pyplot as plt
 import matplotlib.colors
 import networkx as nx
@@ -18,6 +19,7 @@ import numpy as np
 
 
 def printbreak(): print("----------")
+
 
 
 class Course:
@@ -490,9 +492,14 @@ class Curriculum:
         self.graph_analysis['subgraph_transitivity'] =\
             nx.transitivity(subgraph)
 
+        ancestor_dict = {n: len(nx.ancestors(self.diGraph, n)) for n in self.diGraph}
+        most_ancestors = sorted(ancestor_dict, key=ancestor_dict.get, reverse=True)[:10]
+        self.graph_analysis['most_ancestors'] = {self.course_dict[key].course_title: ancestor_dict[key] for key in most_ancestors}
+
     def print_graph_analysis(self):
         for key in self.graph_analysis:
-            print("\t%s: %s" % (key, self.graph_analysis[key]))
+            print("\t%s:" % key, end = ' ')
+            pprint(self.graph_analysis[key], sort_dicts=False)
 
     def print_graph(self, notebook=False, emphasize_in_degree=False,
                     defaults=True):
