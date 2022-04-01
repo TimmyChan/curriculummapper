@@ -1,11 +1,8 @@
 """
 Unit tests for the Course class
 """
-import os
-import sys
 
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)),
-                             'src/'))
+
 from curriculummapper import Course  # noqa: E402
 
 
@@ -39,7 +36,7 @@ def test_str():
 # testing __repr__(self) should always print simple string as defined below
 def test_repr():
     x = Course("SUBJ", "1234", "Course Title")
-    assert repr(x) == "curriculum.Course(SUBJ, 1234, Course Title)"
+    assert repr(x) == "Course(SUBJ, 1234, Course Title)"
 
 
 def test_eq():

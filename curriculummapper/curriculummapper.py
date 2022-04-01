@@ -1,4 +1,4 @@
-#! python3.9
+#! python3
 
 # Scraping and logic
 from time import perf_counter
@@ -59,7 +59,7 @@ class Course:
 
     def __repr__(self):
         ''' Give stable repr for hash for set operations '''
-        return ("curriculum.Course(%s, %s, %s)" %
+        return ("Course(%s, %s, %s)" %
                 (self.subject_code, self.course_code, self.course_title))
 
     def __hash__(self):
