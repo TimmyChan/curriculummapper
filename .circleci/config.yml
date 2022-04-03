@@ -4,23 +4,84 @@ jobs:
     working_directory: ~/curriculummapper
     docker:
       - image: cimg/python:3.9.11
-
-    parallelism: 4
-
     steps:
       # step 1: obtain repo from GitHub
       - checkout
-      # step 2: create virtual env and install dependencies
+      # step 2: try to restore cache:
+      - restore_cache:
+      # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+      # step 3: create virtual env and install dependencies
       - run:
           name: install dependencies
           command: |
             python3 -m venv CMvenv
             . CMvenv/bin/activate
             pip install -r requirements.txt
-      # step 3: run linter and tests
+      # step 4: save the cache
+      - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - "CMvenv"
+      # step 5: run linter and tests
       - run:
           name: run linter and tests
           command: |
             . CMvenv/bin/activate
             flake8 --exclude=CMvenv/* --statistics
             pytest -v
+      # step 6: store test results
+      - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: test-results
+  deploy:
+    docker:
+      - image: cimg/python:3.9.11
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile" }}
+      - run:
+          name: install  dependencies
+          command: |
+            python3 -m venv CMvenv
+            . CMvenv/bin/activate
+            pip install -r requirements.txt
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "setup.py" }}-{{ checksum "Makefile" }}
+          paths:
+            - "CMvenv"
+      - run:
+          name: verify git tag vs. version
+          command: |
+            python3 setup.py verify
+      - run:
+          name: init .pypirc
+          command: |
+            echo -e "[pypi]" >> ~/.pypirc
+            echo -e "username = $PYPI_USERNAME" >> ~/.pypirc
+            echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
+      - run:
+          name: create packages
+          command: |
+            python3 -m pip install build
+            python3 -m build
+      - run:
+          name: upload to pypi
+          command: |
+            . CMvenv/bin/activate
+            twine upload dist/*
+workflows:
+  build_test_publish:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
