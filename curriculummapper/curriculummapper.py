@@ -96,7 +96,7 @@ class Course:
             return self.course_code
         else:
             try:
-                return int(re.search(r'([0-9]{3}[0-9]*)', self.course_code)[0])
+                return int(re.search(r"([0-9]+)", self.course_code)[0])
             except Exception:
                 return int(self.course_code)
 
@@ -190,7 +190,7 @@ class Curriculum:
                  # get the subject code which is by default first 4 capitals
                  subject_search=r"([A-Z]{4})",
                  # get the course_code which are the digits
-                 code_search=r"(\d{3}\w*)", colored_subjects=None
+                 code_search=r"(\d+\w*)", colored_subjects=None
                  ):
         '''
         university (string)
@@ -218,8 +218,6 @@ class Curriculum:
         self.url_list = []
         if URL is not None:
             self.set_url(URL)
-        SOURCE_DIR = os.path.dirname(os.path.realpath(__file__))
-        self.data_dir = os.path.join(SOURCE_DIR, "data/")
         self.alias_dict = {}
         # for a directed graph
         # this will stay empty until generate_nx is called!
@@ -246,6 +244,15 @@ class Curriculum:
             for course in course_list:
                 self.add_course(course)
         self.graph_analysis = {}
+        self.data_dir = os.path.join("canned_soup/" +
+                                     str(self).replace(" ", "_") +
+                                     "/")
+        try:
+            os.makedirs(self.data_dir)
+        except Exception:
+            # only here if already have the directory
+            # do nothing safely
+            pass
 
     def add_subject(self, subj):
         if re.match(self.subject_search, subj):
@@ -556,10 +563,10 @@ class Curriculum:
         # net.enable_physics(True)
         # net.show_buttons(filter_=True)
         try:
-            os.makedirs("visualization")
+            os.makedirs("visualizations")
         except Exception:
             pass
-        net.show("visualization/%s_%s.html" % (str(self).replace(" ", "_"),
+        net.show("visualizations/%s_%s.html" % (str(self).replace(" ", "_"),
                  self.preferred_subject_code))
         # net.show_buttons(filter_=['physics'])
 
@@ -573,12 +580,10 @@ class Curriculum:
         ''' saves a copy of the html to not overping '''
         if URL is not None:
             self.set_url(URL)
-
-        filename = str(self).replace(" ", "_")
         i = 1
         if self.url.split("/")[-i] == "":
             i += 1
-        filename += "_" + self.url.split("/")[-i] + ".html"
+        filename = self.url.split("/")[-i] + ".html"
         # print("Trying %s/%s" % (data_dir, filename))
         try:
             os.makedirs(self.data_dir)
@@ -615,8 +620,16 @@ class Curriculum:
     def update(self, guess_alias=False):
         for key, alias_list in self.alias_dict.items():
             for alias in alias_list:
-                self.course_dict[key].add_alias(alias)
-                self.course_dict[key].copypasta(self.course_dict[alias])
+                try:
+                    self.course_dict[key].add_alias(alias)
+                    self.course_dict[key].copypasta(self.course_dict[alias])
+                except KeyError:
+                    self.add_course(key)
+                    self.add_course(alias)
+                    self.course_dict[key].add_alias(alias)
+                    self.course_dict[key].copypasta(self.course_dict[alias])
+                
+
 
     def print_all(self, notebook=False, logging=True, defaults=True):
         '''
