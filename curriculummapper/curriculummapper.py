@@ -392,6 +392,7 @@ class Curriculum:
             try:
                 return self.course_dict[course_id]
             except Exception:
+
                 self.add_course_by_id(course_id)
                 return self.course_dict[course_id]
 
@@ -505,6 +506,19 @@ class Curriculum:
         self.graph_analysis['most_ancestors'] =\
             {self.course_dict[key].course_title: ancestor_dict[key]
              for key in most_ancestors}
+
+    def nx_analysis(self, key='ancestors',
+                    nx_func=nx.ancestors,
+                    descending=True):
+        tempdict =\
+            {n: len(nx_func(self.diGraph, n)) for n in self.diGraph}
+        sortedlist = sorted(tempdict,
+                            key=tempdict.get, reverse=descending)[:10]
+        adjective = 'most' if descending else 'least'
+        graph_analysis_key = adjective + ' ' + key
+        self.graph_analysis[graph_analysis_key] =\
+            {self.course_dict[key].course_title: tempdict[key]
+             for key in sortedlist}
 
     def print_graph_analysis(self):
         for key in self.graph_analysis:
@@ -628,8 +642,6 @@ class Curriculum:
                     self.add_course(alias)
                     self.course_dict[key].add_alias(alias)
                     self.course_dict[key].copypasta(self.course_dict[alias])
-                
-
 
     def print_all(self, notebook=False, logging=True, defaults=True):
         '''

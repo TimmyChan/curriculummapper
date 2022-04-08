@@ -16,8 +16,8 @@ def main():
     school_name = "University of California Irvine"
     degree_name = "BA in Business Administration"
     curriculum = Curriculum(school_name, degree_name, "MGMT",
-                            colored_subjects=["MGMT","ECON","STATS"],
-                            course_search=r"([A-Z]{3}[A-Z]*\s\d\d*[A-Z]*)\b", ##########
+                            colored_subjects=["MGMT", "ECON", "STATS"],
+                            course_search=r"([A-Z]{3}[A-Z]*\s\d\d*[A-Z]*)\b",
                             subject_search=r"([A-Z]{3}[A-Z]*)")
     url_list = ["https://catalogue.uci.edu/allcourses/mgmt/",
                 "https://catalogue.uci.edu/allcourses/econ/",
@@ -56,12 +56,11 @@ def main():
             for tag in paragraph_tags:
                 # print(tag.text)
                 if re.search("Prereq", tag.text):
-                    prereqs += curriculum.course_id_list_from_string(tag.text)
-                if re.search("Overlaps", tag.text):
-                    aliases += curriculum.course_id_list_from_string(tag.text)
-
-            prereqs = [curriculum.course_list_from_string(p)[0] for p in prereqs if p not in aliases]
-            # print(prereqs)
+                    prereqs += curriculum.course_list_from_string(tag.text)
+                additional_text = (re.search("Overlaps", tag.text) or
+                                   re.search("Restrict", tag.text))
+                if additional_text:
+                    course_description += "\n" + tag.text
 
             # print(aliases)
             curriculum.add_course(Course(subject_code, course_code,
