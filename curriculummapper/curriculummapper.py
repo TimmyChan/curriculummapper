@@ -26,13 +26,14 @@ class Course:
     def __init__(self, subject_code="NONE", course_code="0",
                  course_title="",
                  course_description="",
-                 prerequisites=None, alias_list=None):
+                 prerequisites=None, alias_list=None,
+                 subject_search=r"([A-Z]+\s*[A-Z]*)\s\d+"):
         ''' * subject_code (string): Example "CSDS"
             * course_code (string): Example "498"
             course_key (string) = subject_code + " " + course_code = "CSDS 498"
             * course_title (string)
             * course_description (string)
-            * prerequisites SET of Course objects
+            * prerequisites SET of string objects # Changed to strings
             * alias_set SET of strings
         '''
         self.subject_code = subject_code
