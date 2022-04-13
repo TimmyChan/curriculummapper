@@ -27,7 +27,8 @@ class Course:
                  course_title="",
                  course_description="",
                  prerequisites=None, alias_list=None,
-                 subject_search=r"([A-Z]+\s*[A-Z]*)\s\d+"):
+                 subject_search=r"([A-Z]+\s*[A-Z]*)\s\d+\b",
+                 course_code_search=r"[A-Z]+\s*[A-Z]*\s(\d+)\b"):
         ''' * subject_code (string): Example "CSDS"
             * course_code (string): Example "498"
             course_key (string) = subject_code + " " + course_code = "CSDS 498"
