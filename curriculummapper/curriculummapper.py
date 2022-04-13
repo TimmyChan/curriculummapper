@@ -96,7 +96,7 @@ class Course:
             return self.course_code
         else:
             try:
-                return int(re.search(r"([0-9]+)", self.course_code)[0])
+                return int(re.search(r"([0-9]+)", str(self.course_code))[0])
             except Exception:
                 return int(self.course_code)
 
