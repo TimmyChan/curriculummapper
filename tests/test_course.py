@@ -6,8 +6,8 @@ Unit tests for the Course class
 from curriculummapper import Course  # noqa: E402
 
 
-# No parameters passed should give blink course
 def test_init():
+    ''' Initiating with no parameters passed should give blink course '''
     x = Course()
     assert (x.subject_code == "NONE" and x.course_code == "0" and
             x.course_title == "" and
@@ -15,26 +15,29 @@ def test_init():
             x.prerequisites == set())
 
 
-# Parameters passed should be saved
 def test_init_with_param():
+    ''' Parameters passed should be saved'''
     x = Course()
     y = Course("DSCS", 5679, "To the left",
-               "Everything you own", [x])
+               "Everything you own in a box to the left", [x])
     assert (y.subject_code == "DSCS" and
             y.course_code == 5679 and
             y.course_title == "To the left" and
-            y.course_description == "Everything you own" and
+            y.course_description == "Everything you own in a box to the left" and  # noqa: E501
             y.prerequisites == set([x]))
 
 
-# testing __str__() Should print subject code, course code.
 def test_str():
+    '''  __str__() Should print subject code, course code. '''
     x = Course("SUBJ", "1234", "Course Title")
     assert str(x) == "SUBJ 1234"
 
 
-# testing __repr__(self) should always print simple string as defined below
 def test_repr():
+    '''
+    __repr__(self) should always print
+    "Course(subject_code, course_code, course_title)"
+    '''
     x = Course("SUBJ", "1234", "Course Title")
     assert repr(x) == "Course(SUBJ, 1234, Course Title)"
 
@@ -45,13 +48,17 @@ def test_eq():
     assert (x == y)
 
 
-# testing simple add_alias
-def test_alias():
-    ''' should be sorted '''
+def test_add_alias():
+    ''' testing simple add_alias '''
     x = Course("CSDS", 1234, "Yo Mama",
                "Needs her own zipcode")
     x.add_alias("ABCD 1234")
     assert x.alias_set == set(["ABCD 1234"])
+
+
+def test_add_alias_course_id_logic():
+    ''' should raise error '''
+    pass
 
 
 # testing repeat add_alias (should behave as set)
@@ -84,8 +91,13 @@ def test_get_course_code_int():
     assert x.get_course_code_int() == 1234
 
 
-# should return an int still
 def test_get_course_code_int_tricky():
+    '''
+    should return an int still, sometimes courses are weird like
+    "AA S 123b" so the regex in general...
+    course_code: r"([A-Z]+\s*[A-Z]+\s\d+\w*\b)"  # noqa: W605
+    subject_code: r"([A-Z]+\s*[A-Z]+)(?=\s\d+\w*\b)"
+    '''
     x = Course("DATA", "1234F")
     assert x.get_course_code_int() == 1234
 
